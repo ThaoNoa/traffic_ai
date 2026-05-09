@@ -1322,3 +1322,402 @@
 2026-05-09 20:06:13 | INFO     | __main__                       | total_tracks_created: 28
 2026-05-09 20:06:13 | INFO     | __main__                       | currently_active: 8
 2026-05-09 20:06:13 | INFO     | __main__                       | Output: outputs/tracking_output.mp4
+2026-05-09 21:02:36 | INFO     | geometry.ipm                   | IPMTransformer init | BEV size: 500×800 | scale: 50.0px/m (X), 26.7px/m (Y)
+2026-05-09 21:02:36 | INFO     | geometry.ipm                   | IPM calibrated.
+2026-05-09 21:02:36 | INFO     | features.feature_extractor     | FeatureExtractor init | window=25 | stride=5
+2026-05-09 21:02:36 | INFO     | anomaly.rule_engine            | PhysicsRuleEngine initialized.
+2026-05-09 21:03:22 | INFO     | geometry.ipm                   | IPMTransformer init | BEV size: 500×800 | scale: 50.0px/m (X), 26.7px/m (Y)
+2026-05-09 21:03:22 | INFO     | geometry.ipm                   | IPM calibrated.
+2026-05-09 21:03:22 | INFO     | features.feature_extractor     | FeatureExtractor init | window=25 | stride=5
+2026-05-09 21:03:22 | INFO     | anomaly.rule_engine            | PhysicsRuleEngine initialized.
+2026-05-09 21:03:22 | INFO     | anomaly.lgm_classifier         | AccidentClassifier init | threshold=0.65 | feature_dim=20
+2026-05-09 21:03:22 | WARNING  | anomaly.lgm_classifier         | Model file không tồn tại: models/lgbm_accident.pkl. Chạy ở chế độ rule-only. Dùng train() để build model.
+2026-05-09 21:03:22 | INFO     | anomaly.alert_manager          | AlertManager init | cooldown=5.0s | clip=10s | output=outputs
+2026-05-09 21:14:54 | INFO     | detector.vehicle_detector      | VehicleDetector init | device=cuda | conf=0.25 | iou=0.5
+2026-05-09 21:14:54 | INFO     | detector.vehicle_detector      | Classes filter: [2, 3, 5, 7]
+2026-05-09 21:14:54 | INFO     | tracker.deep_sort_tracker      | DeepSORTTracker init | max_age=20 | n_init=2 | max_cosine_dist=0.4 | λ_motion=0.7
+2026-05-09 21:14:54 | INFO     | geometry.ipm                   | IPMTransformer init | BEV size: 500×800 | scale: 50.0px/m (X), 26.7px/m (Y)
+2026-05-09 21:14:54 | INFO     | geometry.ipm                   | IPM calibrated.
+2026-05-09 21:14:54 | INFO     | features.feature_extractor     | FeatureExtractor init | window=25 | stride=5
+2026-05-09 21:14:54 | INFO     | anomaly.rule_engine            | PhysicsRuleEngine initialized.
+2026-05-09 21:14:54 | INFO     | anomaly.lgm_classifier         | AccidentClassifier init | threshold=0.65 | feature_dim=20
+2026-05-09 21:14:54 | WARNING  | anomaly.lgm_classifier         | Model file không tồn tại: models/lgbm_accident.pkl. Chạy ở chế độ rule-only. Dùng train() để build model.
+2026-05-09 21:14:54 | INFO     | anomaly.alert_manager          | AlertManager init | cooldown=5.0s | clip=10s | output=outputs
+2026-05-09 21:14:54 | INFO     | SYSTEM_MAIN                    | CLI Override: Video source được set thành videos/demo.mp4
+2026-05-09 21:14:54 | INFO     | SYSTEM_MAIN                    | Bắt đầu pipeline: videos/demo.mp4 (2560x1440 @ 60.0fps)
+2026-05-09 21:14:54 | INFO     | SYSTEM_MAIN                    | Pipeline kết thúc. Kết quả lưu tại: outputs/demo_result.mp4
+2026-05-09 21:16:28 | INFO     | detector.vehicle_detector      | VehicleDetector init | device=cuda | conf=0.25 | iou=0.5
+2026-05-09 21:16:28 | INFO     | detector.vehicle_detector      | Classes filter: [2, 3, 5, 7]
+2026-05-09 21:16:28 | INFO     | detector.vehicle_detector      | Loading YOLOv8 model: models/yolov8s.pt
+2026-05-09 21:16:28 | WARNING  | detector.vehicle_detector      | Model không tồn tại tại models/yolov8s.pt. Auto-downloading yolov8n.pt...
+2026-05-09 21:16:30 | INFO     | detector.vehicle_detector      | Model warmup...
+2026-05-09 21:16:31 | INFO     | detector.vehicle_detector      | Model ready.
+2026-05-09 21:16:31 | INFO     | tracker.deep_sort_tracker      | DeepSORTTracker init | max_age=20 | n_init=2 | max_cosine_dist=0.4 | λ_motion=0.7
+2026-05-09 21:16:31 | INFO     | geometry.ipm                   | IPMTransformer init | BEV size: 500×800 | scale: 50.0px/m (X), 26.7px/m (Y)
+2026-05-09 21:16:31 | INFO     | geometry.ipm                   | IPM calibrated.
+2026-05-09 21:16:31 | INFO     | features.feature_extractor     | FeatureExtractor init | window=25 | stride=5
+2026-05-09 21:16:31 | INFO     | anomaly.rule_engine            | PhysicsRuleEngine initialized.
+2026-05-09 21:16:31 | INFO     | anomaly.lgm_classifier         | AccidentClassifier init | threshold=0.65 | feature_dim=20
+2026-05-09 21:16:31 | WARNING  | anomaly.lgm_classifier         | Model file không tồn tại: models/lgbm_accident.pkl. Chạy ở chế độ rule-only. Dùng train() để build model.
+2026-05-09 21:16:31 | INFO     | anomaly.alert_manager          | AlertManager init | cooldown=5.0s | clip=10s | output=outputs
+2026-05-09 21:16:31 | INFO     | SYSTEM_MAIN                    | CLI Override: Video source được set thành videos/demo.mp4
+2026-05-09 21:16:31 | INFO     | SYSTEM_MAIN                    | Bắt đầu pipeline: videos/demo.mp4 (2560x1440 @ 60.0fps)
+2026-05-09 21:16:32 | INFO     | SYSTEM_MAIN                    | Pipeline kết thúc. Kết quả lưu tại: outputs/demo_result.mp4
+2026-05-09 21:17:33 | INFO     | detector.vehicle_detector      | VehicleDetector init | device=cuda | conf=0.25 | iou=0.5
+2026-05-09 21:17:33 | INFO     | detector.vehicle_detector      | Classes filter: [2, 3, 5, 7]
+2026-05-09 21:17:33 | INFO     | detector.vehicle_detector      | Loading YOLOv8 model: models/yolov8s.pt
+2026-05-09 21:17:33 | WARNING  | detector.vehicle_detector      | Model không tồn tại tại models/yolov8s.pt. Auto-downloading yolov8n.pt...
+2026-05-09 21:17:34 | INFO     | detector.vehicle_detector      | Model warmup...
+2026-05-09 21:17:35 | INFO     | detector.vehicle_detector      | Model ready.
+2026-05-09 21:17:35 | INFO     | tracker.deep_sort_tracker      | DeepSORTTracker init | max_age=20 | n_init=2 | max_cosine_dist=0.4 | λ_motion=0.7
+2026-05-09 21:17:35 | INFO     | geometry.ipm                   | IPMTransformer init | BEV size: 500×800 | scale: 50.0px/m (X), 26.7px/m (Y)
+2026-05-09 21:17:35 | INFO     | geometry.ipm                   | IPM calibrated.
+2026-05-09 21:17:35 | INFO     | features.feature_extractor     | FeatureExtractor init | window=25 | stride=5
+2026-05-09 21:17:35 | INFO     | anomaly.rule_engine            | PhysicsRuleEngine initialized.
+2026-05-09 21:17:35 | INFO     | anomaly.lgm_classifier         | AccidentClassifier init | threshold=0.65 | feature_dim=20
+2026-05-09 21:17:35 | WARNING  | anomaly.lgm_classifier         | Model file không tồn tại: models/lgbm_accident.pkl. Chạy ở chế độ rule-only. Dùng train() để build model.
+2026-05-09 21:17:35 | INFO     | anomaly.alert_manager          | AlertManager init | cooldown=5.0s | clip=10s | output=outputs
+2026-05-09 21:17:35 | INFO     | SYSTEM_MAIN                    | CLI Override: Video source được set thành videos/demo.mp4
+2026-05-09 21:17:35 | INFO     | SYSTEM_MAIN                    | Bắt đầu pipeline: videos/demo.mp4 (2560x1440 @ 60.0fps)
+2026-05-09 21:17:36 | INFO     | SYSTEM_MAIN                    | Pipeline kết thúc. Kết quả lưu tại: outputs/demo_result.mp4
+2026-05-09 21:20:34 | INFO     | MAIN1                          | Initializing detector...
+2026-05-09 21:20:34 | INFO     | detector.vehicle_detector      | VehicleDetector init | device=cuda | conf=0.25 | iou=0.5
+2026-05-09 21:20:34 | INFO     | detector.vehicle_detector      | Classes filter: [2, 3, 5, 7]
+2026-05-09 21:20:34 | INFO     | detector.vehicle_detector      | Loading YOLOv8 model: models/yolov8s.pt
+2026-05-09 21:20:34 | WARNING  | detector.vehicle_detector      | Model không tồn tại tại models/yolov8s.pt. Auto-downloading yolov8n.pt...
+2026-05-09 21:20:35 | INFO     | detector.vehicle_detector      | Model warmup...
+2026-05-09 21:20:37 | INFO     | detector.vehicle_detector      | Model ready.
+2026-05-09 21:20:37 | INFO     | MAIN1                          | Initializing tracker...
+2026-05-09 21:20:37 | INFO     | tracker.deep_sort_tracker      | DeepSORTTracker init | max_age=20 | n_init=2 | max_cosine_dist=0.4 | λ_motion=0.7
+2026-05-09 21:20:38 | INFO     | tracker.deep_sort_tracker      | DeepSort engine ready | GPU embedder: True
+2026-05-09 21:20:38 | INFO     | MAIN1                          | Initializing IPM...
+2026-05-09 21:20:38 | INFO     | geometry.ipm                   | IPMTransformer init | BEV size: 500×800 | scale: 50.0px/m (X), 26.7px/m (Y)
+2026-05-09 21:20:38 | INFO     | geometry.ipm                   | IPM calibrated.
+2026-05-09 21:20:38 | INFO     | MAIN1                          | Initializing feature extractor...
+2026-05-09 21:20:38 | INFO     | features.feature_extractor     | FeatureExtractor init | window=25 | stride=5
+2026-05-09 21:20:38 | INFO     | MAIN1                          | Initializing rule engine...
+2026-05-09 21:20:38 | INFO     | anomaly.rule_engine            | PhysicsRuleEngine initialized.
+2026-05-09 21:20:38 | INFO     | MAIN1                          | Initializing classifier...
+2026-05-09 21:20:38 | INFO     | anomaly.lgm_classifier         | AccidentClassifier init | threshold=0.65 | feature_dim=20
+2026-05-09 21:20:38 | WARNING  | anomaly.lgm_classifier         | Model file không tồn tại: models/lgbm_accident.pkl. Chạy ở chế độ rule-only. Dùng train() để build model.
+2026-05-09 21:20:38 | INFO     | MAIN1                          | Initializing alert manager...
+2026-05-09 21:20:38 | INFO     | anomaly.alert_manager          | AlertManager init | cooldown=5.0s | clip=10s | output=outputs
+2026-05-09 21:20:38 | INFO     | MAIN1                          | Video opened | 2560x1440 | FPS=60.00
+2026-05-09 21:21:25 | INFO     | MAIN1                          | Initializing detector...
+2026-05-09 21:21:25 | INFO     | detector.vehicle_detector      | VehicleDetector init | device=cuda | conf=0.25 | iou=0.5
+2026-05-09 21:21:25 | INFO     | detector.vehicle_detector      | Classes filter: [2, 3, 5, 7]
+2026-05-09 21:21:25 | INFO     | detector.vehicle_detector      | Loading YOLOv8 model: models/yolov8s.pt
+2026-05-09 21:21:25 | WARNING  | detector.vehicle_detector      | Model không tồn tại tại models/yolov8s.pt. Auto-downloading yolov8n.pt...
+2026-05-09 21:21:26 | INFO     | detector.vehicle_detector      | Model warmup...
+2026-05-09 21:21:27 | INFO     | detector.vehicle_detector      | Model ready.
+2026-05-09 21:21:27 | INFO     | MAIN1                          | Initializing tracker...
+2026-05-09 21:21:27 | INFO     | tracker.deep_sort_tracker      | DeepSORTTracker init | max_age=20 | n_init=2 | max_cosine_dist=0.4 | λ_motion=0.7
+2026-05-09 21:21:28 | INFO     | tracker.deep_sort_tracker      | DeepSort engine ready | GPU embedder: True
+2026-05-09 21:21:28 | INFO     | MAIN1                          | Initializing IPM...
+2026-05-09 21:21:28 | INFO     | geometry.ipm                   | IPMTransformer init | BEV size: 500×800 | scale: 50.0px/m (X), 26.7px/m (Y)
+2026-05-09 21:21:28 | INFO     | geometry.ipm                   | IPM calibrated.
+2026-05-09 21:21:28 | INFO     | MAIN1                          | Initializing feature extractor...
+2026-05-09 21:21:28 | INFO     | features.feature_extractor     | FeatureExtractor init | window=25 | stride=5
+2026-05-09 21:21:28 | INFO     | MAIN1                          | Initializing rule engine...
+2026-05-09 21:21:28 | INFO     | anomaly.rule_engine            | PhysicsRuleEngine initialized.
+2026-05-09 21:21:28 | INFO     | MAIN1                          | Initializing classifier...
+2026-05-09 21:21:28 | INFO     | anomaly.lgm_classifier         | AccidentClassifier init | threshold=0.65 | feature_dim=20
+2026-05-09 21:21:28 | WARNING  | anomaly.lgm_classifier         | Model file không tồn tại: models/lgbm_accident.pkl. Chạy ở chế độ rule-only. Dùng train() để build model.
+2026-05-09 21:21:28 | INFO     | MAIN1                          | Initializing alert manager...
+2026-05-09 21:21:28 | INFO     | anomaly.alert_manager          | AlertManager init | cooldown=5.0s | clip=10s | output=outputs
+2026-05-09 21:21:28 | INFO     | MAIN1                          | Video opened | 2560x1440 | FPS=60.00
+2026-05-09 21:21:32 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 1 | Score=1.000 | Frame=30 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:21:32 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 2 | Score=1.000 | Frame=30 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:21:32 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 3 | Score=1.000 | Frame=30 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:21:32 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 4 | Score=1.000 | Frame=30 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:21:32 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 5 | Score=1.000 | Frame=30 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:21:32 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 6 | Score=1.000 | Frame=30 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:21:32 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 8 | Score=1.000 | Frame=30 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:21:35 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 12 | Score=1.000 | Frame=50 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:21:35 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 13 | Score=0.945 | Frame=55 | Violations: ['SUDDEN_BRAKE', 'COLLISION_RISK']
+2026-05-09 21:21:36 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 14 | Score=1.000 | Frame=60 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:21:37 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 1 | Score=1.000 | Frame=65 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:21:37 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 2 | Score=1.000 | Frame=65 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:21:37 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 3 | Score=0.947 | Frame=65 | Violations: ['SUDDEN_BRAKE', 'COLLISION_RISK']
+2026-05-09 21:21:37 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 6 | Score=1.000 | Frame=65 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:21:37 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 8 | Score=1.000 | Frame=65 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:21:37 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 15 | Score=0.933 | Frame=65 | Violations: ['SUDDEN_BRAKE', 'COLLISION_RISK']
+2026-05-09 21:21:38 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 16 | Score=1.000 | Frame=70 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:21:38 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 17 | Score=0.961 | Frame=70 | Violations: ['SUDDEN_BRAKE', 'COLLISION_RISK']
+2026-05-09 21:21:38 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 18 | Score=0.956 | Frame=70 | Violations: ['SUDDEN_BRAKE', 'COLLISION_RISK']
+2026-05-09 21:21:40 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 12 | Score=1.000 | Frame=75 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:21:40 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 19 | Score=1.000 | Frame=75 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:21:41 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 13 | Score=1.000 | Frame=80 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:21:41 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 14 | Score=1.000 | Frame=80 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:21:41 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 20 | Score=1.000 | Frame=80 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:21:43 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 2 | Score=1.000 | Frame=90 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:21:43 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 8 | Score=1.000 | Frame=90 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:21:43 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 21 | Score=1.000 | Frame=90 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:21:43 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 22 | Score=1.000 | Frame=90 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:21:43 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 16 | Score=1.000 | Frame=95 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:21:44 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 18 | Score=1.000 | Frame=100 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:21:44 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 25 | Score=1.000 | Frame=100 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:21:45 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 19 | Score=1.000 | Frame=110 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:21:47 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 14 | Score=1.000 | Frame=120 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:21:47 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 20 | Score=0.954 | Frame=120 | Violations: ['SUDDEN_BRAKE', 'COLLISION_RISK']
+2026-05-09 21:21:48 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 2 | Score=1.000 | Frame=130 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:21:48 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 22 | Score=1.000 | Frame=130 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:21:48 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 26 | Score=0.960 | Frame=130 | Violations: ['SUDDEN_BRAKE', 'COLLISION_RISK']
+2026-05-09 21:21:49 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 16 | Score=1.000 | Frame=135 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:21:49 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 27 | Score=1.000 | Frame=135 | Violations: ['SUDDEN_BRAKE', 'COLLISION_RISK']
+2026-05-09 21:21:49 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 28 | Score=1.000 | Frame=135 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:21:49 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 25 | Score=0.952 | Frame=140 | Violations: ['SUDDEN_BRAKE', 'COLLISION_RISK']
+2026-05-09 21:21:49 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 29 | Score=0.943 | Frame=140 | Violations: ['SUDDEN_BRAKE', 'COLLISION_RISK']
+2026-05-09 21:21:50 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 30 | Score=0.900 | Frame=145 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:21:51 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 19 | Score=1.000 | Frame=150 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:21:56 | INFO     | anomaly.alert_manager          | Clip saved: outputs/accident_track1_1778336492.mp4 (250 frames)
+2026-05-09 21:21:56 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 2 | Score=1.000 | Frame=155 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:21:56 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 19 | Score=1.000 | Frame=155 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:21:56 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 20 | Score=1.000 | Frame=155 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:21:56 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 25 | Score=1.000 | Frame=155 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:21:56 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 26 | Score=0.920 | Frame=155 | Violations: ['SUDDEN_BRAKE', 'COLLISION_RISK']
+2026-05-09 21:21:56 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 27 | Score=0.961 | Frame=155 | Violations: ['SUDDEN_BRAKE', 'COLLISION_RISK']
+2026-05-09 21:21:56 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 32 | Score=1.000 | Frame=155 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:21:56 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 33 | Score=1.000 | Frame=155 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:21:57 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 34 | Score=1.000 | Frame=165 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:21:58 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 36 | Score=0.945 | Frame=170 | Violations: ['SUDDEN_BRAKE', 'COLLISION_RISK']
+2026-05-09 21:21:58 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 37 | Score=1.000 | Frame=170 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:21:58 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 39 | Score=0.917 | Frame=175 | Violations: ['SUDDEN_BRAKE', 'COLLISION_RISK']
+2026-05-09 21:21:59 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 41 | Score=0.960 | Frame=185 | Violations: ['SUDDEN_BRAKE', 'COLLISION_RISK']
+2026-05-09 21:22:00 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 42 | Score=1.000 | Frame=190 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:01 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 43 | Score=1.000 | Frame=195 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:01 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 20 | Score=1.000 | Frame=200 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:01 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 25 | Score=1.000 | Frame=200 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:02 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 27 | Score=0.957 | Frame=205 | Violations: ['SUDDEN_BRAKE', 'COLLISION_RISK']
+2026-05-09 21:22:02 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 44 | Score=1.000 | Frame=205 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:02 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 45 | Score=0.956 | Frame=210 | Violations: ['SUDDEN_BRAKE', 'COLLISION_RISK']
+2026-05-09 21:22:02 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 46 | Score=1.000 | Frame=210 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:03 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 36 | Score=0.954 | Frame=215 | Violations: ['SUDDEN_BRAKE', 'COLLISION_RISK']
+2026-05-09 21:22:04 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 39 | Score=1.000 | Frame=220 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:04 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 47 | Score=1.000 | Frame=220 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:04 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 48 | Score=0.951 | Frame=220 | Violations: ['SUDDEN_BRAKE', 'COLLISION_RISK']
+2026-05-09 21:22:04 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 49 | Score=1.000 | Frame=225 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:06 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 50 | Score=1.000 | Frame=240 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:07 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 20 | Score=0.943 | Frame=245 | Violations: ['SUDDEN_BRAKE', 'COLLISION_RISK']
+2026-05-09 21:22:07 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 25 | Score=0.972 | Frame=245 | Violations: ['SUDDEN_BRAKE', 'COLLISION_RISK']
+2026-05-09 21:22:07 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 27 | Score=0.972 | Frame=245 | Violations: ['SUDDEN_BRAKE', 'COLLISION_RISK']
+2026-05-09 21:22:08 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 45 | Score=0.928 | Frame=250 | Violations: ['SUDDEN_BRAKE', 'COLLISION_RISK']
+2026-05-09 21:22:08 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 46 | Score=0.923 | Frame=250 | Violations: ['SUDDEN_BRAKE', 'COLLISION_RISK']
+2026-05-09 21:22:08 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 51 | Score=0.983 | Frame=250 | Violations: ['SUDDEN_BRAKE', 'COLLISION_RISK']
+2026-05-09 21:22:08 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 36 | Score=0.957 | Frame=255 | Violations: ['SUDDEN_BRAKE', 'COLLISION_RISK']
+2026-05-09 21:22:08 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 52 | Score=1.000 | Frame=255 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:08 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 53 | Score=0.963 | Frame=255 | Violations: ['SUDDEN_BRAKE', 'COLLISION_RISK']
+2026-05-09 21:22:09 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 39 | Score=0.955 | Frame=260 | Violations: ['SUDDEN_BRAKE', 'COLLISION_RISK']
+2026-05-09 21:22:10 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 55 | Score=1.000 | Frame=265 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:10 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 58 | Score=0.945 | Frame=265 | Violations: ['SUDDEN_BRAKE', 'COLLISION_RISK']
+2026-05-09 21:22:10 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 65 | Score=0.911 | Frame=270 | Violations: ['SUDDEN_BRAKE', 'COLLISION_RISK']
+2026-05-09 21:22:11 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 73 | Score=1.000 | Frame=275 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:11 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 74 | Score=1.000 | Frame=275 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:11 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 75 | Score=1.000 | Frame=275 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:11 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 76 | Score=1.000 | Frame=275 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:18 | INFO     | anomaly.alert_manager          | Clip saved: outputs/accident_track2_1778336516.mp4 (250 frames)
+2026-05-09 21:22:18 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 25 | Score=1.000 | Frame=280 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:18 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 36 | Score=1.000 | Frame=280 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:18 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 52 | Score=1.000 | Frame=280 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:18 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 55 | Score=1.000 | Frame=280 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:18 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 73 | Score=1.000 | Frame=280 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:18 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 74 | Score=1.000 | Frame=280 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:18 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 76 | Score=1.000 | Frame=280 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:18 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 80 | Score=1.000 | Frame=280 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:19 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 87 | Score=1.000 | Frame=290 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:21 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 89 | Score=1.000 | Frame=305 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:21 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 91 | Score=1.000 | Frame=305 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:22 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 94 | Score=1.000 | Frame=315 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:22 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 95 | Score=1.000 | Frame=320 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:23 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 36 | Score=1.000 | Frame=325 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:23 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 55 | Score=1.000 | Frame=325 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:23 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 73 | Score=1.000 | Frame=325 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:23 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 74 | Score=1.000 | Frame=325 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:23 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 80 | Score=1.000 | Frame=325 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:23 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 90 | Score=1.000 | Frame=325 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:24 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 97 | Score=0.950 | Frame=335 | Violations: ['SUDDEN_BRAKE', 'COLLISION_RISK']
+2026-05-09 21:22:25 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 99 | Score=1.000 | Frame=350 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:25 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 100 | Score=1.000 | Frame=350 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:27 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 102 | Score=1.000 | Frame=360 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:27 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 103 | Score=1.000 | Frame=360 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:27 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 106 | Score=0.948 | Frame=365 | Violations: ['SUDDEN_BRAKE', 'COLLISION_RISK']
+2026-05-09 21:22:28 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 55 | Score=0.929 | Frame=370 | Violations: ['SUDDEN_BRAKE', 'COLLISION_RISK']
+2026-05-09 21:22:28 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 73 | Score=1.000 | Frame=370 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:28 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 74 | Score=1.000 | Frame=370 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:28 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 80 | Score=1.000 | Frame=370 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:28 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 107 | Score=1.000 | Frame=370 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:28 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 108 | Score=1.000 | Frame=370 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:29 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 109 | Score=0.935 | Frame=375 | Violations: ['SUDDEN_BRAKE', 'COLLISION_RISK']
+2026-05-09 21:22:29 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 97 | Score=1.000 | Frame=380 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:30 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 115 | Score=1.000 | Frame=390 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:31 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 99 | Score=0.942 | Frame=395 | Violations: ['SUDDEN_BRAKE', 'COLLISION_RISK']
+2026-05-09 21:22:32 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 117 | Score=0.955 | Frame=400 | Violations: ['SUDDEN_BRAKE', 'COLLISION_RISK']
+2026-05-09 21:22:37 | INFO     | anomaly.alert_manager          | Clip saved: outputs/accident_track25_1778336538.mp4 (250 frames)
+2026-05-09 21:22:37 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 55 | Score=0.936 | Frame=405 | Violations: ['SUDDEN_BRAKE', 'COLLISION_RISK']
+2026-05-09 21:22:37 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 80 | Score=1.000 | Frame=405 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:37 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 97 | Score=1.000 | Frame=405 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:37 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 99 | Score=1.000 | Frame=405 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:37 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 102 | Score=1.000 | Frame=405 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:37 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 103 | Score=1.000 | Frame=405 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:37 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 106 | Score=0.949 | Frame=405 | Violations: ['SUDDEN_BRAKE', 'COLLISION_RISK']
+2026-05-09 21:22:37 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 109 | Score=1.000 | Frame=405 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:38 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 115 | Score=0.961 | Frame=415 | Violations: ['SUDDEN_BRAKE', 'COLLISION_RISK']
+2026-05-09 21:22:38 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 121 | Score=1.000 | Frame=420 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:39 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 122 | Score=1.000 | Frame=425 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:39 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 126 | Score=1.000 | Frame=430 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:41 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 127 | Score=0.937 | Frame=440 | Violations: ['SUDDEN_BRAKE', 'COLLISION_RISK']
+2026-05-09 21:22:41 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 128 | Score=0.927 | Frame=440 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:41 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 129 | Score=1.000 | Frame=440 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:41 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 130 | Score=1.000 | Frame=445 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:42 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 97 | Score=1.000 | Frame=455 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:42 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 102 | Score=1.000 | Frame=455 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:42 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 106 | Score=1.000 | Frame=455 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:42 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 134 | Score=1.000 | Frame=455 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:44 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 142 | Score=1.000 | Frame=475 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:45 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 126 | Score=1.000 | Frame=480 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:45 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 143 | Score=0.915 | Frame=480 | Violations: ['SUDDEN_BRAKE', 'COLLISION_RISK']
+2026-05-09 21:22:47 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 102 | Score=1.000 | Frame=490 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:47 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 106 | Score=1.000 | Frame=490 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:47 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 129 | Score=1.000 | Frame=490 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:47 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 130 | Score=1.000 | Frame=490 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:47 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 145 | Score=1.000 | Frame=490 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:49 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 148 | Score=1.000 | Frame=500 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:49 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 150 | Score=1.000 | Frame=500 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:50 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 142 | Score=1.000 | Frame=510 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:50 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 152 | Score=1.000 | Frame=510 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:50 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 143 | Score=1.000 | Frame=515 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:51 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 151 | Score=1.000 | Frame=520 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:57 | INFO     | anomaly.alert_manager          | Clip saved: outputs/accident_track55_1778336557.mp4 (250 frames)
+2026-05-09 21:22:57 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 102 | Score=1.000 | Frame=530 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:57 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 106 | Score=1.000 | Frame=530 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:57 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 130 | Score=1.000 | Frame=530 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:57 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 148 | Score=1.000 | Frame=530 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:57 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 150 | Score=1.000 | Frame=530 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:57 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 151 | Score=1.000 | Frame=530 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:57 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 152 | Score=1.000 | Frame=530 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:22:58 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 156 | Score=1.000 | Frame=545 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:00 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 157 | Score=1.000 | Frame=555 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:00 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 158 | Score=1.000 | Frame=560 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:00 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 159 | Score=1.000 | Frame=560 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:01 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 162 | Score=1.000 | Frame=565 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:01 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 163 | Score=1.000 | Frame=570 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:02 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 165 | Score=1.000 | Frame=575 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:02 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 148 | Score=1.000 | Frame=580 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:02 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 150 | Score=1.000 | Frame=580 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:02 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 152 | Score=1.000 | Frame=580 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:03 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 166 | Score=1.000 | Frame=585 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:05 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 167 | Score=1.000 | Frame=605 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:06 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 159 | Score=1.000 | Frame=610 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:06 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 163 | Score=1.000 | Frame=615 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:06 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 169 | Score=1.000 | Frame=615 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:07 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 148 | Score=1.000 | Frame=625 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:07 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 150 | Score=1.000 | Frame=625 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:07 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 152 | Score=1.000 | Frame=625 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:08 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 170 | Score=1.000 | Frame=630 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:08 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 172 | Score=1.000 | Frame=630 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:10 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 173 | Score=1.000 | Frame=645 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:10 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 174 | Score=1.000 | Frame=645 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:10 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 167 | Score=1.000 | Frame=650 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:15 | INFO     | anomaly.alert_manager          | Clip saved: outputs/accident_track102_1778336577.mp4 (250 frames)
+2026-05-09 21:23:16 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 148 | Score=1.000 | Frame=655 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:16 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 152 | Score=1.000 | Frame=655 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:16 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 159 | Score=0.880 | Frame=655 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:16 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 163 | Score=1.000 | Frame=655 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:16 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 167 | Score=1.000 | Frame=655 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:16 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 169 | Score=1.000 | Frame=655 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:16 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 172 | Score=0.913 | Frame=655 | Violations: ['SUDDEN_BRAKE', 'COLLISION_RISK']
+2026-05-09 21:23:16 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 173 | Score=1.000 | Frame=655 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:16 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 174 | Score=1.000 | Frame=655 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:17 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 175 | Score=1.000 | Frame=670 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:17 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 176 | Score=1.000 | Frame=670 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:17 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 177 | Score=1.000 | Frame=670 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:21 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 152 | Score=1.000 | Frame=690 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:21 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 159 | Score=1.000 | Frame=690 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:21 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 163 | Score=1.000 | Frame=690 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:21 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 167 | Score=1.000 | Frame=690 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:21 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 169 | Score=0.940 | Frame=690 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:21 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 172 | Score=1.000 | Frame=690 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:21 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 178 | Score=1.000 | Frame=695 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:23 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 177 | Score=1.000 | Frame=710 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:25 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 180 | Score=1.000 | Frame=730 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:25 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 182 | Score=1.000 | Frame=735 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:26 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 183 | Score=0.963 | Frame=740 | Violations: ['SUDDEN_BRAKE', 'COLLISION_RISK']
+2026-05-09 21:23:26 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 184 | Score=1.000 | Frame=740 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:26 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 159 | Score=1.000 | Frame=745 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:26 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 172 | Score=1.000 | Frame=745 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:34 | INFO     | anomaly.alert_manager          | Clip saved: outputs/accident_track148_1778336596.mp4 (250 frames)
+2026-05-09 21:23:34 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 159 | Score=1.000 | Frame=780 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:34 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 172 | Score=1.000 | Frame=780 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:34 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 184 | Score=1.000 | Frame=780 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:34 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 187 | Score=1.000 | Frame=780 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:35 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 188 | Score=1.000 | Frame=790 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:35 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 189 | Score=1.000 | Frame=790 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:35 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 191 | Score=1.000 | Frame=790 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:36 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 192 | Score=1.000 | Frame=800 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:37 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 195 | Score=1.000 | Frame=810 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:37 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 196 | Score=1.000 | Frame=810 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:38 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 198 | Score=1.000 | Frame=820 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:39 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 159 | Score=1.000 | Frame=830 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:39 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 172 | Score=1.000 | Frame=830 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:39 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 199 | Score=1.000 | Frame=830 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:40 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 200 | Score=1.000 | Frame=835 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:40 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 189 | Score=1.000 | Frame=840 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:40 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 202 | Score=1.000 | Frame=840 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:42 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 196 | Score=1.000 | Frame=855 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:43 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 198 | Score=1.000 | Frame=865 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:44 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 205 | Score=1.000 | Frame=870 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:45 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 200 | Score=1.000 | Frame=880 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:45 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 206 | Score=1.000 | Frame=880 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:45 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 207 | Score=1.000 | Frame=880 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:45 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 209 | Score=1.000 | Frame=885 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:52 | INFO     | anomaly.alert_manager          | Clip saved: outputs/accident_track159_1778336614.mp4 (250 frames)
+2026-05-09 21:23:52 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 196 | Score=1.000 | Frame=905 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:52 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 198 | Score=1.000 | Frame=905 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:52 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 200 | Score=1.000 | Frame=905 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:52 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 207 | Score=1.000 | Frame=905 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:52 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 209 | Score=0.908 | Frame=905 | Violations: ['SUDDEN_BRAKE', 'COLLISION_RISK']
+2026-05-09 21:23:56 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 211 | Score=1.000 | Frame=935 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:57 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 196 | Score=1.000 | Frame=945 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:57 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 198 | Score=1.000 | Frame=945 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:57 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 207 | Score=1.000 | Frame=945 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:57 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 209 | Score=1.000 | Frame=945 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:59 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 213 | Score=1.000 | Frame=960 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:59 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 215 | Score=1.000 | Frame=960 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:23:59 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 216 | Score=1.000 | Frame=965 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:24:00 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 218 | Score=1.000 | Frame=975 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:24:01 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 211 | Score=1.000 | Frame=985 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:24:01 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 220 | Score=1.000 | Frame=985 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:24:02 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 221 | Score=1.000 | Frame=990 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:24:02 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 196 | Score=1.000 | Frame=995 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:24:02 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 198 | Score=1.000 | Frame=995 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:24:02 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 209 | Score=1.000 | Frame=995 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:24:02 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 222 | Score=1.000 | Frame=995 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:24:03 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 223 | Score=1.000 | Frame=1000 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:24:03 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 224 | Score=1.000 | Frame=1000 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:24:04 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 215 | Score=1.000 | Frame=1005 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:24:04 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 226 | Score=1.000 | Frame=1005 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:24:04 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 216 | Score=1.000 | Frame=1010 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:24:11 | INFO     | anomaly.alert_manager          | Clip saved: outputs/accident_track196_1778336632.mp4 (250 frames)
+2026-05-09 21:24:11 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 196 | Score=1.000 | Frame=1030 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:24:11 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 198 | Score=1.000 | Frame=1030 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:24:11 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 209 | Score=1.000 | Frame=1030 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:24:11 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 211 | Score=1.000 | Frame=1030 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:24:11 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 215 | Score=1.000 | Frame=1030 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:24:11 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 216 | Score=1.000 | Frame=1030 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:24:11 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 221 | Score=1.000 | Frame=1030 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:24:11 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 223 | Score=1.000 | Frame=1030 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:24:11 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 224 | Score=1.000 | Frame=1030 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:24:12 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 228 | Score=1.000 | Frame=1035 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:24:15 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 229 | Score=1.000 | Frame=1055 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:24:16 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 231 | Score=0.937 | Frame=1065 | Violations: ['SUDDEN_BRAKE', 'COLLISION_RISK']
+2026-05-09 21:24:16 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 232 | Score=0.948 | Frame=1065 | Violations: ['SUDDEN_BRAKE', 'COLLISION_RISK']
+2026-05-09 21:24:17 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 198 | Score=1.000 | Frame=1070 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:24:17 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 209 | Score=1.000 | Frame=1070 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:24:17 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 215 | Score=1.000 | Frame=1070 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:24:17 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 216 | Score=1.000 | Frame=1070 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:24:17 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 224 | Score=1.000 | Frame=1070 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:24:17 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 233 | Score=1.000 | Frame=1070 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:24:17 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 234 | Score=1.000 | Frame=1075 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:24:18 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 236 | Score=1.000 | Frame=1080 | Violations: ['SUDDEN_BRAKE']
+2026-05-09 21:24:18 | INFO     | MAIN1                          | End of video.
+2026-05-09 21:24:18 | INFO     | MAIN1                          | Saved output: outputs/demo_result.mp4
