@@ -1,0 +1,1324 @@
+2026-05-09 17:31:37 | INFO     | __main__                       | ============================================================
+2026-05-09 17:31:37 | INFO     | __main__                       | TRAFFIC AI SYSTEM — Detection Test
+2026-05-09 17:31:37 | INFO     | __main__                       | Source: videos/linh_nam.mp4
+2026-05-09 17:31:37 | INFO     | __main__                       | ============================================================
+2026-05-09 17:31:37 | INFO     | detector.vehicle_detector      | VehicleDetector init | device=cuda | conf=0.35 | iou=0.65
+2026-05-09 17:31:37 | INFO     | detector.vehicle_detector      | Loading YOLOv8 model: models/yolov8n.pt
+2026-05-09 17:31:37 | WARNING  | detector.vehicle_detector      | Model không tồn tại tại models/yolov8n.pt. Auto-downloading yolov8n.pt...
+2026-05-09 17:31:40 | INFO     | detector.vehicle_detector      | Model warmup...
+2026-05-09 17:31:41 | INFO     | detector.vehicle_detector      | Model ready.
+2026-05-09 17:31:42 | INFO     | utils.video_stream             | Stream opened: videos/linh_nam.mp4 | 720×1280 @ 29.9FPS | Total frames: 433
+2026-05-09 17:31:42 | INFO     | __main__                       | Processing video... Nhấn 'q' để thoát.
+2026-05-09 17:31:42 | INFO     | utils.video_stream             | Video stream kết thúc.
+2026-05-09 17:35:27 | INFO     | __main__                       | ============================================================
+2026-05-09 17:35:27 | INFO     | __main__                       | TRAFFIC AI SYSTEM — Detection Test
+2026-05-09 17:35:27 | INFO     | __main__                       | Source: videos/linh_nam.mp4
+2026-05-09 17:35:27 | INFO     | __main__                       | ============================================================
+2026-05-09 17:35:27 | INFO     | detector.vehicle_detector      | VehicleDetector init | device=cuda | conf=0.35 | iou=0.65
+2026-05-09 17:35:27 | INFO     | detector.vehicle_detector      | Loading YOLOv8 model: models/yolov8n.pt
+2026-05-09 17:35:27 | WARNING  | detector.vehicle_detector      | Model không tồn tại tại models/yolov8n.pt. Auto-downloading yolov8n.pt...
+2026-05-09 17:35:28 | INFO     | detector.vehicle_detector      | Model warmup...
+2026-05-09 17:35:30 | INFO     | detector.vehicle_detector      | Model ready.
+2026-05-09 17:35:30 | INFO     | utils.video_stream             | Stream opened: videos/linh_nam.mp4 | 720×1280 @ 29.9FPS | Total frames: 433
+2026-05-09 17:35:30 | INFO     | __main__                       | Processing video... Nhấn 'q' để thoát.
+2026-05-09 17:35:31 | INFO     | utils.video_stream             | Video stream kết thúc.
+2026-05-09 17:35:31 | INFO     | __main__                       | Frame   433 | FPS: 19.9 | Detect: 14.2ms | Vehicles: 0 | Progress: 100.0%
+2026-05-09 17:35:31 | INFO     | utils.video_stream             | VideoStream stopped.
+2026-05-09 17:35:31 | INFO     | __main__                       | 
+========================================
+2026-05-09 17:35:31 | INFO     | __main__                       | DETECTION STATS:
+2026-05-09 17:35:31 | INFO     | __main__                       |   frames_processed: 20
+2026-05-09 17:35:31 | INFO     | __main__                       |   total_detections: 11
+2026-05-09 17:35:31 | INFO     | __main__                       |   avg_detections_per_frame: 0.55
+2026-05-09 17:35:31 | INFO     | __main__                       | ========================================
+2026-05-09 17:47:36 | INFO     | __main__                       | ============================================================
+2026-05-09 17:47:36 | INFO     | __main__                       | TRAFFIC AI SYSTEM — Detection Test
+2026-05-09 17:47:36 | INFO     | __main__                       | Source: videos/linh_nam.mp4
+2026-05-09 17:47:36 | INFO     | __main__                       | ============================================================
+2026-05-09 17:47:36 | INFO     | detector.vehicle_detector      | VehicleDetector init | device=cuda | conf=0.35 | iou=0.65
+2026-05-09 17:47:36 | INFO     | detector.vehicle_detector      | Loading YOLOv8 model: models/yolov8n.pt
+2026-05-09 17:47:36 | WARNING  | detector.vehicle_detector      | Model không tồn tại tại models/yolov8n.pt. Auto-downloading yolov8n.pt...
+2026-05-09 17:47:37 | INFO     | detector.vehicle_detector      | Model warmup...
+2026-05-09 17:47:39 | INFO     | detector.vehicle_detector      | Model ready.
+2026-05-09 17:47:39 | INFO     | utils.video_stream             | Stream opened: videos/linh_nam.mp4 | 720×1280 @ 29.9FPS | Total frames: 433
+2026-05-09 17:47:39 | INFO     | __main__                       | Processing video... Nhấn 'q' để thoát.
+2026-05-09 17:47:40 | INFO     | utils.video_stream             | Video stream kết thúc.
+2026-05-09 17:47:40 | INFO     | utils.video_stream             | VideoStream stopped.
+2026-05-09 17:47:40 | INFO     | __main__                       | 
+========================================
+2026-05-09 17:47:40 | INFO     | __main__                       | DETECTION STATS:
+2026-05-09 17:47:40 | INFO     | __main__                       |   frames_processed: 20
+2026-05-09 17:47:40 | INFO     | __main__                       |   total_detections: 11
+2026-05-09 17:47:40 | INFO     | __main__                       |   avg_detections_per_frame: 0.55
+2026-05-09 17:47:40 | INFO     | __main__                       | ========================================
+2026-05-09 17:53:57 | INFO     | __main__                       | ============================================================
+2026-05-09 17:53:57 | INFO     | __main__                       | TRAFFIC AI SYSTEM — Detection Test
+2026-05-09 17:53:57 | INFO     | __main__                       | Source: videos/linh_nam.mp4
+2026-05-09 17:53:57 | INFO     | __main__                       | ============================================================
+2026-05-09 17:53:57 | INFO     | detector.vehicle_detector      | VehicleDetector init | device=cuda | conf=0.35 | iou=0.65
+2026-05-09 17:53:57 | INFO     | detector.vehicle_detector      | Loading YOLOv8 model: models/yolov8n.pt
+2026-05-09 17:53:57 | WARNING  | detector.vehicle_detector      | Model không tồn tại tại models/yolov8n.pt. Auto-downloading yolov8n.pt...
+2026-05-09 17:53:58 | INFO     | detector.vehicle_detector      | Model warmup...
+2026-05-09 17:54:00 | INFO     | detector.vehicle_detector      | Model ready.
+2026-05-09 17:54:00 | INFO     | utils.video_stream             | Stream opened: videos/linh_nam.mp4 | 720×1280 @ 29.9FPS | Total frames: 433
+2026-05-09 17:56:09 | INFO     | __main__                       | ============================================================
+2026-05-09 17:56:09 | INFO     | __main__                       | TRAFFIC AI SYSTEM — Detection Test
+2026-05-09 17:56:09 | INFO     | __main__                       | Source: videos/linh_nam.mp4
+2026-05-09 17:56:09 | INFO     | __main__                       | ============================================================
+2026-05-09 17:56:09 | INFO     | detector.vehicle_detector      | VehicleDetector init | device=cuda | conf=0.35 | iou=0.65
+2026-05-09 17:56:09 | INFO     | detector.vehicle_detector      | Loading YOLOv8 model: models/yolov8n.pt
+2026-05-09 17:56:09 | WARNING  | detector.vehicle_detector      | Model không tồn tại tại models/yolov8n.pt. Auto-downloading yolov8n.pt...
+2026-05-09 17:56:10 | INFO     | detector.vehicle_detector      | Model warmup...
+2026-05-09 17:56:12 | INFO     | detector.vehicle_detector      | Model ready.
+2026-05-09 17:56:12 | INFO     | utils.video_stream             | Stream opened: videos/linh_nam.mp4 | 720×1280 @ 29.9FPS | Total frames: 433
+2026-05-09 17:56:12 | INFO     | __main__                       | Processing video... Nhấn 'q' để thoát.
+2026-05-09 17:56:13 | INFO     | utils.video_stream             | Video stream kết thúc.
+2026-05-09 17:58:23 | INFO     | __main__                       | ============================================================
+2026-05-09 17:58:23 | INFO     | __main__                       | TRAFFIC AI SYSTEM — Detection Test
+2026-05-09 17:58:23 | INFO     | __main__                       | Source: videos/linh_nam.mp4
+2026-05-09 17:58:23 | INFO     | __main__                       | ============================================================
+2026-05-09 17:58:23 | INFO     | detector.vehicle_detector      | VehicleDetector init | device=cuda | conf=0.35 | iou=0.65
+2026-05-09 17:58:23 | INFO     | detector.vehicle_detector      | Loading YOLOv8 model: models/yolov8n.pt
+2026-05-09 17:58:23 | WARNING  | detector.vehicle_detector      | Model không tồn tại tại models/yolov8n.pt. Auto-downloading yolov8n.pt...
+2026-05-09 17:58:24 | INFO     | detector.vehicle_detector      | Model warmup...
+2026-05-09 17:58:26 | INFO     | detector.vehicle_detector      | Model ready.
+2026-05-09 17:58:26 | INFO     | utils.video_stream             | Stream opened: videos/linh_nam.mp4 | 720×1280 @ 29.9FPS | Total frames: 433
+2026-05-09 17:58:26 | INFO     | __main__                       | Processing video... Nhấn 'q' để thoát.
+2026-05-09 17:58:27 | INFO     | utils.video_stream             | Video stream kết thúc.
+2026-05-09 17:58:27 | INFO     | utils.video_stream             | VideoStream stopped.
+2026-05-09 17:58:27 | INFO     | __main__                       | 
+========================================
+2026-05-09 17:58:27 | INFO     | __main__                       | DETECTION STATS:
+2026-05-09 17:58:27 | INFO     | __main__                       |   frames_processed: 21
+2026-05-09 17:58:27 | INFO     | __main__                       |   total_detections: 10
+2026-05-09 17:58:27 | INFO     | __main__                       |   avg_detections_per_frame: 0.48
+2026-05-09 17:58:27 | INFO     | __main__                       | ========================================
+2026-05-09 17:58:48 | INFO     | __main__                       | ============================================================
+2026-05-09 17:58:48 | INFO     | __main__                       | TRAFFIC AI SYSTEM — Detection Test
+2026-05-09 17:58:48 | INFO     | __main__                       | Source: videos/linh_nam.mp4
+2026-05-09 17:58:48 | INFO     | __main__                       | ============================================================
+2026-05-09 17:58:48 | INFO     | detector.vehicle_detector      | VehicleDetector init | device=cuda | conf=0.35 | iou=0.65
+2026-05-09 17:58:48 | INFO     | detector.vehicle_detector      | Loading YOLOv8 model: models/yolov8n.pt
+2026-05-09 17:58:48 | WARNING  | detector.vehicle_detector      | Model không tồn tại tại models/yolov8n.pt. Auto-downloading yolov8n.pt...
+2026-05-09 17:58:49 | INFO     | detector.vehicle_detector      | Model warmup...
+2026-05-09 17:58:50 | INFO     | detector.vehicle_detector      | Model ready.
+2026-05-09 17:58:50 | INFO     | utils.video_stream             | Stream opened: videos/linh_nam.mp4 | 720×1280 @ 29.9FPS | Total frames: 433
+2026-05-09 17:58:50 | INFO     | __main__                       | Processing video... Nhấn 'q' để thoát.
+2026-05-09 17:58:51 | INFO     | utils.video_stream             | Video stream kết thúc.
+2026-05-09 17:58:51 | INFO     | utils.video_stream             | VideoStream stopped.
+2026-05-09 17:58:51 | INFO     | __main__                       | 
+========================================
+2026-05-09 17:58:51 | INFO     | __main__                       | DETECTION STATS:
+2026-05-09 17:58:51 | INFO     | __main__                       |   frames_processed: 24
+2026-05-09 17:58:51 | INFO     | __main__                       |   total_detections: 23
+2026-05-09 17:58:51 | INFO     | __main__                       |   avg_detections_per_frame: 0.96
+2026-05-09 17:58:51 | INFO     | __main__                       | ========================================
+2026-05-09 18:01:55 | INFO     | __main__                       | ============================================================
+2026-05-09 18:01:55 | INFO     | __main__                       | TRAFFIC AI SYSTEM — Detection Test
+2026-05-09 18:01:55 | INFO     | __main__                       | Source: videos/linh_nam.mp4
+2026-05-09 18:01:55 | INFO     | __main__                       | ============================================================
+2026-05-09 18:01:55 | INFO     | detector.vehicle_detector      | VehicleDetector init | device=cuda | conf=0.35 | iou=0.65
+2026-05-09 18:01:55 | INFO     | detector.vehicle_detector      | Loading YOLOv8 model: models/yolov8n.pt
+2026-05-09 18:01:55 | WARNING  | detector.vehicle_detector      | Model không tồn tại tại models/yolov8n.pt. Auto-downloading yolov8n.pt...
+2026-05-09 18:01:57 | INFO     | detector.vehicle_detector      | Model warmup...
+2026-05-09 18:01:58 | INFO     | detector.vehicle_detector      | Model ready.
+2026-05-09 18:01:58 | INFO     | utils.video_stream             | Stream opened: videos/linh_nam.mp4 | 2560×1440 @ 60.0FPS | Total frames: 840
+2026-05-09 18:01:58 | INFO     | __main__                       | Saving output to: outputs/detection_output.mp4
+2026-05-09 18:01:58 | INFO     | __main__                       | Processing video... Nhấn 'q' để thoát.
+2026-05-09 18:01:59 | INFO     | __main__                       | Frame   107 | FPS: 6.6 | Detect: 21.7ms | Vehicles: 0 | Progress: 14.0%
+2026-05-09 18:02:00 | INFO     | __main__                       | Frame   238 | FPS: 11.7 | Detect: 26.7ms | Vehicles: 0 | Progress: 29.6%
+2026-05-09 18:02:01 | INFO     | __main__                       | Frame   409 | FPS: 12.3 | Detect: 18.8ms | Vehicles: 0 | Progress: 50.1%
+2026-05-09 18:02:02 | INFO     | __main__                       | Frame   583 | FPS: 13.3 | Detect: 21.2ms | Vehicles: 0 | Progress: 70.7%
+2026-05-09 18:02:03 | INFO     | __main__                       | Frame   757 | FPS: 13.7 | Detect: 22.0ms | Vehicles: 0 | Progress: 91.3%
+2026-05-09 18:02:04 | INFO     | utils.video_stream             | Video stream kết thúc.
+2026-05-09 18:02:02 | INFO     | utils.video_stream             | VideoStream stopped.
+2026-05-09 18:02:02 | INFO     | __main__                       | 
+========================================
+2026-05-09 18:02:02 | INFO     | __main__                       | DETECTION STATS:
+2026-05-09 18:02:02 | INFO     | __main__                       |   frames_processed: 74
+2026-05-09 18:02:02 | INFO     | __main__                       |   total_detections: 0
+2026-05-09 18:02:02 | INFO     | __main__                       |   avg_detections_per_frame: 0.0
+2026-05-09 18:02:02 | INFO     | __main__                       | ========================================
+2026-05-09 18:12:47 | INFO     | __main__                       | ============================================================
+2026-05-09 18:12:47 | INFO     | __main__                       | TRAFFIC AI SYSTEM — Detection Test
+2026-05-09 18:12:47 | INFO     | __main__                       | Source: videos/linh_nam.mp4
+2026-05-09 18:12:47 | INFO     | __main__                       | ============================================================
+2026-05-09 18:12:47 | INFO     | detector.vehicle_detector      | VehicleDetector init | device=cuda | conf=0.35 | iou=0.65
+2026-05-09 18:12:47 | INFO     | detector.vehicle_detector      | Loading YOLOv8 model: models/yolov8n.pt
+2026-05-09 18:12:47 | WARNING  | detector.vehicle_detector      | Model không tồn tại tại models/yolov8n.pt. Auto-downloading yolov8n.pt...
+2026-05-09 18:12:49 | INFO     | detector.vehicle_detector      | Model warmup...
+2026-05-09 18:12:50 | INFO     | detector.vehicle_detector      | Model ready.
+2026-05-09 18:12:50 | INFO     | utils.video_stream             | Stream opened: videos/linh_nam.mp4 | 2560×1440 @ 60.0FPS | Total frames: 840
+2026-05-09 18:12:50 | INFO     | __main__                       | Saving output to: outputs/detection_output.mp4
+2026-05-09 18:12:50 | INFO     | __main__                       | Processing video... Nhấn 'q' để thoát.
+2026-05-09 18:12:51 | INFO     | utils.video_stream             | VideoStream stopped.
+2026-05-09 18:12:51 | INFO     | __main__                       | 
+========================================
+2026-05-09 18:12:51 | INFO     | __main__                       | DETECTION STATS:
+2026-05-09 18:12:51 | INFO     | __main__                       |   frames_processed: 5
+2026-05-09 18:12:51 | INFO     | __main__                       |   total_detections: 1
+2026-05-09 18:12:51 | INFO     | __main__                       |   avg_detections_per_frame: 0.2
+2026-05-09 18:12:51 | INFO     | __main__                       | ========================================
+2026-05-09 18:14:15 | INFO     | __main__                       | ============================================================
+2026-05-09 18:14:15 | INFO     | __main__                       | TRAFFIC AI SYSTEM — Detection Test
+2026-05-09 18:14:15 | INFO     | __main__                       | Source: videos/linh_nam.mp4
+2026-05-09 18:14:15 | INFO     | __main__                       | ============================================================
+2026-05-09 18:14:15 | INFO     | detector.vehicle_detector      | VehicleDetector init | device=cuda | conf=0.35 | iou=0.65
+2026-05-09 18:14:15 | INFO     | detector.vehicle_detector      | Loading YOLOv8 model: models/yolov8n.pt
+2026-05-09 18:14:15 | WARNING  | detector.vehicle_detector      | Model không tồn tại tại models/yolov8n.pt. Auto-downloading yolov8n.pt...
+2026-05-09 18:14:17 | INFO     | detector.vehicle_detector      | Model warmup...
+2026-05-09 18:14:18 | INFO     | detector.vehicle_detector      | Model ready.
+2026-05-09 18:14:18 | INFO     | __main__                       | Video opened: 2560x1440 @ 60.0FPS | Total frames: 840
+2026-05-09 18:14:18 | INFO     | __main__                       | Saving output to: outputs/detection_output.mp4
+2026-05-09 18:14:18 | INFO     | __main__                       | Processing video...
+2026-05-09 18:14:19 | INFO     | __main__                       | Frame    11 | FPS: 11.9 | Detect: 28.1ms | Vehicles: 0 | Progress: 1.3%
+2026-05-09 18:14:20 | INFO     | __main__                       | Frame    35 | FPS: 24.0 | Detect: 9.8ms | Vehicles: 0 | Progress: 4.2%
+2026-05-09 18:14:21 | INFO     | __main__                       | Frame    63 | FPS: 27.1 | Detect: 21.9ms | Vehicles: 0 | Progress: 7.5%
+2026-05-09 18:14:22 | INFO     | __main__                       | Frame    92 | FPS: 28.4 | Detect: 18.4ms | Vehicles: 0 | Progress: 11.0%
+2026-05-09 18:14:23 | INFO     | __main__                       | Frame   120 | FPS: 27.7 | Detect: 11.2ms | Vehicles: 0 | Progress: 14.3%
+2026-05-09 18:14:24 | INFO     | __main__                       | Frame   148 | FPS: 27.6 | Detect: 11.9ms | Vehicles: 0 | Progress: 17.6%
+2026-05-09 18:14:25 | INFO     | __main__                       | Frame   176 | FPS: 27.8 | Detect: 11.7ms | Vehicles: 0 | Progress: 21.0%
+2026-05-09 18:14:26 | INFO     | __main__                       | Frame   200 | FPS: 24.0 | Detect: 19.0ms | Vehicles: 0 | Progress: 23.8%
+2026-05-09 18:14:27 | INFO     | __main__                       | Frame   223 | FPS: 22.8 | Detect: 18.1ms | Vehicles: 0 | Progress: 26.5%
+2026-05-09 18:14:28 | INFO     | __main__                       | Frame   246 | FPS: 23.0 | Detect: 18.9ms | Vehicles: 0 | Progress: 29.3%
+2026-05-09 18:14:29 | INFO     | __main__                       | Frame   269 | FPS: 22.4 | Detect: 18.9ms | Vehicles: 0 | Progress: 32.0%
+2026-05-09 18:14:30 | INFO     | __main__                       | Frame   291 | FPS: 21.8 | Detect: 19.6ms | Vehicles: 0 | Progress: 34.6%
+2026-05-09 18:14:32 | INFO     | __main__                       | Frame   314 | FPS: 22.3 | Detect: 20.0ms | Vehicles: 0 | Progress: 37.4%
+2026-05-09 18:14:33 | INFO     | __main__                       | Frame   336 | FPS: 21.6 | Detect: 20.7ms | Vehicles: 0 | Progress: 40.0%
+2026-05-09 18:14:34 | INFO     | __main__                       | Frame   359 | FPS: 22.1 | Detect: 22.8ms | Vehicles: 0 | Progress: 42.7%
+2026-05-09 18:14:35 | INFO     | __main__                       | Frame   381 | FPS: 21.6 | Detect: 20.4ms | Vehicles: 0 | Progress: 45.4%
+2026-05-09 18:14:36 | INFO     | __main__                       | Frame   403 | FPS: 21.8 | Detect: 21.2ms | Vehicles: 0 | Progress: 48.0%
+2026-05-09 18:14:37 | INFO     | __main__                       | Frame   425 | FPS: 21.6 | Detect: 22.1ms | Vehicles: 0 | Progress: 50.6%
+2026-05-09 18:14:38 | INFO     | __main__                       | Frame   447 | FPS: 22.0 | Detect: 22.2ms | Vehicles: 0 | Progress: 53.2%
+2026-05-09 18:14:39 | INFO     | __main__                       | Frame   470 | FPS: 22.0 | Detect: 23.4ms | Vehicles: 0 | Progress: 56.0%
+2026-05-09 18:14:40 | INFO     | __main__                       | Frame   492 | FPS: 21.7 | Detect: 21.3ms | Vehicles: 0 | Progress: 58.6%
+2026-05-09 18:14:41 | INFO     | __main__                       | Frame   514 | FPS: 21.9 | Detect: 21.2ms | Vehicles: 0 | Progress: 61.2%
+2026-05-09 18:14:42 | INFO     | __main__                       | Frame   592 | FPS: 76.8 | Detect: 20.5ms | Vehicles: 0 | Progress: 70.5%
+2026-05-09 18:14:43 | INFO     | __main__                       | Frame   613 | FPS: 20.0 | Detect: 21.1ms | Vehicles: 0 | Progress: 73.0%
+2026-05-09 18:14:44 | INFO     | __main__                       | Frame   636 | FPS: 22.2 | Detect: 19.5ms | Vehicles: 0 | Progress: 75.7%
+2026-05-09 18:14:45 | INFO     | __main__                       | Frame   658 | FPS: 22.0 | Detect: 21.3ms | Vehicles: 0 | Progress: 78.3%
+2026-05-09 18:14:46 | INFO     | __main__                       | Frame   679 | FPS: 20.9 | Detect: 20.2ms | Vehicles: 0 | Progress: 80.8%
+2026-05-09 18:14:47 | INFO     | __main__                       | Frame   702 | FPS: 22.4 | Detect: 19.7ms | Vehicles: 0 | Progress: 83.6%
+2026-05-09 18:14:48 | INFO     | __main__                       | Frame   725 | FPS: 22.2 | Detect: 23.5ms | Vehicles: 0 | Progress: 86.3%
+2026-05-09 18:14:49 | INFO     | __main__                       | Frame   747 | FPS: 21.7 | Detect: 22.2ms | Vehicles: 0 | Progress: 88.9%
+2026-05-09 18:14:50 | INFO     | __main__                       | Frame   769 | FPS: 21.0 | Detect: 21.2ms | Vehicles: 0 | Progress: 91.5%
+2026-05-09 18:14:51 | INFO     | __main__                       | Frame   791 | FPS: 21.7 | Detect: 20.6ms | Vehicles: 0 | Progress: 94.2%
+2026-05-09 18:14:52 | INFO     | __main__                       | Frame   813 | FPS: 21.3 | Detect: 20.6ms | Vehicles: 0 | Progress: 96.8%
+2026-05-09 18:14:53 | INFO     | __main__                       | Frame   835 | FPS: 21.2 | Detect: 20.2ms | Vehicles: 0 | Progress: 99.4%
+2026-05-09 18:14:53 | INFO     | __main__                       | End of video.
+2026-05-09 18:14:53 | INFO     | __main__                       | ========================================
+2026-05-09 18:14:53 | INFO     | __main__                       | DETECTION STATS
+2026-05-09 18:14:53 | INFO     | __main__                       | frames_processed: 840
+2026-05-09 18:14:53 | INFO     | __main__                       | total_detections: 0
+2026-05-09 18:14:53 | INFO     | __main__                       | avg_detections_per_frame: 0.0
+2026-05-09 18:14:53 | INFO     | __main__                       | ========================================
+2026-05-09 18:14:53 | INFO     | __main__                       | Output saved to: outputs/detection_output.mp4
+2026-05-09 18:18:01 | INFO     | __main__                       | ============================================================
+2026-05-09 18:18:01 | INFO     | __main__                       | TRAFFIC AI SYSTEM — Detection Test
+2026-05-09 18:18:01 | INFO     | __main__                       | Source: videos/linh_nam.mp4
+2026-05-09 18:18:01 | INFO     | __main__                       | ============================================================
+2026-05-09 18:18:01 | INFO     | detector.vehicle_detector      | VehicleDetector init | device=cuda | conf=0.35 | iou=0.65
+2026-05-09 18:18:01 | INFO     | detector.vehicle_detector      | Classes filter: [2, 3, 5, 7]
+2026-05-09 18:18:01 | INFO     | detector.vehicle_detector      | Loading YOLOv8 model: models/yolov8n.pt
+2026-05-09 18:18:01 | WARNING  | detector.vehicle_detector      | Model không tồn tại tại models/yolov8n.pt. Auto-downloading yolov8n.pt...
+2026-05-09 18:18:02 | INFO     | detector.vehicle_detector      | Model warmup...
+2026-05-09 18:18:03 | INFO     | detector.vehicle_detector      | Model ready.
+2026-05-09 18:18:03 | INFO     | __main__                       | Video opened: 2560x1440 @ 60.0FPS | Total frames: 840
+2026-05-09 18:18:03 | INFO     | __main__                       | Saving output to: outputs/detection_output.mp4
+2026-05-09 18:18:03 | INFO     | __main__                       | Processing video...
+2026-05-09 18:18:04 | INFO     | __main__                       | Frame    13 | FPS: 13.8 | Detect: 13.1ms | Vehicles: 0 | Progress: 1.5%
+2026-05-09 18:18:05 | INFO     | __main__                       | Frame    39 | FPS: 25.7 | Detect: 14.1ms | Vehicles: 0 | Progress: 4.6%
+2026-05-09 18:18:06 | INFO     | __main__                       | Frame    66 | FPS: 26.7 | Detect: 13.7ms | Vehicles: 0 | Progress: 7.9%
+2026-05-09 18:18:07 | INFO     | __main__                       | Frame    92 | FPS: 25.6 | Detect: 19.2ms | Vehicles: 0 | Progress: 11.0%
+2026-05-09 18:18:08 | INFO     | __main__                       | Frame   118 | FPS: 25.6 | Detect: 11.8ms | Vehicles: 0 | Progress: 14.0%
+2026-05-09 18:18:09 | INFO     | __main__                       | Frame   141 | FPS: 22.8 | Detect: 25.3ms | Vehicles: 0 | Progress: 16.8%
+2026-05-09 18:18:10 | INFO     | __main__                       | Frame   167 | FPS: 25.6 | Detect: 11.8ms | Vehicles: 0 | Progress: 19.9%
+2026-05-09 18:18:12 | INFO     | __main__                       | Frame   193 | FPS: 25.4 | Detect: 17.3ms | Vehicles: 0 | Progress: 23.0%
+2026-05-09 18:18:13 | INFO     | __main__                       | Frame   217 | FPS: 23.3 | Detect: 17.5ms | Vehicles: 0 | Progress: 25.8%
+2026-05-09 18:18:14 | INFO     | __main__                       | Frame   239 | FPS: 20.9 | Detect: 21.6ms | Vehicles: 0 | Progress: 28.5%
+2026-05-09 18:18:15 | INFO     | __main__                       | Frame   260 | FPS: 20.6 | Detect: 19.7ms | Vehicles: 0 | Progress: 31.0%
+2026-05-09 18:18:16 | INFO     | __main__                       | Frame   282 | FPS: 21.3 | Detect: 23.3ms | Vehicles: 0 | Progress: 33.6%
+2026-05-09 18:18:17 | INFO     | __main__                       | Frame   302 | FPS: 19.9 | Detect: 26.1ms | Vehicles: 0 | Progress: 36.0%
+2026-05-09 18:18:18 | INFO     | __main__                       | Frame   323 | FPS: 20.4 | Detect: 20.9ms | Vehicles: 0 | Progress: 38.5%
+2026-05-09 18:18:19 | INFO     | __main__                       | Frame   345 | FPS: 21.0 | Detect: 21.2ms | Vehicles: 0 | Progress: 41.1%
+2026-05-09 18:18:20 | INFO     | __main__                       | Frame   367 | FPS: 21.6 | Detect: 22.0ms | Vehicles: 0 | Progress: 43.7%
+2026-05-09 18:18:21 | INFO     | __main__                       | Frame   442 | FPS: 73.7 | Detect: 21.1ms | Vehicles: 0 | Progress: 52.6%
+2026-05-09 18:18:22 | INFO     | __main__                       | Frame   464 | FPS: 21.6 | Detect: 21.7ms | Vehicles: 0 | Progress: 55.2%
+2026-05-09 18:18:23 | INFO     | __main__                       | Frame   486 | FPS: 21.3 | Detect: 22.5ms | Vehicles: 0 | Progress: 57.9%
+2026-05-09 18:18:24 | INFO     | __main__                       | Frame   507 | FPS: 20.6 | Detect: 22.1ms | Vehicles: 0 | Progress: 60.4%
+2026-05-09 18:18:25 | INFO     | __main__                       | Frame   529 | FPS: 21.7 | Detect: 21.8ms | Vehicles: 0 | Progress: 63.0%
+2026-05-09 18:18:26 | INFO     | __main__                       | Frame   551 | FPS: 21.7 | Detect: 22.1ms | Vehicles: 0 | Progress: 65.6%
+2026-05-09 18:18:27 | INFO     | __main__                       | Frame   574 | FPS: 22.1 | Detect: 21.2ms | Vehicles: 0 | Progress: 68.3%
+2026-05-09 18:18:28 | INFO     | __main__                       | Frame   596 | FPS: 21.5 | Detect: 24.4ms | Vehicles: 0 | Progress: 71.0%
+2026-05-09 18:18:29 | INFO     | __main__                       | Frame   617 | FPS: 20.8 | Detect: 23.2ms | Vehicles: 0 | Progress: 73.5%
+2026-05-09 18:18:30 | INFO     | __main__                       | Frame   639 | FPS: 21.4 | Detect: 21.1ms | Vehicles: 0 | Progress: 76.1%
+2026-05-09 18:18:31 | INFO     | __main__                       | Frame   661 | FPS: 21.8 | Detect: 23.5ms | Vehicles: 0 | Progress: 78.7%
+2026-05-09 18:18:32 | INFO     | __main__                       | Frame   683 | FPS: 21.5 | Detect: 20.8ms | Vehicles: 0 | Progress: 81.3%
+2026-05-09 18:18:33 | INFO     | __main__                       | Frame   703 | FPS: 19.5 | Detect: 17.5ms | Vehicles: 0 | Progress: 83.7%
+2026-05-09 18:18:34 | INFO     | __main__                       | Frame   725 | FPS: 21.2 | Detect: 21.1ms | Vehicles: 0 | Progress: 86.3%
+2026-05-09 18:18:35 | INFO     | __main__                       | Frame   747 | FPS: 21.4 | Detect: 28.8ms | Vehicles: 0 | Progress: 88.9%
+2026-05-09 18:18:36 | INFO     | __main__                       | Frame   768 | FPS: 20.7 | Detect: 20.3ms | Vehicles: 0 | Progress: 91.4%
+2026-05-09 18:18:37 | INFO     | __main__                       | Frame   790 | FPS: 21.9 | Detect: 19.4ms | Vehicles: 0 | Progress: 94.0%
+2026-05-09 18:18:38 | INFO     | __main__                       | Frame   813 | FPS: 22.6 | Detect: 19.0ms | Vehicles: 0 | Progress: 96.8%
+2026-05-09 18:18:39 | INFO     | __main__                       | Frame   834 | FPS: 20.5 | Detect: 20.7ms | Vehicles: 0 | Progress: 99.3%
+2026-05-09 18:18:39 | INFO     | __main__                       | End of video.
+2026-05-09 18:18:39 | INFO     | __main__                       | ========================================
+2026-05-09 18:18:39 | INFO     | __main__                       | DETECTION STATS
+2026-05-09 18:18:39 | INFO     | __main__                       | frames_processed: 840
+2026-05-09 18:18:39 | INFO     | __main__                       | total_detections: 0
+2026-05-09 18:18:39 | INFO     | __main__                       | avg_detections_per_frame: 0.0
+2026-05-09 18:18:39 | INFO     | __main__                       | ========================================
+2026-05-09 18:18:39 | INFO     | __main__                       | Output saved to: outputs/detection_output.mp4
+2026-05-09 18:20:20 | INFO     | __main__                       | ============================================================
+2026-05-09 18:20:20 | INFO     | __main__                       | TRAFFIC AI SYSTEM — Detection Test
+2026-05-09 18:20:20 | INFO     | __main__                       | Source: videos/linh_nam.mp4
+2026-05-09 18:20:20 | INFO     | __main__                       | ============================================================
+2026-05-09 18:20:20 | INFO     | detector.vehicle_detector      | VehicleDetector init | device=cuda | conf=0.15 | iou=0.65
+2026-05-09 18:20:20 | INFO     | detector.vehicle_detector      | Classes filter: [2, 3, 5, 7]
+2026-05-09 18:20:20 | INFO     | detector.vehicle_detector      | Loading YOLOv8 model: models/yolov8s.pt
+2026-05-09 18:20:20 | WARNING  | detector.vehicle_detector      | Model không tồn tại tại models/yolov8s.pt. Auto-downloading yolov8n.pt...
+2026-05-09 18:20:21 | INFO     | detector.vehicle_detector      | Model warmup...
+2026-05-09 18:20:22 | INFO     | detector.vehicle_detector      | Model ready.
+2026-05-09 18:20:22 | INFO     | __main__                       | Video opened: 2560x1440 @ 60.0FPS | Total frames: 840
+2026-05-09 18:20:22 | INFO     | __main__                       | Saving output to: outputs/detection_output.mp4
+2026-05-09 18:20:22 | INFO     | __main__                       | Processing video...
+2026-05-09 18:20:23 | INFO     | __main__                       | Frame    11 | FPS: 11.7 | Detect: 19.9ms | Vehicles: 1 | Progress: 1.3%
+2026-05-09 18:20:24 | INFO     | __main__                       | Frame    33 | FPS: 21.6 | Detect: 18.7ms | Vehicles: 1 | Progress: 3.9%
+2026-05-09 18:20:25 | INFO     | __main__                       | Frame    55 | FPS: 21.5 | Detect: 25.8ms | Vehicles: 1 | Progress: 6.5%
+2026-05-09 18:20:26 | INFO     | __main__                       | Frame    78 | FPS: 22.6 | Detect: 18.0ms | Vehicles: 0 | Progress: 9.3%
+2026-05-09 18:20:27 | INFO     | __main__                       | Frame   100 | FPS: 21.9 | Detect: 19.4ms | Vehicles: 1 | Progress: 11.9%
+2026-05-09 18:20:28 | INFO     | __main__                       | Frame   122 | FPS: 21.8 | Detect: 21.4ms | Vehicles: 1 | Progress: 14.5%
+2026-05-09 18:20:29 | INFO     | __main__                       | Frame   144 | FPS: 21.7 | Detect: 20.9ms | Vehicles: 0 | Progress: 17.1%
+2026-05-09 18:20:30 | INFO     | __main__                       | Frame   166 | FPS: 21.6 | Detect: 22.7ms | Vehicles: 0 | Progress: 19.8%
+2026-05-09 18:20:31 | INFO     | __main__                       | Frame   188 | FPS: 21.2 | Detect: 23.9ms | Vehicles: 0 | Progress: 22.4%
+2026-05-09 18:20:32 | INFO     | __main__                       | Frame   209 | FPS: 20.3 | Detect: 26.3ms | Vehicles: 1 | Progress: 24.9%
+2026-05-09 18:20:33 | INFO     | __main__                       | Frame   230 | FPS: 20.1 | Detect: 25.3ms | Vehicles: 1 | Progress: 27.4%
+2026-05-09 18:20:34 | INFO     | __main__                       | Frame   251 | FPS: 20.3 | Detect: 24.6ms | Vehicles: 2 | Progress: 29.9%
+2026-05-09 18:20:35 | INFO     | __main__                       | Frame   271 | FPS: 19.8 | Detect: 25.5ms | Vehicles: 0 | Progress: 32.3%
+2026-05-09 18:20:36 | INFO     | __main__                       | Frame   291 | FPS: 20.0 | Detect: 25.8ms | Vehicles: 0 | Progress: 34.6%
+2026-05-09 18:20:38 | INFO     | __main__                       | Frame   312 | FPS: 20.2 | Detect: 27.2ms | Vehicles: 0 | Progress: 37.1%
+2026-05-09 18:20:39 | INFO     | __main__                       | Frame   333 | FPS: 20.2 | Detect: 24.9ms | Vehicles: 0 | Progress: 39.6%
+2026-05-09 18:20:40 | INFO     | __main__                       | Frame   353 | FPS: 19.2 | Detect: 26.6ms | Vehicles: 0 | Progress: 42.0%
+2026-05-09 18:20:41 | INFO     | __main__                       | Frame   372 | FPS: 19.0 | Detect: 30.3ms | Vehicles: 0 | Progress: 44.3%
+2026-05-09 18:20:42 | INFO     | __main__                       | Frame   391 | FPS: 18.3 | Detect: 28.6ms | Vehicles: 1 | Progress: 46.5%
+2026-05-09 18:20:43 | INFO     | __main__                       | Frame   410 | FPS: 18.7 | Detect: 27.9ms | Vehicles: 0 | Progress: 48.8%
+2026-05-09 18:20:44 | INFO     | __main__                       | Frame   429 | FPS: 18.7 | Detect: 27.1ms | Vehicles: 0 | Progress: 51.1%
+2026-05-09 18:20:45 | INFO     | __main__                       | Frame   449 | FPS: 19.6 | Detect: 26.5ms | Vehicles: 1 | Progress: 53.5%
+2026-05-09 18:20:46 | INFO     | __main__                       | Frame   468 | FPS: 18.6 | Detect: 28.4ms | Vehicles: 2 | Progress: 55.7%
+2026-05-09 18:20:47 | INFO     | __main__                       | Frame   487 | FPS: 18.7 | Detect: 31.3ms | Vehicles: 1 | Progress: 58.0%
+2026-05-09 18:20:48 | INFO     | __main__                       | Frame   506 | FPS: 18.9 | Detect: 27.6ms | Vehicles: 2 | Progress: 60.2%
+2026-05-09 18:20:49 | INFO     | __main__                       | Frame   526 | FPS: 19.1 | Detect: 28.1ms | Vehicles: 1 | Progress: 62.6%
+2026-05-09 18:20:50 | INFO     | __main__                       | Frame   598 | FPS: 70.0 | Detect: 27.8ms | Vehicles: 1 | Progress: 71.2%
+2026-05-09 18:20:51 | INFO     | __main__                       | Frame   618 | FPS: 19.2 | Detect: 24.9ms | Vehicles: 0 | Progress: 73.6%
+2026-05-09 18:20:52 | INFO     | __main__                       | Frame   639 | FPS: 20.2 | Detect: 24.8ms | Vehicles: 1 | Progress: 76.1%
+2026-05-09 18:20:53 | INFO     | __main__                       | Frame   660 | FPS: 20.3 | Detect: 24.9ms | Vehicles: 0 | Progress: 78.6%
+2026-05-09 18:20:54 | INFO     | __main__                       | Frame   680 | FPS: 19.8 | Detect: 24.5ms | Vehicles: 0 | Progress: 81.0%
+2026-05-09 18:20:55 | INFO     | __main__                       | Frame   699 | FPS: 18.8 | Detect: 26.0ms | Vehicles: 0 | Progress: 83.2%
+2026-05-09 18:20:56 | INFO     | __main__                       | Frame   718 | FPS: 18.6 | Detect: 25.5ms | Vehicles: 0 | Progress: 85.5%
+2026-05-09 18:20:57 | INFO     | __main__                       | Frame   737 | FPS: 18.5 | Detect: 29.2ms | Vehicles: 1 | Progress: 87.7%
+2026-05-09 18:20:58 | INFO     | __main__                       | Frame   757 | FPS: 19.0 | Detect: 26.4ms | Vehicles: 0 | Progress: 90.1%
+2026-05-09 18:20:59 | INFO     | __main__                       | Frame   776 | FPS: 18.8 | Detect: 25.7ms | Vehicles: 0 | Progress: 92.4%
+2026-05-09 18:21:00 | INFO     | __main__                       | Frame   797 | FPS: 20.3 | Detect: 26.4ms | Vehicles: 0 | Progress: 94.9%
+2026-05-09 18:21:01 | INFO     | __main__                       | Frame   818 | FPS: 20.5 | Detect: 25.2ms | Vehicles: 0 | Progress: 97.4%
+2026-05-09 18:21:02 | INFO     | __main__                       | Frame   839 | FPS: 20.2 | Detect: 26.0ms | Vehicles: 0 | Progress: 99.9%
+2026-05-09 18:21:02 | INFO     | __main__                       | End of video.
+2026-05-09 18:21:02 | INFO     | __main__                       | ========================================
+2026-05-09 18:21:02 | INFO     | __main__                       | DETECTION STATS
+2026-05-09 18:21:02 | INFO     | __main__                       | frames_processed: 840
+2026-05-09 18:21:02 | INFO     | __main__                       | total_detections: 321
+2026-05-09 18:21:02 | INFO     | __main__                       | avg_detections_per_frame: 0.38
+2026-05-09 18:21:02 | INFO     | __main__                       | ========================================
+2026-05-09 18:21:02 | INFO     | __main__                       | Output saved to: outputs/detection_output.mp4
+2026-05-09 18:24:07 | INFO     | __main__                       | ============================================================
+2026-05-09 18:24:07 | INFO     | __main__                       | TRAFFIC AI SYSTEM — Detection Test
+2026-05-09 18:24:07 | INFO     | __main__                       | Source: videos/linh_nam.mp4
+2026-05-09 18:24:07 | INFO     | __main__                       | ============================================================
+2026-05-09 18:24:07 | INFO     | detector.vehicle_detector      | VehicleDetector init | device=cuda | conf=0.15 | iou=0.65
+2026-05-09 18:24:07 | INFO     | detector.vehicle_detector      | Classes filter: [2, 3, 5, 7]
+2026-05-09 18:24:07 | INFO     | detector.vehicle_detector      | Loading YOLOv8 model: models/yolov8s.pt
+2026-05-09 18:24:07 | WARNING  | detector.vehicle_detector      | Model không tồn tại tại models/yolov8s.pt. Auto-downloading yolov8n.pt...
+2026-05-09 18:24:08 | INFO     | detector.vehicle_detector      | Model warmup...
+2026-05-09 18:24:10 | INFO     | detector.vehicle_detector      | Model ready.
+2026-05-09 18:24:10 | INFO     | __main__                       | Video opened: 2560x1440 @ 60.0FPS | Total frames: 840
+2026-05-09 18:24:10 | INFO     | __main__                       | Saving output to: outputs/detection_output.mp4
+2026-05-09 18:24:10 | INFO     | __main__                       | Processing video...
+2026-05-09 18:24:11 | INFO     | __main__                       | Frame    11 | FPS: 11.8 | Detect: 30.3ms | Vehicles: 0 | Progress: 1.3%
+2026-05-09 18:24:12 | INFO     | __main__                       | Frame    30 | FPS: 18.2 | Detect: 30.9ms | Vehicles: 0 | Progress: 3.6%
+2026-05-09 18:24:13 | INFO     | __main__                       | Frame    49 | FPS: 18.4 | Detect: 29.2ms | Vehicles: 0 | Progress: 5.8%
+2026-05-09 18:24:14 | INFO     | __main__                       | Frame    68 | FPS: 18.5 | Detect: 28.5ms | Vehicles: 0 | Progress: 8.1%
+2026-05-09 18:24:15 | INFO     | __main__                       | Frame    87 | FPS: 18.8 | Detect: 28.1ms | Vehicles: 1 | Progress: 10.4%
+2026-05-09 18:24:16 | INFO     | __main__                       | Frame   106 | FPS: 18.5 | Detect: 28.6ms | Vehicles: 1 | Progress: 12.6%
+2026-05-09 18:24:17 | INFO     | __main__                       | Frame   125 | FPS: 18.3 | Detect: 30.9ms | Vehicles: 1 | Progress: 14.9%
+2026-05-09 18:24:18 | INFO     | __main__                       | Frame   144 | FPS: 18.5 | Detect: 29.2ms | Vehicles: 0 | Progress: 17.1%
+2026-05-09 18:24:19 | INFO     | __main__                       | Frame   163 | FPS: 19.0 | Detect: 27.3ms | Vehicles: 0 | Progress: 19.4%
+2026-05-09 18:24:20 | INFO     | __main__                       | Frame   230 | FPS: 64.8 | Detect: 28.2ms | Vehicles: 0 | Progress: 27.4%
+2026-05-09 18:24:21 | INFO     | __main__                       | Frame   250 | FPS: 19.3 | Detect: 27.4ms | Vehicles: 0 | Progress: 29.8%
+2026-05-09 18:24:22 | INFO     | __main__                       | Frame   270 | FPS: 19.2 | Detect: 28.8ms | Vehicles: 1 | Progress: 32.1%
+2026-05-09 18:24:23 | INFO     | __main__                       | Frame   289 | FPS: 19.0 | Detect: 27.4ms | Vehicles: 0 | Progress: 34.4%
+2026-05-09 18:24:24 | INFO     | __main__                       | Frame   309 | FPS: 19.5 | Detect: 26.6ms | Vehicles: 0 | Progress: 36.8%
+2026-05-09 18:24:25 | INFO     | __main__                       | Frame   329 | FPS: 19.5 | Detect: 27.9ms | Vehicles: 0 | Progress: 39.2%
+2026-05-09 18:24:26 | INFO     | __main__                       | Frame   349 | FPS: 19.5 | Detect: 28.2ms | Vehicles: 0 | Progress: 41.5%
+2026-05-09 18:24:27 | INFO     | __main__                       | Frame   369 | FPS: 19.3 | Detect: 30.6ms | Vehicles: 1 | Progress: 43.9%
+2026-05-09 18:24:28 | INFO     | __main__                       | Frame   388 | FPS: 18.5 | Detect: 30.4ms | Vehicles: 0 | Progress: 46.2%
+2026-05-09 18:24:29 | INFO     | __main__                       | Frame   407 | FPS: 18.5 | Detect: 31.0ms | Vehicles: 0 | Progress: 48.5%
+2026-05-09 18:24:30 | INFO     | __main__                       | Frame   426 | FPS: 18.8 | Detect: 28.8ms | Vehicles: 0 | Progress: 50.7%
+2026-05-09 18:24:31 | INFO     | __main__                       | Frame   445 | FPS: 18.7 | Detect: 29.1ms | Vehicles: 1 | Progress: 53.0%
+2026-05-09 18:24:32 | INFO     | __main__                       | Frame   464 | FPS: 18.8 | Detect: 31.5ms | Vehicles: 1 | Progress: 55.2%
+2026-05-09 18:24:33 | INFO     | __main__                       | Frame   483 | FPS: 18.0 | Detect: 28.9ms | Vehicles: 0 | Progress: 57.5%
+2026-05-09 18:24:34 | INFO     | __main__                       | Frame   502 | FPS: 18.5 | Detect: 32.7ms | Vehicles: 3 | Progress: 59.8%
+2026-05-09 18:24:35 | INFO     | __main__                       | Frame   521 | FPS: 18.3 | Detect: 29.2ms | Vehicles: 0 | Progress: 62.0%
+2026-05-09 18:24:36 | INFO     | __main__                       | Frame   540 | FPS: 18.6 | Detect: 28.5ms | Vehicles: 0 | Progress: 64.3%
+2026-05-09 18:24:37 | INFO     | __main__                       | Frame   559 | FPS: 18.7 | Detect: 28.4ms | Vehicles: 0 | Progress: 66.5%
+2026-05-09 18:24:38 | INFO     | __main__                       | Frame   578 | FPS: 18.5 | Detect: 28.6ms | Vehicles: 0 | Progress: 68.8%
+2026-05-09 18:24:39 | INFO     | __main__                       | Frame   598 | FPS: 19.2 | Detect: 29.0ms | Vehicles: 0 | Progress: 71.2%
+2026-05-09 18:24:40 | INFO     | __main__                       | Frame   617 | FPS: 18.2 | Detect: 28.8ms | Vehicles: 1 | Progress: 73.5%
+2026-05-09 18:24:41 | INFO     | __main__                       | Frame   636 | FPS: 18.6 | Detect: 28.8ms | Vehicles: 1 | Progress: 75.7%
+2026-05-09 18:24:42 | INFO     | __main__                       | Frame   654 | FPS: 17.7 | Detect: 29.3ms | Vehicles: 0 | Progress: 77.9%
+2026-05-09 18:24:43 | INFO     | __main__                       | Frame   673 | FPS: 18.7 | Detect: 30.7ms | Vehicles: 1 | Progress: 80.1%
+2026-05-09 18:24:44 | INFO     | __main__                       | Frame   692 | FPS: 18.5 | Detect: 27.9ms | Vehicles: 0 | Progress: 82.4%
+2026-05-09 18:24:46 | INFO     | __main__                       | Frame   712 | FPS: 19.2 | Detect: 28.7ms | Vehicles: 1 | Progress: 84.8%
+2026-05-09 18:24:47 | INFO     | __main__                       | Frame   732 | FPS: 19.4 | Detect: 27.6ms | Vehicles: 0 | Progress: 87.1%
+2026-05-09 18:24:48 | INFO     | __main__                       | Frame   752 | FPS: 19.2 | Detect: 28.3ms | Vehicles: 0 | Progress: 89.5%
+2026-05-09 18:24:49 | INFO     | __main__                       | Frame   772 | FPS: 19.4 | Detect: 28.8ms | Vehicles: 0 | Progress: 91.9%
+2026-05-09 18:24:50 | INFO     | __main__                       | End of video.
+2026-05-09 18:24:50 | INFO     | __main__                       | ========================================
+2026-05-09 18:24:50 | INFO     | __main__                       | DETECTION STATS
+2026-05-09 18:24:50 | INFO     | __main__                       | frames_processed: 840
+2026-05-09 18:24:50 | INFO     | __main__                       | total_detections: 270
+2026-05-09 18:24:50 | INFO     | __main__                       | avg_detections_per_frame: 0.32
+2026-05-09 18:24:50 | INFO     | __main__                       | ========================================
+2026-05-09 18:24:50 | INFO     | __main__                       | Output saved to: outputs/detection_output.mp4
+2026-05-09 18:28:45 | INFO     | __main__                       | ============================================================
+2026-05-09 18:28:45 | INFO     | __main__                       | TRAFFIC AI SYSTEM — Detection Test
+2026-05-09 18:28:45 | INFO     | __main__                       | Source: videos/linh_nam.mp4
+2026-05-09 18:28:45 | INFO     | __main__                       | ============================================================
+2026-05-09 18:28:45 | INFO     | detector.vehicle_detector      | VehicleDetector init | device=cuda | conf=0.2 | iou=0.65
+2026-05-09 18:28:45 | INFO     | detector.vehicle_detector      | Classes filter: [2, 3, 5, 7]
+2026-05-09 18:28:45 | INFO     | detector.vehicle_detector      | Loading YOLOv8 model: models/yolov8s.pt
+2026-05-09 18:28:45 | WARNING  | detector.vehicle_detector      | Model không tồn tại tại models/yolov8s.pt. Auto-downloading yolov8n.pt...
+2026-05-09 18:28:46 | INFO     | detector.vehicle_detector      | Model warmup...
+2026-05-09 18:28:47 | INFO     | detector.vehicle_detector      | Model ready.
+2026-05-09 18:28:47 | INFO     | __main__                       | Video opened: 2560x1440 @ 60.0FPS | Total frames: 840
+2026-05-09 18:28:47 | INFO     | __main__                       | Saving output to: outputs/detection_output.mp4
+2026-05-09 18:28:47 | INFO     | __main__                       | Processing video...
+2026-05-09 18:28:48 | INFO     | __main__                       | Frame    10 | FPS: 11.0 | Detect: 29.7ms | Vehicles: 0 | Progress: 1.2%
+2026-05-09 18:28:49 | INFO     | __main__                       | Frame    83 | FPS: 69.6 | Detect: 21.8ms | Vehicles: 1 | Progress: 9.9%
+2026-05-09 18:28:50 | INFO     | __main__                       | Frame   104 | FPS: 20.5 | Detect: 22.9ms | Vehicles: 1 | Progress: 12.4%
+2026-05-09 18:28:51 | INFO     | __main__                       | Frame   124 | FPS: 19.8 | Detect: 26.5ms | Vehicles: 1 | Progress: 14.8%
+2026-05-09 18:28:52 | INFO     | __main__                       | Frame   144 | FPS: 19.2 | Detect: 27.0ms | Vehicles: 0 | Progress: 17.1%
+2026-05-09 18:28:53 | INFO     | __main__                       | Frame   163 | FPS: 17.8 | Detect: 32.6ms | Vehicles: 0 | Progress: 19.4%
+2026-05-09 18:28:54 | INFO     | __main__                       | Frame   181 | FPS: 17.2 | Detect: 27.7ms | Vehicles: 0 | Progress: 21.5%
+2026-05-09 18:28:56 | INFO     | __main__                       | Frame   200 | FPS: 18.3 | Detect: 30.2ms | Vehicles: 1 | Progress: 23.8%
+2026-05-09 18:28:57 | INFO     | __main__                       | Frame   219 | FPS: 18.4 | Detect: 25.9ms | Vehicles: 1 | Progress: 26.1%
+2026-05-09 18:28:58 | INFO     | __main__                       | Frame   239 | FPS: 19.5 | Detect: 24.7ms | Vehicles: 0 | Progress: 28.5%
+2026-05-09 18:28:59 | INFO     | __main__                       | Frame   257 | FPS: 17.7 | Detect: 22.9ms | Vehicles: 0 | Progress: 30.6%
+2026-05-09 18:29:00 | INFO     | __main__                       | Frame   276 | FPS: 19.0 | Detect: 23.7ms | Vehicles: 0 | Progress: 32.9%
+2026-05-09 18:29:01 | INFO     | __main__                       | Frame   295 | FPS: 18.9 | Detect: 28.5ms | Vehicles: 0 | Progress: 35.1%
+2026-05-09 18:29:02 | INFO     | __main__                       | Frame   314 | FPS: 18.7 | Detect: 28.7ms | Vehicles: 0 | Progress: 37.4%
+2026-05-09 18:29:03 | INFO     | __main__                       | Frame   333 | FPS: 18.5 | Detect: 23.6ms | Vehicles: 0 | Progress: 39.6%
+2026-05-09 18:29:04 | INFO     | __main__                       | Frame   353 | FPS: 19.6 | Detect: 28.0ms | Vehicles: 0 | Progress: 42.0%
+2026-05-09 18:29:05 | INFO     | __main__                       | Frame   373 | FPS: 19.5 | Detect: 18.8ms | Vehicles: 0 | Progress: 44.4%
+2026-05-09 18:29:06 | INFO     | __main__                       | Frame   392 | FPS: 18.6 | Detect: 20.6ms | Vehicles: 1 | Progress: 46.7%
+2026-05-09 18:29:07 | INFO     | __main__                       | Frame   410 | FPS: 18.0 | Detect: 25.8ms | Vehicles: 0 | Progress: 48.8%
+2026-05-09 18:29:08 | INFO     | __main__                       | Frame   429 | FPS: 18.3 | Detect: 19.5ms | Vehicles: 0 | Progress: 51.1%
+2026-05-09 18:29:09 | INFO     | __main__                       | Frame   449 | FPS: 19.1 | Detect: 27.4ms | Vehicles: 1 | Progress: 53.5%
+2026-05-09 18:29:10 | INFO     | __main__                       | Frame   469 | FPS: 19.3 | Detect: 25.5ms | Vehicles: 1 | Progress: 55.8%
+2026-05-09 18:29:11 | INFO     | __main__                       | Frame   486 | FPS: 16.9 | Detect: 32.6ms | Vehicles: 1 | Progress: 57.9%
+2026-05-09 18:29:12 | INFO     | __main__                       | Frame   505 | FPS: 18.0 | Detect: 27.2ms | Vehicles: 2 | Progress: 60.1%
+2026-05-09 18:29:13 | INFO     | __main__                       | Frame   523 | FPS: 18.0 | Detect: 26.1ms | Vehicles: 0 | Progress: 62.3%
+2026-05-09 18:29:14 | INFO     | __main__                       | Frame   542 | FPS: 18.5 | Detect: 22.5ms | Vehicles: 0 | Progress: 64.5%
+2026-05-09 18:29:15 | INFO     | __main__                       | Frame   562 | FPS: 18.9 | Detect: 27.9ms | Vehicles: 0 | Progress: 66.9%
+2026-05-09 18:29:16 | INFO     | __main__                       | Frame   581 | FPS: 18.2 | Detect: 24.3ms | Vehicles: 0 | Progress: 69.2%
+2026-05-09 18:29:17 | INFO     | __main__                       | Frame   599 | FPS: 17.5 | Detect: 53.5ms | Vehicles: 1 | Progress: 71.3%
+2026-05-09 18:29:18 | INFO     | __main__                       | Frame   616 | FPS: 16.6 | Detect: 27.8ms | Vehicles: 1 | Progress: 73.3%
+2026-05-09 18:29:19 | INFO     | __main__                       | Frame   675 | FPS: 57.2 | Detect: 29.7ms | Vehicles: 0 | Progress: 80.4%
+2026-05-09 18:29:20 | INFO     | __main__                       | Frame   692 | FPS: 16.7 | Detect: 38.2ms | Vehicles: 0 | Progress: 82.4%
+2026-05-09 18:29:21 | INFO     | __main__                       | Frame   708 | FPS: 15.5 | Detect: 30.2ms | Vehicles: 0 | Progress: 84.3%
+2026-05-09 18:29:22 | INFO     | __main__                       | Frame   725 | FPS: 16.6 | Detect: 31.7ms | Vehicles: 0 | Progress: 86.3%
+2026-05-09 18:29:23 | INFO     | __main__                       | Frame   743 | FPS: 17.9 | Detect: 26.6ms | Vehicles: 0 | Progress: 88.5%
+2026-05-09 18:29:24 | INFO     | __main__                       | Frame   761 | FPS: 17.6 | Detect: 29.2ms | Vehicles: 0 | Progress: 90.6%
+2026-05-09 18:29:25 | INFO     | __main__                       | Frame   779 | FPS: 17.2 | Detect: 25.6ms | Vehicles: 0 | Progress: 92.7%
+2026-05-09 18:29:26 | INFO     | __main__                       | Frame   795 | FPS: 15.1 | Detect: 28.0ms | Vehicles: 0 | Progress: 94.6%
+2026-05-09 18:29:27 | INFO     | __main__                       | Frame   812 | FPS: 16.7 | Detect: 27.2ms | Vehicles: 0 | Progress: 96.7%
+2026-05-09 18:29:28 | INFO     | __main__                       | Frame   830 | FPS: 17.5 | Detect: 29.3ms | Vehicles: 0 | Progress: 98.8%
+2026-05-09 18:29:29 | INFO     | __main__                       | End of video.
+2026-05-09 18:29:29 | INFO     | __main__                       | ========================================
+2026-05-09 18:29:29 | INFO     | __main__                       | DETECTION STATS
+2026-05-09 18:29:29 | INFO     | __main__                       | frames_processed: 840
+2026-05-09 18:29:29 | INFO     | __main__                       | total_detections: 247
+2026-05-09 18:29:29 | INFO     | __main__                       | avg_detections_per_frame: 0.29
+2026-05-09 18:29:29 | INFO     | __main__                       | ========================================
+2026-05-09 18:29:29 | INFO     | __main__                       | Output saved to: outputs/detection_output.mp4
+2026-05-09 18:34:20 | INFO     | __main__                       | ============================================================
+2026-05-09 18:34:20 | INFO     | __main__                       | TRAFFIC AI SYSTEM — Detection Test
+2026-05-09 18:34:20 | INFO     | __main__                       | Source: videos/linh_nam.mp4
+2026-05-09 18:34:20 | INFO     | __main__                       | ============================================================
+2026-05-09 18:34:20 | INFO     | detector.vehicle_detector      | VehicleDetector init | device=cuda | conf=0.2 | iou=0.65
+2026-05-09 18:34:20 | INFO     | detector.vehicle_detector      | Classes filter: [2, 3, 5, 7]
+2026-05-09 18:34:20 | INFO     | detector.vehicle_detector      | Loading YOLOv8 model: models/yolov8s.pt
+2026-05-09 18:34:20 | WARNING  | detector.vehicle_detector      | Model không tồn tại tại models/yolov8s.pt. Auto-downloading yolov8n.pt...
+2026-05-09 18:34:21 | INFO     | detector.vehicle_detector      | Model warmup...
+2026-05-09 18:34:22 | INFO     | detector.vehicle_detector      | Model ready.
+2026-05-09 18:34:22 | INFO     | __main__                       | Video opened: 2560x1440 @ 60.0FPS | Total frames: 2838
+2026-05-09 18:34:22 | INFO     | __main__                       | Saving output to: outputs/detection_output.mp4
+2026-05-09 18:34:22 | INFO     | __main__                       | Processing video...
+2026-05-09 18:34:23 | INFO     | __main__                       | Frame    14 | FPS: 14.7 | Detect: 60.5ms | Vehicles: 0 | Progress: 0.5%
+2026-05-09 18:34:24 | INFO     | __main__                       | Frame    30 | FPS: 15.1 | Detect: 33.2ms | Vehicles: 21 | Progress: 1.1%
+2026-05-09 18:34:26 | INFO     | __main__                       | Frame    46 | FPS: 15.4 | Detect: 38.8ms | Vehicles: 14 | Progress: 1.6%
+2026-05-09 18:34:27 | INFO     | __main__                       | Frame    64 | FPS: 17.2 | Detect: 33.2ms | Vehicles: 14 | Progress: 2.3%
+2026-05-09 18:34:28 | INFO     | __main__                       | Frame    84 | FPS: 19.3 | Detect: 31.2ms | Vehicles: 11 | Progress: 3.0%
+2026-05-09 18:34:29 | INFO     | __main__                       | Frame   104 | FPS: 19.0 | Detect: 30.3ms | Vehicles: 9 | Progress: 3.7%
+2026-05-09 18:34:30 | INFO     | __main__                       | Frame   122 | FPS: 17.7 | Detect: 27.0ms | Vehicles: 14 | Progress: 4.3%
+2026-05-09 18:34:31 | INFO     | __main__                       | Frame   141 | FPS: 17.9 | Detect: 33.9ms | Vehicles: 14 | Progress: 5.0%
+2026-05-09 18:34:32 | INFO     | __main__                       | Frame   159 | FPS: 17.6 | Detect: 34.1ms | Vehicles: 14 | Progress: 5.6%
+2026-05-09 18:34:33 | INFO     | __main__                       | Frame   175 | FPS: 15.6 | Detect: 34.1ms | Vehicles: 19 | Progress: 6.2%
+2026-05-09 18:34:34 | INFO     | __main__                       | Frame   190 | FPS: 14.6 | Detect: 31.3ms | Vehicles: 18 | Progress: 6.7%
+2026-05-09 18:34:35 | INFO     | __main__                       | Frame   207 | FPS: 16.8 | Detect: 28.8ms | Vehicles: 15 | Progress: 7.3%
+2026-05-09 18:34:36 | INFO     | __main__                       | Frame   224 | FPS: 16.6 | Detect: 31.6ms | Vehicles: 17 | Progress: 7.9%
+2026-05-09 18:34:37 | INFO     | __main__                       | Frame   240 | FPS: 16.0 | Detect: 28.9ms | Vehicles: 10 | Progress: 8.5%
+2026-05-09 18:34:38 | INFO     | __main__                       | Frame   256 | FPS: 15.3 | Detect: 31.5ms | Vehicles: 10 | Progress: 9.0%
+2026-05-09 18:34:39 | INFO     | __main__                       | Frame   271 | FPS: 14.0 | Detect: 42.9ms | Vehicles: 16 | Progress: 9.5%
+2026-05-09 18:34:40 | INFO     | __main__                       | Frame   285 | FPS: 13.8 | Detect: 35.2ms | Vehicles: 15 | Progress: 10.0%
+2026-05-09 18:34:41 | INFO     | __main__                       | Frame   300 | FPS: 14.7 | Detect: 29.8ms | Vehicles: 4 | Progress: 10.6%
+2026-05-09 18:34:42 | INFO     | __main__                       | Frame   316 | FPS: 15.4 | Detect: 35.7ms | Vehicles: 11 | Progress: 11.1%
+2026-05-09 18:34:43 | INFO     | __main__                       | Frame   333 | FPS: 16.6 | Detect: 33.3ms | Vehicles: 16 | Progress: 11.7%
+2026-05-09 18:34:44 | INFO     | __main__                       | Frame   349 | FPS: 15.9 | Detect: 36.6ms | Vehicles: 12 | Progress: 12.3%
+2026-05-09 18:34:45 | INFO     | __main__                       | Frame   365 | FPS: 15.3 | Detect: 30.6ms | Vehicles: 12 | Progress: 12.9%
+2026-05-09 18:34:46 | INFO     | __main__                       | Frame   381 | FPS: 15.6 | Detect: 33.5ms | Vehicles: 11 | Progress: 13.4%
+2026-05-09 18:34:47 | INFO     | __main__                       | Frame   400 | FPS: 18.1 | Detect: 26.9ms | Vehicles: 5 | Progress: 14.1%
+2026-05-09 18:34:48 | INFO     | __main__                       | Frame   468 | FPS: 66.3 | Detect: 20.3ms | Vehicles: 5 | Progress: 16.5%
+2026-05-09 18:34:49 | INFO     | __main__                       | Frame   487 | FPS: 18.4 | Detect: 30.8ms | Vehicles: 6 | Progress: 17.2%
+2026-05-09 18:34:50 | INFO     | __main__                       | Frame   506 | FPS: 18.3 | Detect: 28.0ms | Vehicles: 6 | Progress: 17.8%
+2026-05-09 18:34:51 | INFO     | __main__                       | Frame   525 | FPS: 18.3 | Detect: 29.5ms | Vehicles: 3 | Progress: 18.5%
+2026-05-09 18:34:52 | INFO     | __main__                       | Frame   542 | FPS: 15.8 | Detect: 43.3ms | Vehicles: 7 | Progress: 19.1%
+2026-05-09 18:34:53 | INFO     | __main__                       | Frame   559 | FPS: 16.3 | Detect: 31.6ms | Vehicles: 4 | Progress: 19.7%
+2026-05-09 18:34:55 | INFO     | __main__                       | Frame   575 | FPS: 15.1 | Detect: 33.4ms | Vehicles: 5 | Progress: 20.3%
+2026-05-09 18:34:56 | INFO     | __main__                       | Frame   591 | FPS: 15.2 | Detect: 35.7ms | Vehicles: 3 | Progress: 20.8%
+2026-05-09 18:34:57 | INFO     | __main__                       | Frame   608 | FPS: 16.1 | Detect: 34.6ms | Vehicles: 2 | Progress: 21.4%
+2026-05-09 18:34:58 | INFO     | __main__                       | Frame   625 | FPS: 16.9 | Detect: 32.7ms | Vehicles: 3 | Progress: 22.0%
+2026-05-09 18:34:59 | INFO     | __main__                       | Frame   642 | FPS: 16.6 | Detect: 37.3ms | Vehicles: 0 | Progress: 22.6%
+2026-05-09 18:35:00 | INFO     | __main__                       | Frame   659 | FPS: 16.2 | Detect: 31.1ms | Vehicles: 4 | Progress: 23.2%
+2026-05-09 18:35:01 | INFO     | __main__                       | Frame   675 | FPS: 15.6 | Detect: 30.1ms | Vehicles: 3 | Progress: 23.8%
+2026-05-09 18:35:02 | INFO     | __main__                       | Frame   693 | FPS: 17.0 | Detect: 27.5ms | Vehicles: 2 | Progress: 24.4%
+2026-05-09 18:35:03 | INFO     | __main__                       | Frame   710 | FPS: 17.0 | Detect: 36.1ms | Vehicles: 3 | Progress: 25.0%
+2026-05-09 18:35:04 | INFO     | __main__                       | Frame   727 | FPS: 16.7 | Detect: 31.9ms | Vehicles: 2 | Progress: 25.6%
+2026-05-09 18:35:05 | INFO     | __main__                       | Frame   743 | FPS: 15.6 | Detect: 42.0ms | Vehicles: 3 | Progress: 26.2%
+2026-05-09 18:35:06 | INFO     | __main__                       | Frame   759 | FPS: 15.6 | Detect: 26.9ms | Vehicles: 2 | Progress: 26.7%
+2026-05-09 18:35:07 | INFO     | __main__                       | Frame   776 | FPS: 16.6 | Detect: 23.9ms | Vehicles: 6 | Progress: 27.3%
+2026-05-09 18:35:08 | INFO     | __main__                       | Frame   793 | FPS: 16.6 | Detect: 25.1ms | Vehicles: 2 | Progress: 27.9%
+2026-05-09 18:35:09 | INFO     | __main__                       | Frame   810 | FPS: 16.4 | Detect: 21.4ms | Vehicles: 4 | Progress: 28.5%
+2026-05-09 18:35:10 | INFO     | __main__                       | Frame   827 | FPS: 16.4 | Detect: 40.0ms | Vehicles: 6 | Progress: 29.1%
+2026-05-09 18:35:11 | INFO     | __main__                       | Frame   845 | FPS: 17.7 | Detect: 28.7ms | Vehicles: 4 | Progress: 29.8%
+2026-05-09 18:35:12 | INFO     | __main__                       | Frame   863 | FPS: 17.1 | Detect: 27.3ms | Vehicles: 4 | Progress: 30.4%
+2026-05-09 18:35:13 | INFO     | __main__                       | Frame   881 | FPS: 17.2 | Detect: 37.1ms | Vehicles: 3 | Progress: 31.0%
+2026-05-09 18:35:14 | INFO     | __main__                       | Frame   899 | FPS: 17.7 | Detect: 29.3ms | Vehicles: 3 | Progress: 31.7%
+2026-05-09 18:35:15 | INFO     | __main__                       | Frame   918 | FPS: 19.0 | Detect: 33.5ms | Vehicles: 1 | Progress: 32.3%
+2026-05-09 18:35:16 | INFO     | __main__                       | Frame   937 | FPS: 18.7 | Detect: 31.0ms | Vehicles: 3 | Progress: 33.0%
+2026-05-09 18:35:17 | INFO     | __main__                       | Frame   957 | FPS: 19.1 | Detect: 26.9ms | Vehicles: 5 | Progress: 33.7%
+2026-05-09 18:35:18 | INFO     | __main__                       | Frame  1022 | FPS: 63.1 | Detect: 23.9ms | Vehicles: 2 | Progress: 36.0%
+2026-05-09 18:35:19 | INFO     | __main__                       | Frame  1041 | FPS: 18.1 | Detect: 25.7ms | Vehicles: 5 | Progress: 36.7%
+2026-05-09 18:35:20 | INFO     | __main__                       | Frame  1059 | FPS: 17.6 | Detect: 31.3ms | Vehicles: 9 | Progress: 37.3%
+2026-05-09 18:35:21 | INFO     | __main__                       | Frame  1078 | FPS: 18.6 | Detect: 24.3ms | Vehicles: 5 | Progress: 38.0%
+2026-05-09 18:35:22 | INFO     | __main__                       | Frame  1097 | FPS: 18.4 | Detect: 27.9ms | Vehicles: 10 | Progress: 38.7%
+2026-05-09 18:35:23 | INFO     | __main__                       | Frame  1115 | FPS: 17.8 | Detect: 32.3ms | Vehicles: 11 | Progress: 39.3%
+2026-05-09 18:35:24 | INFO     | __main__                       | Frame  1132 | FPS: 16.7 | Detect: 44.3ms | Vehicles: 6 | Progress: 39.9%
+2026-05-09 18:35:25 | INFO     | __main__                       | Frame  1148 | FPS: 15.6 | Detect: 32.7ms | Vehicles: 8 | Progress: 40.5%
+2026-05-09 18:35:26 | INFO     | __main__                       | Frame  1163 | FPS: 14.3 | Detect: 37.3ms | Vehicles: 8 | Progress: 41.0%
+2026-05-09 18:35:27 | INFO     | __main__                       | Frame  1178 | FPS: 14.4 | Detect: 25.9ms | Vehicles: 8 | Progress: 41.5%
+2026-05-09 18:35:28 | INFO     | __main__                       | Frame  1195 | FPS: 17.0 | Detect: 27.4ms | Vehicles: 11 | Progress: 42.1%
+2026-05-09 18:35:30 | INFO     | __main__                       | Frame  1212 | FPS: 16.8 | Detect: 28.0ms | Vehicles: 10 | Progress: 42.7%
+2026-05-09 18:35:31 | INFO     | __main__                       | Frame  1229 | FPS: 17.0 | Detect: 29.3ms | Vehicles: 10 | Progress: 43.3%
+2026-05-09 18:35:32 | INFO     | __main__                       | Frame  1247 | FPS: 17.1 | Detect: 38.4ms | Vehicles: 14 | Progress: 43.9%
+2026-05-09 18:35:33 | INFO     | __main__                       | Frame  1263 | FPS: 15.6 | Detect: 28.6ms | Vehicles: 12 | Progress: 44.5%
+2026-05-09 18:35:34 | INFO     | __main__                       | Frame  1280 | FPS: 16.9 | Detect: 26.9ms | Vehicles: 11 | Progress: 45.1%
+2026-05-09 18:35:35 | INFO     | __main__                       | Frame  1296 | FPS: 15.5 | Detect: 22.8ms | Vehicles: 11 | Progress: 45.7%
+2026-05-09 18:35:36 | INFO     | __main__                       | Frame  1313 | FPS: 16.1 | Detect: 31.6ms | Vehicles: 13 | Progress: 46.3%
+2026-05-09 18:35:37 | INFO     | __main__                       | Frame  1330 | FPS: 16.4 | Detect: 31.3ms | Vehicles: 12 | Progress: 46.9%
+2026-05-09 18:35:38 | INFO     | __main__                       | Frame  1347 | FPS: 16.2 | Detect: 34.0ms | Vehicles: 9 | Progress: 47.5%
+2026-05-09 18:35:39 | INFO     | __main__                       | Frame  1364 | FPS: 16.7 | Detect: 31.0ms | Vehicles: 12 | Progress: 48.1%
+2026-05-09 18:35:40 | INFO     | __main__                       | Frame  1381 | FPS: 16.4 | Detect: 39.1ms | Vehicles: 14 | Progress: 48.7%
+2026-05-09 18:35:41 | INFO     | __main__                       | Frame  1396 | FPS: 14.9 | Detect: 32.7ms | Vehicles: 11 | Progress: 49.2%
+2026-05-09 18:35:42 | INFO     | __main__                       | Frame  1412 | FPS: 15.9 | Detect: 31.9ms | Vehicles: 16 | Progress: 49.8%
+2026-05-09 18:35:43 | INFO     | __main__                       | Frame  1429 | FPS: 16.2 | Detect: 39.5ms | Vehicles: 15 | Progress: 50.4%
+2026-05-09 18:35:44 | INFO     | __main__                       | Frame  1447 | FPS: 17.4 | Detect: 35.4ms | Vehicles: 14 | Progress: 51.0%
+2026-05-09 18:35:45 | INFO     | __main__                       | Frame  1464 | FPS: 16.5 | Detect: 38.8ms | Vehicles: 13 | Progress: 51.6%
+2026-05-09 18:35:46 | INFO     | __main__                       | Frame  1481 | FPS: 16.5 | Detect: 30.0ms | Vehicles: 15 | Progress: 52.2%
+2026-05-09 18:35:47 | INFO     | __main__                       | Frame  1498 | FPS: 16.4 | Detect: 28.6ms | Vehicles: 13 | Progress: 52.8%
+2026-05-09 18:35:48 | INFO     | __main__                       | Frame  1554 | FPS: 55.3 | Detect: 32.1ms | Vehicles: 13 | Progress: 54.8%
+2026-05-09 18:35:49 | INFO     | __main__                       | Frame  1569 | FPS: 14.8 | Detect: 40.8ms | Vehicles: 18 | Progress: 55.3%
+2026-05-09 18:35:50 | INFO     | __main__                       | Frame  1585 | FPS: 15.4 | Detect: 33.1ms | Vehicles: 16 | Progress: 55.8%
+2026-05-09 18:35:51 | INFO     | __main__                       | Frame  1600 | FPS: 15.0 | Detect: 39.9ms | Vehicles: 13 | Progress: 56.4%
+2026-05-09 18:35:52 | INFO     | __main__                       | Frame  1615 | FPS: 14.3 | Detect: 32.9ms | Vehicles: 17 | Progress: 56.9%
+2026-05-09 18:35:53 | INFO     | __main__                       | Frame  1631 | FPS: 15.9 | Detect: 34.2ms | Vehicles: 14 | Progress: 57.5%
+2026-05-09 18:35:54 | INFO     | __main__                       | Frame  1648 | FPS: 16.2 | Detect: 30.3ms | Vehicles: 8 | Progress: 58.1%
+2026-05-09 18:35:55 | INFO     | __main__                       | Frame  1665 | FPS: 16.7 | Detect: 38.4ms | Vehicles: 11 | Progress: 58.7%
+2026-05-09 18:35:56 | INFO     | __main__                       | Frame  1682 | FPS: 16.9 | Detect: 33.2ms | Vehicles: 11 | Progress: 59.3%
+2026-05-09 18:35:57 | INFO     | __main__                       | Frame  1698 | FPS: 15.9 | Detect: 33.4ms | Vehicles: 13 | Progress: 59.8%
+2026-05-09 18:35:58 | INFO     | __main__                       | Frame  1714 | FPS: 15.6 | Detect: 49.3ms | Vehicles: 21 | Progress: 60.4%
+2026-05-09 18:35:59 | INFO     | __main__                       | Frame  1730 | FPS: 15.3 | Detect: 27.0ms | Vehicles: 11 | Progress: 61.0%
+2026-05-09 18:36:00 | INFO     | __main__                       | Frame  1746 | FPS: 15.3 | Detect: 33.4ms | Vehicles: 13 | Progress: 61.5%
+2026-05-09 18:36:01 | INFO     | __main__                       | Frame  1759 | FPS: 11.8 | Detect: 63.4ms | Vehicles: 13 | Progress: 62.0%
+2026-05-09 18:36:02 | INFO     | __main__                       | Frame  1772 | FPS: 12.5 | Detect: 32.6ms | Vehicles: 19 | Progress: 62.4%
+2026-05-09 18:36:03 | INFO     | __main__                       | Frame  1786 | FPS: 13.9 | Detect: 31.2ms | Vehicles: 20 | Progress: 62.9%
+2026-05-09 18:36:05 | INFO     | __main__                       | Frame  1802 | FPS: 15.1 | Detect: 32.6ms | Vehicles: 13 | Progress: 63.5%
+2026-05-09 18:36:06 | INFO     | __main__                       | Frame  1819 | FPS: 16.0 | Detect: 37.2ms | Vehicles: 11 | Progress: 64.1%
+2026-05-09 18:36:07 | INFO     | __main__                       | Frame  1835 | FPS: 15.7 | Detect: 30.8ms | Vehicles: 14 | Progress: 64.7%
+2026-05-09 18:36:08 | INFO     | __main__                       | Frame  1853 | FPS: 17.1 | Detect: 35.8ms | Vehicles: 12 | Progress: 65.3%
+2026-05-09 18:36:09 | INFO     | __main__                       | Frame  1870 | FPS: 16.9 | Detect: 30.1ms | Vehicles: 13 | Progress: 65.9%
+2026-05-09 18:36:10 | INFO     | __main__                       | Frame  1887 | FPS: 16.6 | Detect: 31.7ms | Vehicles: 12 | Progress: 66.5%
+2026-05-09 18:36:11 | INFO     | __main__                       | Frame  1904 | FPS: 16.8 | Detect: 26.4ms | Vehicles: 4 | Progress: 67.1%
+2026-05-09 18:36:12 | INFO     | __main__                       | Frame  1922 | FPS: 17.8 | Detect: 26.2ms | Vehicles: 7 | Progress: 67.7%
+2026-05-09 18:36:13 | INFO     | __main__                       | Frame  1939 | FPS: 16.7 | Detect: 37.7ms | Vehicles: 9 | Progress: 68.3%
+2026-05-09 18:36:14 | INFO     | __main__                       | Frame  1954 | FPS: 14.7 | Detect: 34.4ms | Vehicles: 8 | Progress: 68.9%
+2026-05-09 18:36:15 | INFO     | __main__                       | Frame  1970 | FPS: 15.9 | Detect: 32.5ms | Vehicles: 12 | Progress: 69.4%
+2026-05-09 18:36:16 | INFO     | __main__                       | Frame  1988 | FPS: 17.8 | Detect: 26.5ms | Vehicles: 1 | Progress: 70.0%
+2026-05-09 18:36:17 | INFO     | __main__                       | Frame  2007 | FPS: 17.9 | Detect: 27.2ms | Vehicles: 3 | Progress: 70.7%
+2026-05-09 18:36:18 | INFO     | __main__                       | Frame  2074 | FPS: 63.7 | Detect: 32.0ms | Vehicles: 4 | Progress: 73.1%
+2026-05-09 18:36:19 | INFO     | __main__                       | Frame  2093 | FPS: 18.5 | Detect: 25.0ms | Vehicles: 5 | Progress: 73.7%
+2026-05-09 18:36:20 | INFO     | __main__                       | Frame  2112 | FPS: 18.3 | Detect: 26.8ms | Vehicles: 2 | Progress: 74.4%
+2026-05-09 18:36:21 | INFO     | __main__                       | Frame  2130 | FPS: 17.6 | Detect: 32.8ms | Vehicles: 6 | Progress: 75.1%
+2026-05-09 18:36:22 | INFO     | __main__                       | Frame  2148 | FPS: 17.9 | Detect: 31.1ms | Vehicles: 6 | Progress: 75.7%
+2026-05-09 18:36:23 | INFO     | __main__                       | Frame  2167 | FPS: 18.3 | Detect: 26.6ms | Vehicles: 2 | Progress: 76.4%
+2026-05-09 18:36:24 | INFO     | __main__                       | Frame  2186 | FPS: 18.8 | Detect: 27.5ms | Vehicles: 8 | Progress: 77.0%
+2026-05-09 18:36:25 | INFO     | __main__                       | Frame  2205 | FPS: 18.4 | Detect: 27.7ms | Vehicles: 10 | Progress: 77.7%
+2026-05-09 18:36:26 | INFO     | __main__                       | Frame  2224 | FPS: 18.2 | Detect: 28.5ms | Vehicles: 3 | Progress: 78.4%
+2026-05-09 18:36:27 | INFO     | __main__                       | Frame  2243 | FPS: 18.5 | Detect: 33.8ms | Vehicles: 5 | Progress: 79.0%
+2026-05-09 18:36:28 | INFO     | __main__                       | Frame  2263 | FPS: 19.1 | Detect: 23.4ms | Vehicles: 5 | Progress: 79.7%
+2026-05-09 18:36:29 | INFO     | __main__                       | Frame  2281 | FPS: 17.3 | Detect: 28.1ms | Vehicles: 4 | Progress: 80.4%
+2026-05-09 18:36:30 | INFO     | __main__                       | Frame  2299 | FPS: 17.6 | Detect: 21.6ms | Vehicles: 3 | Progress: 81.0%
+2026-05-09 18:36:31 | INFO     | __main__                       | Frame  2318 | FPS: 18.4 | Detect: 20.8ms | Vehicles: 5 | Progress: 81.7%
+2026-05-09 18:36:32 | INFO     | __main__                       | Frame  2337 | FPS: 18.0 | Detect: 28.1ms | Vehicles: 4 | Progress: 82.3%
+2026-05-09 18:36:33 | INFO     | __main__                       | Frame  2355 | FPS: 17.8 | Detect: 27.4ms | Vehicles: 6 | Progress: 83.0%
+2026-05-09 18:36:34 | INFO     | __main__                       | Frame  2373 | FPS: 17.8 | Detect: 30.8ms | Vehicles: 5 | Progress: 83.6%
+2026-05-09 18:36:35 | INFO     | __main__                       | Frame  2392 | FPS: 18.1 | Detect: 27.2ms | Vehicles: 7 | Progress: 84.3%
+2026-05-09 18:36:36 | INFO     | __main__                       | Frame  2410 | FPS: 17.7 | Detect: 31.7ms | Vehicles: 5 | Progress: 84.9%
+2026-05-09 18:36:37 | INFO     | __main__                       | Frame  2428 | FPS: 17.4 | Detect: 33.7ms | Vehicles: 6 | Progress: 85.6%
+2026-05-09 18:36:38 | INFO     | __main__                       | Frame  2446 | FPS: 18.0 | Detect: 29.2ms | Vehicles: 6 | Progress: 86.2%
+2026-05-09 18:36:39 | INFO     | __main__                       | Frame  2465 | FPS: 18.2 | Detect: 29.6ms | Vehicles: 8 | Progress: 86.9%
+2026-05-09 18:36:41 | INFO     | __main__                       | Frame  2483 | FPS: 17.9 | Detect: 32.8ms | Vehicles: 5 | Progress: 87.5%
+2026-05-09 18:36:42 | INFO     | __main__                       | Frame  2500 | FPS: 17.0 | Detect: 30.6ms | Vehicles: 5 | Progress: 88.1%
+2026-05-09 18:36:43 | INFO     | __main__                       | Frame  2519 | FPS: 18.4 | Detect: 35.8ms | Vehicles: 8 | Progress: 88.8%
+2026-05-09 18:36:44 | INFO     | __main__                       | Frame  2537 | FPS: 17.3 | Detect: 33.2ms | Vehicles: 4 | Progress: 89.4%
+2026-05-09 18:36:45 | INFO     | __main__                       | Frame  2555 | FPS: 17.7 | Detect: 24.6ms | Vehicles: 9 | Progress: 90.0%
+2026-05-09 18:36:46 | INFO     | __main__                       | Frame  2573 | FPS: 17.7 | Detect: 21.7ms | Vehicles: 12 | Progress: 90.7%
+2026-05-09 18:36:47 | INFO     | __main__                       | Frame  2592 | FPS: 18.6 | Detect: 20.7ms | Vehicles: 9 | Progress: 91.3%
+2026-05-09 18:36:48 | INFO     | __main__                       | Frame  2658 | FPS: 64.8 | Detect: 28.1ms | Vehicles: 7 | Progress: 93.7%
+2026-05-09 18:36:49 | INFO     | __main__                       | Frame  2676 | FPS: 18.0 | Detect: 25.7ms | Vehicles: 6 | Progress: 94.3%
+2026-05-09 18:36:50 | INFO     | __main__                       | Frame  2695 | FPS: 18.0 | Detect: 32.0ms | Vehicles: 8 | Progress: 95.0%
+2026-05-09 18:36:51 | INFO     | __main__                       | Frame  2713 | FPS: 18.0 | Detect: 25.9ms | Vehicles: 3 | Progress: 95.6%
+2026-05-09 18:36:52 | INFO     | __main__                       | Frame  2732 | FPS: 18.1 | Detect: 27.8ms | Vehicles: 7 | Progress: 96.3%
+2026-05-09 18:36:53 | INFO     | __main__                       | Frame  2749 | FPS: 17.0 | Detect: 22.7ms | Vehicles: 13 | Progress: 96.9%
+2026-05-09 18:36:54 | INFO     | __main__                       | Frame  2766 | FPS: 16.4 | Detect: 27.1ms | Vehicles: 18 | Progress: 97.5%
+2026-05-09 18:36:55 | INFO     | __main__                       | Frame  2781 | FPS: 14.8 | Detect: 28.2ms | Vehicles: 15 | Progress: 98.0%
+2026-05-09 18:36:56 | INFO     | __main__                       | Frame  2796 | FPS: 14.6 | Detect: 31.3ms | Vehicles: 0 | Progress: 98.5%
+2026-05-09 18:36:57 | INFO     | __main__                       | Frame  2815 | FPS: 18.2 | Detect: 24.1ms | Vehicles: 0 | Progress: 99.2%
+2026-05-09 18:36:58 | INFO     | __main__                       | End of video.
+2026-05-09 18:36:58 | INFO     | __main__                       | ========================================
+2026-05-09 18:36:58 | INFO     | __main__                       | DETECTION STATS
+2026-05-09 18:36:58 | INFO     | __main__                       | frames_processed: 2838
+2026-05-09 18:36:58 | INFO     | __main__                       | total_detections: 23087
+2026-05-09 18:36:58 | INFO     | __main__                       | avg_detections_per_frame: 8.13
+2026-05-09 18:36:58 | INFO     | __main__                       | ========================================
+2026-05-09 18:36:58 | INFO     | __main__                       | Output saved to: outputs/detection_output.mp4
+2026-05-09 18:43:10 | INFO     | __main__                       | ============================================================
+2026-05-09 18:43:10 | INFO     | __main__                       | TRAFFIC AI SYSTEM — Tracking Test
+2026-05-09 18:43:10 | INFO     | __main__                       | Source: videos/linh_nam.mp4
+2026-05-09 18:43:10 | INFO     | __main__                       | ============================================================
+2026-05-09 18:43:10 | INFO     | detector.vehicle_detector      | VehicleDetector init | device=cuda | conf=0.2 | iou=0.65
+2026-05-09 18:43:10 | INFO     | detector.vehicle_detector      | Classes filter: [2, 3, 5, 7]
+2026-05-09 18:43:10 | INFO     | detector.vehicle_detector      | Loading YOLOv8 model: models/yolov8s.pt
+2026-05-09 18:43:10 | WARNING  | detector.vehicle_detector      | Model không tồn tại tại models/yolov8s.pt. Auto-downloading yolov8n.pt...
+2026-05-09 18:43:11 | INFO     | detector.vehicle_detector      | Model warmup...
+2026-05-09 18:43:12 | INFO     | detector.vehicle_detector      | Model ready.
+2026-05-09 18:43:12 | INFO     | tracker.deep_sort_tracker      | DeepSORTTracker init | max_age=60 | n_init=3 | max_cosine_dist=0.4 | λ_motion=0.7
+2026-05-09 18:43:13 | INFO     | tracker.deep_sort_tracker      | DeepSort engine ready | GPU embedder: True
+2026-05-09 18:43:13 | INFO     | __main__                       | Video opened: 2560x1440 @ 60.0 FPS | Total frames: 840
+2026-05-09 18:43:13 | INFO     | __main__                       | Saving output to: outputs/tracking_output.mp4
+2026-05-09 18:43:13 | INFO     | __main__                       | Processing video...
+2026-05-09 18:43:14 | INFO     | __main__                       | Frame    14 | Detect: 26.8ms | Track: 0.2ms | Detections: 0 | Tracks: 0 | FPS: 7.7 | Progress: 1.7%
+2026-05-09 18:43:15 | INFO     | __main__                       | Frame    46 | Detect: 17.9ms | Track: 0.2ms | Detections: 0 | Tracks: 1 | FPS: 15.7 | Progress: 5.5%
+2026-05-09 18:43:16 | INFO     | __main__                       | Frame   146 | Detect: 24.9ms | Track: 0.3ms | Detections: 0 | Tracks: 2 | FPS: 47.2 | Progress: 17.4%
+2026-05-09 18:43:17 | INFO     | __main__                       | Frame   182 | Detect: 26.6ms | Track: 0.4ms | Detections: 0 | Tracks: 2 | FPS: 17.1 | Progress: 21.7%
+2026-05-09 18:43:18 | INFO     | __main__                       | Frame   208 | Detect: 29.7ms | Track: 22.6ms | Detections: 1 | Tracks: 2 | FPS: 12.9 | Progress: 24.8%
+2026-05-09 18:43:19 | INFO     | __main__                       | Frame   236 | Detect: 29.0ms | Track: 0.3ms | Detections: 0 | Tracks: 2 | FPS: 13.8 | Progress: 28.1%
+2026-05-09 18:43:20 | INFO     | __main__                       | Frame   258 | Detect: 32.5ms | Track: 0.4ms | Detections: 0 | Tracks: 3 | FPS: 11.0 | Progress: 30.7%
+2026-05-09 18:43:21 | INFO     | __main__                       | Frame   290 | Detect: 28.3ms | Track: 0.3ms | Detections: 0 | Tracks: 2 | FPS: 15.9 | Progress: 34.5%
+2026-05-09 18:43:22 | INFO     | __main__                       | Frame   322 | Detect: 21.0ms | Track: 0.3ms | Detections: 0 | Tracks: 2 | FPS: 15.8 | Progress: 38.3%
+2026-05-09 18:43:23 | INFO     | __main__                       | Frame   356 | Detect: 21.0ms | Track: 0.2ms | Detections: 0 | Tracks: 1 | FPS: 16.6 | Progress: 42.4%
+2026-05-09 18:43:24 | INFO     | __main__                       | Frame   386 | Detect: 20.9ms | Track: 31.0ms | Detections: 1 | Tracks: 1 | FPS: 14.1 | Progress: 46.0%
+2026-05-09 18:43:25 | INFO     | __main__                       | Frame   416 | Detect: 22.0ms | Track: 0.2ms | Detections: 0 | Tracks: 1 | FPS: 14.4 | Progress: 49.5%
+2026-05-09 18:43:26 | INFO     | __main__                       | Frame   446 | Detect: 22.2ms | Track: 13.5ms | Detections: 1 | Tracks: 1 | FPS: 14.4 | Progress: 53.1%
+2026-05-09 18:43:27 | INFO     | __main__                       | Frame   472 | Detect: 23.6ms | Track: 30.3ms | Detections: 2 | Tracks: 2 | FPS: 12.0 | Progress: 56.2%
+2026-05-09 18:43:28 | INFO     | __main__                       | Frame   494 | Detect: 28.0ms | Track: 26.1ms | Detections: 1 | Tracks: 4 | FPS: 10.1 | Progress: 58.8%
+2026-05-09 18:43:29 | INFO     | __main__                       | Frame   514 | Detect: 36.5ms | Track: 23.5ms | Detections: 1 | Tracks: 3 | FPS: 9.1 | Progress: 61.2%
+2026-05-09 18:43:30 | INFO     | __main__                       | Frame   540 | Detect: 29.4ms | Track: 37.8ms | Detections: 1 | Tracks: 4 | FPS: 12.2 | Progress: 64.3%
+2026-05-09 18:43:31 | INFO     | __main__                       | Frame   570 | Detect: 29.1ms | Track: 0.5ms | Detections: 0 | Tracks: 4 | FPS: 14.8 | Progress: 67.9%
+2026-05-09 18:43:32 | INFO     | __main__                       | Frame   600 | Detect: 39.7ms | Track: 29.1ms | Detections: 1 | Tracks: 3 | FPS: 13.6 | Progress: 71.4%
+2026-05-09 18:43:34 | INFO     | __main__                       | Frame   622 | Detect: 43.3ms | Track: 29.4ms | Detections: 1 | Tracks: 4 | FPS: 10.1 | Progress: 74.0%
+2026-05-09 18:43:35 | INFO     | __main__                       | Frame   648 | Detect: 30.7ms | Track: 0.5ms | Detections: 0 | Tracks: 4 | FPS: 12.4 | Progress: 77.1%
+2026-05-09 18:43:36 | INFO     | __main__                       | Frame   676 | Detect: 31.3ms | Track: 0.6ms | Detections: 0 | Tracks: 4 | FPS: 13.9 | Progress: 80.5%
+2026-05-09 18:43:37 | INFO     | __main__                       | Frame   708 | Detect: 26.8ms | Track: 0.5ms | Detections: 0 | Tracks: 4 | FPS: 15.7 | Progress: 84.3%
+2026-05-09 18:43:38 | INFO     | __main__                       | Frame   736 | Detect: 30.2ms | Track: 21.4ms | Detections: 1 | Tracks: 3 | FPS: 13.5 | Progress: 87.6%
+2026-05-09 18:43:39 | INFO     | __main__                       | Frame   768 | Detect: 29.3ms | Track: 0.2ms | Detections: 0 | Tracks: 1 | FPS: 15.4 | Progress: 91.4%
+2026-05-09 18:43:40 | INFO     | __main__                       | Frame   800 | Detect: 31.2ms | Track: 0.3ms | Detections: 0 | Tracks: 1 | FPS: 15.3 | Progress: 95.2%
+2026-05-09 18:43:41 | INFO     | __main__                       | Frame   832 | Detect: 30.3ms | Track: 0.3ms | Detections: 0 | Tracks: 1 | FPS: 15.1 | Progress: 99.0%
+2026-05-09 18:43:41 | INFO     | __main__                       | End of video.
+2026-05-09 18:43:41 | INFO     | __main__                       | ==================================================
+2026-05-09 18:43:41 | INFO     | __main__                       | TRACKING STATS
+2026-05-09 18:43:41 | INFO     | __main__                       | {'frames_processed': 420, 'total_detections': 122, 'avg_detections_per_frame': 0.29}
+2026-05-09 18:43:41 | INFO     | __main__                       | {'frames_processed': 420, 'total_tracks_created': 11, 'currently_active': 4}
+2026-05-09 18:43:41 | INFO     | __main__                       | ==================================================
+2026-05-09 18:43:41 | INFO     | __main__                       | Output saved to: outputs/tracking_output.mp4
+2026-05-09 18:48:26 | INFO     | __main__                       | ============================================================
+2026-05-09 18:48:26 | INFO     | __main__                       | TRAFFIC AI SYSTEM — Tracking Test
+2026-05-09 18:48:26 | INFO     | __main__                       | Source: videos/linh_nam.mp4
+2026-05-09 18:48:26 | INFO     | __main__                       | ============================================================
+2026-05-09 18:48:26 | INFO     | detector.vehicle_detector      | VehicleDetector init | device=cuda | conf=0.2 | iou=0.65
+2026-05-09 18:48:26 | INFO     | detector.vehicle_detector      | Classes filter: [2, 3, 5, 7]
+2026-05-09 18:48:26 | INFO     | detector.vehicle_detector      | Loading YOLOv8 model: models/yolov8s.pt
+2026-05-09 18:48:26 | WARNING  | detector.vehicle_detector      | Model không tồn tại tại models/yolov8s.pt. Auto-downloading yolov8n.pt...
+2026-05-09 18:48:27 | INFO     | detector.vehicle_detector      | Model warmup...
+2026-05-09 18:48:28 | INFO     | detector.vehicle_detector      | Model ready.
+2026-05-09 18:48:28 | INFO     | tracker.deep_sort_tracker      | DeepSORTTracker init | max_age=60 | n_init=3 | max_cosine_dist=0.4 | λ_motion=0.7
+2026-05-09 18:48:28 | INFO     | tracker.deep_sort_tracker      | DeepSort engine ready | GPU embedder: True
+2026-05-09 18:48:28 | INFO     | __main__                       | Video opened: 2560x1440 @ 60.0 FPS | Total frames: 840
+2026-05-09 18:48:28 | INFO     | __main__                       | Saving output to: outputs/tracking_output.mp4
+2026-05-09 18:48:28 | INFO     | __main__                       | Processing video...
+2026-05-09 18:48:29 | INFO     | __main__                       | Frame    12 | Detect: 20.9ms | Track: 22.6ms | Detections: 1 | Tracks: 0 | FPS: 6.7 | Progress: 1.4%
+2026-05-09 18:48:30 | INFO     | __main__                       | Frame    42 | Detect: 17.6ms | Track: 0.2ms | Detections: 0 | Tracks: 1 | FPS: 14.7 | Progress: 5.0%
+2026-05-09 18:48:32 | INFO     | __main__                       | Frame    76 | Detect: 19.5ms | Track: 0.2ms | Detections: 0 | Tracks: 1 | FPS: 16.2 | Progress: 9.0%
+2026-05-09 18:48:33 | INFO     | __main__                       | Frame   102 | Detect: 28.2ms | Track: 26.5ms | Detections: 1 | Tracks: 3 | FPS: 13.0 | Progress: 12.1%
+2026-05-09 18:48:34 | INFO     | __main__                       | Frame   124 | Detect: 25.5ms | Track: 13.1ms | Detections: 1 | Tracks: 3 | FPS: 10.8 | Progress: 14.8%
+2026-05-09 18:48:35 | INFO     | __main__                       | Frame   150 | Detect: 30.0ms | Track: 0.4ms | Detections: 0 | Tracks: 3 | FPS: 12.8 | Progress: 17.9%
+2026-05-09 18:48:36 | INFO     | __main__                       | Frame   184 | Detect: 27.8ms | Track: 0.4ms | Detections: 0 | Tracks: 2 | FPS: 16.4 | Progress: 21.9%
+2026-05-09 18:48:37 | INFO     | __main__                       | Frame   210 | Detect: 29.8ms | Track: 19.2ms | Detections: 1 | Tracks: 2 | FPS: 12.7 | Progress: 25.0%
+2026-05-09 18:48:38 | INFO     | __main__                       | Frame   240 | Detect: 31.1ms | Track: 0.5ms | Detections: 0 | Tracks: 2 | FPS: 14.9 | Progress: 28.6%
+2026-05-09 18:48:39 | INFO     | __main__                       | Frame   262 | Detect: 32.8ms | Track: 0.4ms | Detections: 0 | Tracks: 2 | FPS: 10.9 | Progress: 31.2%
+2026-05-09 18:48:40 | INFO     | __main__                       | Frame   294 | Detect: 32.3ms | Track: 0.4ms | Detections: 0 | Tracks: 2 | FPS: 15.3 | Progress: 35.0%
+2026-05-09 18:48:41 | INFO     | __main__                       | Frame   324 | Detect: 27.2ms | Track: 0.3ms | Detections: 0 | Tracks: 2 | FPS: 14.9 | Progress: 38.6%
+2026-05-09 18:48:42 | INFO     | __main__                       | Frame   358 | Detect: 27.3ms | Track: 0.3ms | Detections: 0 | Tracks: 1 | FPS: 16.4 | Progress: 42.6%
+2026-05-09 18:48:43 | INFO     | __main__                       | Frame   388 | Detect: 26.3ms | Track: 22.4ms | Detections: 1 | Tracks: 1 | FPS: 14.4 | Progress: 46.2%
+2026-05-09 18:48:44 | INFO     | __main__                       | Frame   418 | Detect: 28.7ms | Track: 28.7ms | Detections: 1 | Tracks: 1 | FPS: 15.0 | Progress: 49.8%
+2026-05-09 18:48:45 | INFO     | __main__                       | Frame   506 | Detect: 34.2ms | Track: 26.0ms | Detections: 2 | Tracks: 5 | FPS: 42.5 | Progress: 60.2%
+2026-05-09 18:48:46 | INFO     | __main__                       | Frame   530 | Detect: 30.3ms | Track: 0.4ms | Detections: 0 | Tracks: 4 | FPS: 12.0 | Progress: 63.1%
+2026-05-09 18:48:47 | INFO     | __main__                       | Frame   562 | Detect: 27.9ms | Track: 0.4ms | Detections: 0 | Tracks: 4 | FPS: 15.7 | Progress: 66.9%
+2026-05-09 18:48:48 | INFO     | __main__                       | Frame   594 | Detect: 31.2ms | Track: 0.4ms | Detections: 0 | Tracks: 4 | FPS: 15.2 | Progress: 70.7%
+2026-05-09 18:48:49 | INFO     | __main__                       | Frame   616 | Detect: 32.2ms | Track: 20.9ms | Detections: 1 | Tracks: 4 | FPS: 10.8 | Progress: 73.3%
+2026-05-09 18:48:50 | INFO     | __main__                       | Frame   642 | Detect: 33.0ms | Track: 0.4ms | Detections: 0 | Tracks: 3 | FPS: 12.2 | Progress: 76.4%
+2026-05-09 18:48:51 | INFO     | __main__                       | Frame   674 | Detect: 27.3ms | Track: 0.4ms | Detections: 0 | Tracks: 2 | FPS: 15.7 | Progress: 80.2%
+2026-05-09 18:48:52 | INFO     | __main__                       | Frame   710 | Detect: 24.4ms | Track: 0.4ms | Detections: 0 | Tracks: 1 | FPS: 17.2 | Progress: 84.5%
+2026-05-09 18:48:53 | INFO     | __main__                       | Frame   740 | Detect: 25.3ms | Track: 0.3ms | Detections: 0 | Tracks: 2 | FPS: 14.6 | Progress: 88.1%
+2026-05-09 18:48:54 | INFO     | __main__                       | Frame   776 | Detect: 19.8ms | Track: 0.3ms | Detections: 0 | Tracks: 1 | FPS: 17.4 | Progress: 92.4%
+2026-05-09 18:48:55 | INFO     | __main__                       | Frame   810 | Detect: 21.0ms | Track: 0.3ms | Detections: 0 | Tracks: 1 | FPS: 16.9 | Progress: 96.4%
+2026-05-09 18:48:56 | INFO     | __main__                       | End of video.
+2026-05-09 18:48:56 | INFO     | __main__                       | ==================================================
+2026-05-09 18:48:56 | INFO     | __main__                       | TRACKING STATS
+2026-05-09 18:48:56 | INFO     | __main__                       | {'frames_processed': 420, 'total_detections': 122, 'avg_detections_per_frame': 0.29}
+2026-05-09 18:48:56 | INFO     | __main__                       | {'frames_processed': 420, 'total_tracks_created': 12, 'currently_active': 2}
+2026-05-09 18:48:56 | INFO     | __main__                       | ==================================================
+2026-05-09 18:48:56 | INFO     | __main__                       | Output saved to: outputs/tracking_output.mp4
+2026-05-09 18:54:12 | INFO     | __main__                       | ============================================================
+2026-05-09 18:54:12 | INFO     | __main__                       | TRAFFIC AI SYSTEM — Tracking Test
+2026-05-09 18:54:12 | INFO     | __main__                       | Source: videos/linh_nam.mp4
+2026-05-09 18:54:12 | INFO     | __main__                       | ============================================================
+2026-05-09 18:54:12 | INFO     | detector.vehicle_detector      | VehicleDetector init | device=cuda | conf=0.35 | iou=0.65
+2026-05-09 18:54:12 | INFO     | detector.vehicle_detector      | Classes filter: [2, 3, 5, 7]
+2026-05-09 18:54:12 | INFO     | detector.vehicle_detector      | Loading YOLOv8 model: models/yolov8s.pt
+2026-05-09 18:54:12 | WARNING  | detector.vehicle_detector      | Model không tồn tại tại models/yolov8s.pt. Auto-downloading yolov8n.pt...
+2026-05-09 18:54:13 | INFO     | detector.vehicle_detector      | Model warmup...
+2026-05-09 18:54:11 | INFO     | detector.vehicle_detector      | Model ready.
+2026-05-09 18:54:11 | INFO     | tracker.deep_sort_tracker      | DeepSORTTracker init | max_age=15 | n_init=3 | max_cosine_dist=0.4 | λ_motion=0.7
+2026-05-09 18:54:12 | INFO     | tracker.deep_sort_tracker      | DeepSort engine ready | GPU embedder: True
+2026-05-09 18:54:12 | INFO     | __main__                       | Video opened: 2560x1440 @ 60.0 FPS | Total frames: 840
+2026-05-09 18:54:12 | INFO     | __main__                       | Saving output to: outputs/tracking_output.mp4
+2026-05-09 18:54:12 | INFO     | __main__                       | Processing video...
+2026-05-09 18:54:13 | INFO     | __main__                       | Frame    16 | Detect: 14.7ms | Track: 0.1ms | Detections: 0 | Tracks: 0 | FPS: 8.9 | Progress: 1.9%
+2026-05-09 18:54:14 | INFO     | __main__                       | Frame    56 | Detect: 18.6ms | Track: 0.1ms | Detections: 0 | Tracks: 0 | FPS: 19.7 | Progress: 6.7%
+2026-05-09 18:54:15 | INFO     | __main__                       | Frame    96 | Detect: 15.1ms | Track: 0.1ms | Detections: 0 | Tracks: 0 | FPS: 19.7 | Progress: 11.4%
+2026-05-09 18:54:16 | INFO     | __main__                       | Frame   128 | Detect: 17.4ms | Track: 0.2ms | Detections: 0 | Tracks: 0 | FPS: 15.4 | Progress: 15.2%
+2026-05-09 18:54:17 | INFO     | __main__                       | Frame   168 | Detect: 26.7ms | Track: 0.1ms | Detections: 0 | Tracks: 0 | FPS: 19.0 | Progress: 20.0%
+2026-05-09 18:54:18 | INFO     | __main__                       | Frame   206 | Detect: 24.5ms | Track: 17.0ms | Detections: 1 | Tracks: 0 | FPS: 18.1 | Progress: 24.5%
+2026-05-09 18:54:19 | INFO     | __main__                       | Frame   242 | Detect: 19.3ms | Track: 0.1ms | Detections: 0 | Tracks: 0 | FPS: 17.4 | Progress: 28.8%
+2026-05-09 18:54:20 | INFO     | __main__                       | Frame   278 | Detect: 21.8ms | Track: 0.1ms | Detections: 0 | Tracks: 0 | FPS: 16.9 | Progress: 33.1%
+2026-05-09 18:54:21 | INFO     | __main__                       | Frame   310 | Detect: 26.3ms | Track: 0.1ms | Detections: 0 | Tracks: 0 | FPS: 15.9 | Progress: 36.9%
+2026-05-09 18:54:22 | INFO     | __main__                       | Frame   346 | Detect: 22.3ms | Track: 0.1ms | Detections: 0 | Tracks: 0 | FPS: 17.9 | Progress: 41.2%
+2026-05-09 18:54:23 | INFO     | __main__                       | Frame   380 | Detect: 17.4ms | Track: 18.5ms | Detections: 1 | Tracks: 1 | FPS: 16.3 | Progress: 45.2%
+2026-05-09 18:54:24 | INFO     | __main__                       | Frame   408 | Detect: 19.1ms | Track: 0.3ms | Detections: 0 | Tracks: 0 | FPS: 13.6 | Progress: 48.6%
+2026-05-09 18:54:25 | INFO     | __main__                       | Frame   442 | Detect: 16.6ms | Track: 0.2ms | Detections: 0 | Tracks: 0 | FPS: 16.3 | Progress: 52.6%
+2026-05-09 18:54:26 | INFO     | __main__                       | Frame   474 | Detect: 18.8ms | Track: 14.5ms | Detections: 1 | Tracks: 1 | FPS: 15.3 | Progress: 56.4%
+2026-05-09 18:54:27 | INFO     | __main__                       | Frame   502 | Detect: 17.7ms | Track: 0.4ms | Detections: 0 | Tracks: 0 | FPS: 13.4 | Progress: 59.8%
+2026-05-09 18:54:28 | INFO     | __main__                       | Frame   536 | Detect: 20.9ms | Track: 0.2ms | Detections: 0 | Tracks: 0 | FPS: 16.4 | Progress: 63.8%
+2026-05-09 18:54:29 | INFO     | __main__                       | Frame   572 | Detect: 23.0ms | Track: 0.1ms | Detections: 0 | Tracks: 0 | FPS: 17.3 | Progress: 68.1%
+2026-05-09 18:54:30 | INFO     | __main__                       | Frame   606 | Detect: 25.6ms | Track: 0.1ms | Detections: 0 | Tracks: 0 | FPS: 16.5 | Progress: 72.1%
+2026-05-09 18:54:31 | INFO     | __main__                       | Frame   640 | Detect: 21.8ms | Track: 0.1ms | Detections: 0 | Tracks: 0 | FPS: 16.7 | Progress: 76.2%
+2026-05-09 18:54:32 | INFO     | __main__                       | Frame   676 | Detect: 28.7ms | Track: 0.1ms | Detections: 0 | Tracks: 0 | FPS: 17.4 | Progress: 80.5%
+2026-05-09 18:54:33 | INFO     | __main__                       | Frame   712 | Detect: 23.3ms | Track: 0.1ms | Detections: 0 | Tracks: 0 | FPS: 17.6 | Progress: 84.8%
+2026-05-09 18:54:34 | INFO     | __main__                       | Frame   746 | Detect: 23.7ms | Track: 0.1ms | Detections: 0 | Tracks: 0 | FPS: 16.5 | Progress: 88.8%
+2026-05-09 18:54:36 | INFO     | __main__                       | Frame   778 | Detect: 23.4ms | Track: 0.1ms | Detections: 0 | Tracks: 0 | FPS: 15.3 | Progress: 92.6%
+2026-05-09 18:54:37 | INFO     | __main__                       | Frame   810 | Detect: 26.3ms | Track: 0.1ms | Detections: 0 | Tracks: 0 | FPS: 15.3 | Progress: 96.4%
+2026-05-09 18:54:37 | INFO     | __main__                       | End of video.
+2026-05-09 18:54:37 | INFO     | __main__                       | ==================================================
+2026-05-09 18:54:37 | INFO     | __main__                       | TRACKING STATS
+2026-05-09 18:54:37 | INFO     | __main__                       | {'frames_processed': 420, 'total_detections': 50, 'avg_detections_per_frame': 0.12}
+2026-05-09 18:54:37 | INFO     | __main__                       | {'frames_processed': 420, 'total_tracks_created': 5, 'currently_active': 0}
+2026-05-09 18:54:37 | INFO     | __main__                       | ==================================================
+2026-05-09 18:54:37 | INFO     | __main__                       | Output saved to: outputs/tracking_output.mp4
+2026-05-09 18:55:47 | INFO     | __main__                       | ============================================================
+2026-05-09 18:55:47 | INFO     | __main__                       | TRAFFIC AI SYSTEM — Tracking Test
+2026-05-09 18:55:47 | INFO     | __main__                       | Source: videos/linh_nam.mp4
+2026-05-09 18:55:47 | INFO     | __main__                       | ============================================================
+2026-05-09 18:55:47 | INFO     | detector.vehicle_detector      | VehicleDetector init | device=cuda | conf=0.2 | iou=0.65
+2026-05-09 18:55:47 | INFO     | detector.vehicle_detector      | Classes filter: [2, 3, 5, 7]
+2026-05-09 18:55:47 | INFO     | detector.vehicle_detector      | Loading YOLOv8 model: models/yolov8s.pt
+2026-05-09 18:55:47 | WARNING  | detector.vehicle_detector      | Model không tồn tại tại models/yolov8s.pt. Auto-downloading yolov8n.pt...
+2026-05-09 18:55:48 | INFO     | detector.vehicle_detector      | Model warmup...
+2026-05-09 18:55:49 | INFO     | detector.vehicle_detector      | Model ready.
+2026-05-09 18:55:49 | INFO     | tracker.deep_sort_tracker      | DeepSORTTracker init | max_age=60 | n_init=3 | max_cosine_dist=0.4 | λ_motion=0.7
+2026-05-09 18:55:50 | INFO     | tracker.deep_sort_tracker      | DeepSort engine ready | GPU embedder: True
+2026-05-09 18:55:50 | INFO     | __main__                       | Video opened: 2560x1440 @ 60.0 FPS | Total frames: 840
+2026-05-09 18:55:50 | INFO     | __main__                       | Saving output to: outputs/tracking_output.mp4
+2026-05-09 18:55:50 | INFO     | __main__                       | Processing video...
+2026-05-09 18:55:51 | INFO     | __main__                       | Frame    10 | Detect: 18.2ms | Track: 0.2ms | Detections: 0 | Tracks: 0 | FPS: 5.9 | Progress: 1.2%
+2026-05-09 18:55:52 | INFO     | __main__                       | Frame    36 | Detect: 20.0ms | Track: 15.0ms | Detections: 1 | Tracks: 0 | FPS: 12.8 | Progress: 4.3%
+2026-05-09 18:55:53 | INFO     | __main__                       | Frame    66 | Detect: 17.8ms | Track: 0.2ms | Detections: 0 | Tracks: 0 | FPS: 14.5 | Progress: 7.9%
+2026-05-09 18:55:54 | INFO     | __main__                       | Frame    96 | Detect: 26.0ms | Track: 26.2ms | Detections: 1 | Tracks: 0 | FPS: 14.0 | Progress: 11.4%
+2026-05-09 18:55:55 | INFO     | __main__                       | Frame   120 | Detect: 22.1ms | Track: 42.8ms | Detections: 1 | Tracks: 1 | FPS: 11.0 | Progress: 14.3%
+2026-05-09 18:55:56 | INFO     | __main__                       | Frame   144 | Detect: 38.9ms | Track: 0.3ms | Detections: 0 | Tracks: 0 | FPS: 12.0 | Progress: 17.1%
+2026-05-09 18:55:57 | INFO     | __main__                       | Frame   176 | Detect: 28.1ms | Track: 0.3ms | Detections: 0 | Tracks: 0 | FPS: 15.7 | Progress: 21.0%
+2026-05-09 18:55:58 | INFO     | __main__                       | Frame   204 | Detect: 33.8ms | Track: 26.0ms | Detections: 1 | Tracks: 1 | FPS: 13.8 | Progress: 24.3%
+2026-05-09 18:55:59 | INFO     | __main__                       | Frame   232 | Detect: 29.5ms | Track: 0.3ms | Detections: 0 | Tracks: 0 | FPS: 13.4 | Progress: 27.6%
+2026-05-09 18:56:00 | INFO     | __main__                       | Frame   254 | Detect: 30.2ms | Track: 24.5ms | Detections: 1 | Tracks: 1 | FPS: 11.0 | Progress: 30.2%
+2026-05-09 18:56:01 | INFO     | __main__                       | Frame   286 | Detect: 30.6ms | Track: 0.4ms | Detections: 0 | Tracks: 0 | FPS: 14.9 | Progress: 34.0%
+2026-05-09 18:56:02 | INFO     | __main__                       | Frame   314 | Detect: 32.4ms | Track: 0.3ms | Detections: 0 | Tracks: 0 | FPS: 13.7 | Progress: 37.4%
+2026-05-09 18:56:03 | INFO     | __main__                       | Frame   346 | Detect: 30.0ms | Track: 0.2ms | Detections: 0 | Tracks: 0 | FPS: 15.4 | Progress: 41.2%
+2026-05-09 18:56:04 | INFO     | __main__                       | Frame   378 | Detect: 29.7ms | Track: 29.2ms | Detections: 1 | Tracks: 0 | FPS: 15.4 | Progress: 45.0%
+2026-05-09 18:56:05 | INFO     | __main__                       | Frame   404 | Detect: 26.4ms | Track: 0.3ms | Detections: 0 | Tracks: 0 | FPS: 12.7 | Progress: 48.1%
+2026-05-09 18:56:06 | INFO     | __main__                       | Frame   436 | Detect: 30.2ms | Track: 0.7ms | Detections: 0 | Tracks: 0 | FPS: 15.1 | Progress: 51.9%
+2026-05-09 18:56:08 | INFO     | __main__                       | Frame   464 | Detect: 38.2ms | Track: 29.7ms | Detections: 1 | Tracks: 0 | FPS: 13.0 | Progress: 55.2%
+2026-05-09 18:56:09 | INFO     | __main__                       | Frame   484 | Detect: 36.0ms | Track: 20.0ms | Detections: 1 | Tracks: 0 | FPS: 9.9 | Progress: 57.6%
+2026-05-09 18:56:10 | INFO     | __main__                       | Frame   506 | Detect: 37.7ms | Track: 24.1ms | Detections: 2 | Tracks: 1 | FPS: 10.0 | Progress: 60.2%
+2026-05-09 18:56:11 | INFO     | __main__                       | Frame   534 | Detect: 27.4ms | Track: 0.4ms | Detections: 0 | Tracks: 0 | FPS: 13.2 | Progress: 63.6%
+2026-05-09 18:56:12 | INFO     | __main__                       | Frame   568 | Detect: 28.2ms | Track: 0.3ms | Detections: 0 | Tracks: 0 | FPS: 16.9 | Progress: 67.6%
+2026-05-09 18:56:13 | INFO     | __main__                       | Frame   600 | Detect: 26.4ms | Track: 52.6ms | Detections: 1 | Tracks: 0 | FPS: 14.3 | Progress: 71.4%
+2026-05-09 18:56:14 | INFO     | __main__                       | Frame   706 | Detect: 25.8ms | Track: 0.3ms | Detections: 0 | Tracks: 0 | FPS: 51.6 | Progress: 84.0%
+2026-05-09 18:56:15 | INFO     | __main__                       | Frame   736 | Detect: 28.4ms | Track: 17.7ms | Detections: 1 | Tracks: 1 | FPS: 14.7 | Progress: 87.6%
+2026-05-09 18:56:16 | INFO     | __main__                       | Frame   770 | Detect: 27.8ms | Track: 0.2ms | Detections: 0 | Tracks: 0 | FPS: 16.5 | Progress: 91.7%
+2026-05-09 18:56:17 | INFO     | __main__                       | Frame   804 | Detect: 29.5ms | Track: 0.2ms | Detections: 0 | Tracks: 0 | FPS: 16.7 | Progress: 95.7%
+2026-05-09 18:56:18 | INFO     | __main__                       | End of video.
+2026-05-09 18:56:18 | INFO     | __main__                       | ==================================================
+2026-05-09 18:56:18 | INFO     | __main__                       | TRACKING STATS
+2026-05-09 18:56:18 | INFO     | __main__                       | {'frames_processed': 420, 'total_detections': 122, 'avg_detections_per_frame': 0.29}
+2026-05-09 18:56:18 | INFO     | __main__                       | {'frames_processed': 420, 'total_tracks_created': 12, 'currently_active': 1}
+2026-05-09 18:56:18 | INFO     | __main__                       | ==================================================
+2026-05-09 18:56:18 | INFO     | __main__                       | Output saved to: outputs/tracking_output.mp4
+2026-05-09 19:04:37 | INFO     | __main__                       | ============================================================
+2026-05-09 19:04:37 | INFO     | __main__                       | TRAFFIC AI — Detection + Tracking
+2026-05-09 19:04:37 | INFO     | __main__                       | Source : videos/linh_nam.mp4
+2026-05-09 19:04:37 | INFO     | __main__                       | Device : cuda
+2026-05-09 19:04:37 | INFO     | __main__                       | ============================================================
+2026-05-09 19:04:37 | INFO     | detector.vehicle_detector      | VehicleDetector init | device=cuda | conf=0.35 | iou=0.65
+2026-05-09 19:04:37 | INFO     | detector.vehicle_detector      | Classes filter: [2, 3, 5, 7]
+2026-05-09 19:04:37 | INFO     | detector.vehicle_detector      | Loading YOLOv8 model: models/yolov8n.pt
+2026-05-09 19:04:37 | WARNING  | detector.vehicle_detector      | Model không tồn tại tại models/yolov8n.pt. Auto-downloading yolov8n.pt...
+2026-05-09 19:04:38 | INFO     | detector.vehicle_detector      | Model warmup...
+2026-05-09 19:04:40 | INFO     | detector.vehicle_detector      | Model ready.
+2026-05-09 19:04:40 | INFO     | tracker.deep_sort_tracker      | DeepSORTTracker init | max_age=60 | n_init=3 | max_cosine_dist=0.4 | λ_motion=0.7
+2026-05-09 19:04:40 | INFO     | tracker.deep_sort_tracker      | DeepSort engine ready | GPU embedder: True
+2026-05-09 19:04:40 | INFO     | __main__                       | Video: 2560×1440 @ 60fps | 840 frames
+2026-05-09 19:04:40 | INFO     | __main__                       | Chạy pipeline... [q] thoát | [s] screenshot | [p] pause
+2026-05-09 19:27:24 | INFO     | __main__                       | ============================================================
+2026-05-09 19:27:24 | INFO     | __main__                       | TRAFFIC AI — Detection + Tracking
+2026-05-09 19:27:24 | INFO     | __main__                       | Source : videos/linh_nam.mp4
+2026-05-09 19:27:24 | INFO     | __main__                       | Device : cuda
+2026-05-09 19:27:24 | INFO     | __main__                       | ============================================================
+2026-05-09 19:27:24 | INFO     | detector.vehicle_detector      | VehicleDetector init | device=cuda | conf=0.35 | iou=0.65
+2026-05-09 19:27:24 | INFO     | detector.vehicle_detector      | Classes filter: [2, 3, 5, 7]
+2026-05-09 19:27:24 | INFO     | detector.vehicle_detector      | Loading YOLOv8 model: models/yolov8n.pt
+2026-05-09 19:27:24 | WARNING  | detector.vehicle_detector      | Model không tồn tại tại models/yolov8n.pt. Auto-downloading yolov8n.pt...
+2026-05-09 19:27:26 | INFO     | detector.vehicle_detector      | Model warmup...
+2026-05-09 19:27:27 | INFO     | detector.vehicle_detector      | Model ready.
+2026-05-09 19:27:27 | INFO     | tracker.deep_sort_tracker      | DeepSORTTracker init | max_age=60 | n_init=3 | max_cosine_dist=0.4 | λ_motion=0.7
+2026-05-09 19:27:28 | INFO     | tracker.deep_sort_tracker      | DeepSort engine ready | GPU embedder: True
+2026-05-09 19:27:28 | INFO     | __main__                       | Video: 2560×1440 @ 60fps | 840 frames
+2026-05-09 19:27:28 | INFO     | __main__                       | Chạy pipeline... [q] thoát | [s] screenshot | [p] pause
+2026-05-09 19:32:00 | INFO     | __main__                       | ============================================================
+2026-05-09 19:32:00 | INFO     | __main__                       | TRAFFIC AI SYSTEM
+2026-05-09 19:32:00 | INFO     | __main__                       | ============================================================
+2026-05-09 19:32:00 | INFO     | __main__                       | Source : videos/linh_nam.mp4
+2026-05-09 19:32:00 | INFO     | __main__                       | Device : cuda
+2026-05-09 19:32:00 | INFO     | detector.vehicle_detector      | VehicleDetector init | device=cuda | conf=0.35 | iou=0.65
+2026-05-09 19:32:00 | INFO     | detector.vehicle_detector      | Classes filter: [2, 3, 5, 7]
+2026-05-09 19:32:00 | INFO     | detector.vehicle_detector      | Loading YOLOv8 model: models/yolov8n.pt
+2026-05-09 19:32:00 | WARNING  | detector.vehicle_detector      | Model không tồn tại tại models/yolov8n.pt. Auto-downloading yolov8n.pt...
+2026-05-09 19:32:01 | INFO     | detector.vehicle_detector      | Model warmup...
+2026-05-09 19:32:03 | INFO     | detector.vehicle_detector      | Model ready.
+2026-05-09 19:32:03 | INFO     | tracker.deep_sort_tracker      | DeepSORTTracker init | max_age=60 | n_init=3 | max_cosine_dist=0.4 | λ_motion=0.7
+2026-05-09 19:32:04 | INFO     | tracker.deep_sort_tracker      | DeepSort engine ready | GPU embedder: True
+2026-05-09 19:32:04 | INFO     | __main__                       | Video: 2560x1440 @ 60.0 FPS
+2026-05-09 19:32:04 | INFO     | __main__                       | Saving output: outputs/tracking_output.mp4
+2026-05-09 19:32:04 | INFO     | __main__                       | [Q] Quit | [P] Pause | [S] Screenshot
+2026-05-09 19:35:42 | INFO     | __main__                       | ============================================================
+2026-05-09 19:35:42 | INFO     | __main__                       | TRAFFIC AI SYSTEM
+2026-05-09 19:35:42 | INFO     | __main__                       | ============================================================
+2026-05-09 19:35:42 | INFO     | __main__                       | Source : videos/linh_nam.mp4
+2026-05-09 19:35:42 | INFO     | __main__                       | Device : cuda
+2026-05-09 19:35:42 | INFO     | detector.vehicle_detector      | VehicleDetector init | device=cuda | conf=0.35 | iou=0.65
+2026-05-09 19:35:42 | INFO     | detector.vehicle_detector      | Classes filter: [2, 3, 5, 7]
+2026-05-09 19:35:42 | INFO     | detector.vehicle_detector      | Loading YOLOv8 model: models/yolov8n.pt
+2026-05-09 19:35:42 | WARNING  | detector.vehicle_detector      | Model không tồn tại tại models/yolov8n.pt. Auto-downloading yolov8n.pt...
+2026-05-09 19:35:41 | INFO     | detector.vehicle_detector      | Model warmup...
+2026-05-09 19:35:42 | INFO     | detector.vehicle_detector      | Model ready.
+2026-05-09 19:35:42 | INFO     | tracker.deep_sort_tracker      | DeepSORTTracker init | max_age=60 | n_init=3 | max_cosine_dist=0.4 | λ_motion=0.7
+2026-05-09 19:35:43 | INFO     | tracker.deep_sort_tracker      | DeepSort engine ready | GPU embedder: True
+2026-05-09 19:35:43 | INFO     | __main__                       | Video: 2560x1440 @ 60.0 FPS
+2026-05-09 19:35:43 | INFO     | __main__                       | Saving output: outputs/tracking_output.mp4
+2026-05-09 19:35:43 | INFO     | __main__                       | [Q] Quit | [P] Pause | [S] Screenshot
+2026-05-09 19:35:44 | INFO     | __main__                       | Frame    22/840 | DET 21.8ms | TRK 0.0ms | FPS 21.4 | Tracks 0 | 2.6%
+2026-05-09 19:35:45 | INFO     | __main__                       | Frame    57/840 | DET 14.4ms | TRK 0.0ms | FPS 34.4 | Tracks 0 | 6.8%
+2026-05-09 19:35:46 | INFO     | __main__                       | Frame    85/840 | DET 20.2ms | TRK 19.5ms | FPS 27.4 | Tracks 1 | 10.1%
+2026-05-09 19:35:47 | INFO     | __main__                       | Frame   117/840 | DET 18.0ms | TRK 0.3ms | FPS 31.3 | Tracks 1 | 13.9%
+2026-05-09 19:35:48 | INFO     | __main__                       | Frame   153/840 | DET 14.1ms | TRK 0.2ms | FPS 36.0 | Tracks 1 | 18.2%
+2026-05-09 19:35:49 | INFO     | __main__                       | Frame   191/840 | DET 24.7ms | TRK 0.1ms | FPS 37.6 | Tracks 0 | 22.7%
+2026-05-09 19:35:50 | INFO     | __main__                       | Frame   227/840 | DET 14.1ms | TRK 0.1ms | FPS 35.1 | Tracks 0 | 27.0%
+2026-05-09 19:35:51 | INFO     | __main__                       | Frame   263/840 | DET 24.7ms | TRK 0.1ms | FPS 35.1 | Tracks 0 | 31.3%
+2026-05-09 19:35:53 | INFO     | __main__                       | Frame   297/840 | DET 25.3ms | TRK 0.1ms | FPS 33.3 | Tracks 0 | 35.4%
+2026-05-09 19:35:54 | INFO     | __main__                       | Frame   333/840 | DET 11.7ms | TRK 0.0ms | FPS 35.3 | Tracks 0 | 39.6%
+2026-05-09 19:35:55 | INFO     | __main__                       | Frame   369/840 | DET 13.7ms | TRK 0.1ms | FPS 35.1 | Tracks 0 | 43.9%
+2026-05-09 19:35:56 | INFO     | __main__                       | Frame   403/840 | DET 18.0ms | TRK 0.1ms | FPS 33.7 | Tracks 0 | 48.0%
+2026-05-09 19:35:57 | INFO     | __main__                       | Frame   440/840 | DET 13.4ms | TRK 0.1ms | FPS 36.3 | Tracks 0 | 52.4%
+2026-05-09 19:35:58 | INFO     | __main__                       | Frame   475/840 | DET 13.8ms | TRK 0.1ms | FPS 34.1 | Tracks 0 | 56.5%
+2026-05-09 19:35:59 | INFO     | __main__                       | Frame   508/840 | DET 13.8ms | TRK 0.1ms | FPS 32.2 | Tracks 0 | 60.5%
+2026-05-09 19:36:00 | INFO     | __main__                       | Frame   543/840 | DET 12.0ms | TRK 0.0ms | FPS 34.2 | Tracks 0 | 64.6%
+2026-05-09 19:36:01 | INFO     | __main__                       | Frame   576/840 | DET 10.6ms | TRK 0.0ms | FPS 32.8 | Tracks 0 | 68.6%
+2026-05-09 19:36:02 | INFO     | __main__                       | Frame   607/840 | DET 19.5ms | TRK 0.1ms | FPS 30.6 | Tracks 0 | 72.3%
+2026-05-09 19:36:03 | INFO     | __main__                       | Frame   632/840 | DET 19.1ms | TRK 0.1ms | FPS 24.4 | Tracks 0 | 75.2%
+2026-05-09 19:36:04 | INFO     | __main__                       | Frame   660/840 | DET 19.2ms | TRK 0.1ms | FPS 27.6 | Tracks 0 | 78.6%
+2026-05-09 19:36:05 | INFO     | __main__                       | Frame   680/840 | DET 14.0ms | TRK 0.1ms | FPS 19.4 | Tracks 0 | 81.0%
+2026-05-09 19:36:06 | INFO     | __main__                       | Frame   699/840 | DET 27.2ms | TRK 0.1ms | FPS 18.1 | Tracks 0 | 83.2%
+2026-05-09 19:36:07 | INFO     | __main__                       | Frame   724/840 | DET 18.3ms | TRK 0.1ms | FPS 24.2 | Tracks 0 | 86.2%
+2026-05-09 19:36:08 | INFO     | __main__                       | Frame   755/840 | DET 22.0ms | TRK 0.1ms | FPS 30.2 | Tracks 0 | 89.9%
+2026-05-09 19:36:09 | INFO     | __main__                       | Frame   786/840 | DET 17.6ms | TRK 0.1ms | FPS 30.4 | Tracks 0 | 93.6%
+2026-05-09 19:36:10 | INFO     | __main__                       | Frame   819/840 | DET 23.2ms | TRK 0.1ms | FPS 31.9 | Tracks 0 | 97.5%
+2026-05-09 19:36:10 | INFO     | __main__                       | ============================================================
+2026-05-09 19:36:10 | INFO     | __main__                       | STATS
+2026-05-09 19:36:10 | INFO     | __main__                       | ============================================================
+2026-05-09 19:36:10 | INFO     | __main__                       | frames_processed: 840
+2026-05-09 19:36:10 | INFO     | __main__                       | total_detections: 23
+2026-05-09 19:36:10 | INFO     | __main__                       | avg_detections_per_frame: 0.03
+2026-05-09 19:36:10 | INFO     | __main__                       | total_tracks_created: 1
+2026-05-09 19:36:10 | INFO     | __main__                       | currently_active: 0
+2026-05-09 19:36:10 | INFO     | __main__                       | Output: outputs/tracking_output.mp4
+2026-05-09 19:40:40 | INFO     | __main__                       | ============================================================
+2026-05-09 19:40:40 | INFO     | __main__                       | TRAFFIC AI SYSTEM
+2026-05-09 19:40:40 | INFO     | __main__                       | ============================================================
+2026-05-09 19:40:40 | INFO     | __main__                       | Source : videos/linh_nam.mp4
+2026-05-09 19:40:40 | INFO     | __main__                       | Device : cuda
+2026-05-09 19:40:40 | INFO     | detector.vehicle_detector      | VehicleDetector init | device=cuda | conf=0.2 | iou=0.65
+2026-05-09 19:40:40 | INFO     | detector.vehicle_detector      | Classes filter: [2, 3, 5, 7]
+2026-05-09 19:40:40 | INFO     | detector.vehicle_detector      | Loading YOLOv8 model: models/yolov8n.pt
+2026-05-09 19:40:40 | WARNING  | detector.vehicle_detector      | Model không tồn tại tại models/yolov8n.pt. Auto-downloading yolov8n.pt...
+2026-05-09 19:40:41 | INFO     | detector.vehicle_detector      | Model warmup...
+2026-05-09 19:40:42 | INFO     | detector.vehicle_detector      | Model ready.
+2026-05-09 19:40:42 | INFO     | tracker.deep_sort_tracker      | DeepSORTTracker init | max_age=60 | n_init=3 | max_cosine_dist=0.4 | λ_motion=0.7
+2026-05-09 19:40:40 | INFO     | tracker.deep_sort_tracker      | DeepSort engine ready | GPU embedder: True
+2026-05-09 19:40:40 | INFO     | __main__                       | Video: 2560x1440 @ 60.0 FPS
+2026-05-09 19:40:40 | INFO     | __main__                       | Saving output: outputs/tracking_output.mp4
+2026-05-09 19:40:40 | INFO     | __main__                       | [Q] Quit | [P] Pause | [S] Screenshot
+2026-05-09 19:40:41 | INFO     | __main__                       | Frame    13/840 | DET 20.6ms | TRK 0.1ms | FPS 13.0 | Tracks 0 | 1.5%
+2026-05-09 19:40:42 | INFO     | __main__                       | Frame    44/840 | DET 15.9ms | TRK 0.1ms | FPS 30.7 | Tracks 0 | 5.2%
+2026-05-09 19:40:43 | INFO     | __main__                       | Frame    77/840 | DET 21.2ms | TRK 0.1ms | FPS 32.4 | Tracks 0 | 9.2%
+2026-05-09 19:40:44 | INFO     | __main__                       | Frame   102/840 | DET 21.3ms | TRK 0.3ms | FPS 24.9 | Tracks 1 | 12.1%
+2026-05-09 19:40:45 | INFO     | __main__                       | Frame   126/840 | DET 21.1ms | TRK 74.2ms | FPS 24.0 | Tracks 1 | 15.0%
+2026-05-09 19:40:46 | INFO     | __main__                       | Frame   143/840 | DET 23.3ms | TRK 35.2ms | FPS 16.1 | Tracks 1 | 17.0%
+2026-05-09 19:40:47 | INFO     | __main__                       | Frame   158/840 | DET 22.5ms | TRK 33.6ms | FPS 14.9 | Tracks 2 | 18.8%
+2026-05-09 19:40:48 | INFO     | __main__                       | Frame   187/840 | DET 28.1ms | TRK 0.7ms | FPS 28.7 | Tracks 1 | 22.3%
+2026-05-09 19:40:49 | INFO     | __main__                       | Frame   208/840 | DET 18.0ms | TRK 0.4ms | FPS 20.4 | Tracks 2 | 24.8%
+2026-05-09 19:40:50 | INFO     | __main__                       | Frame   234/840 | DET 26.1ms | TRK 0.3ms | FPS 25.2 | Tracks 1 | 27.9%
+2026-05-09 19:40:51 | INFO     | __main__                       | Frame   248/840 | DET 29.1ms | TRK 0.3ms | FPS 13.9 | Tracks 1 | 29.5%
+2026-05-09 19:40:52 | INFO     | __main__                       | Frame   268/840 | DET 24.3ms | TRK 0.3ms | FPS 19.4 | Tracks 2 | 31.9%
+2026-05-09 19:40:53 | INFO     | __main__                       | Frame   290/840 | DET 20.9ms | TRK 31.5ms | FPS 21.0 | Tracks 4 | 34.5%
+2026-05-09 19:40:54 | INFO     | __main__                       | Frame   310/840 | DET 31.5ms | TRK 0.4ms | FPS 19.8 | Tracks 4 | 36.9%
+2026-05-09 19:40:55 | INFO     | __main__                       | Frame   341/840 | DET 26.0ms | TRK 0.6ms | FPS 30.5 | Tracks 3 | 40.6%
+2026-05-09 19:40:56 | INFO     | __main__                       | Frame   373/840 | DET 16.3ms | TRK 0.2ms | FPS 31.6 | Tracks 0 | 44.4%
+2026-05-09 19:40:57 | INFO     | __main__                       | Frame   399/840 | DET 14.6ms | TRK 0.3ms | FPS 26.0 | Tracks 1 | 47.5%
+2026-05-09 19:40:58 | INFO     | __main__                       | Frame   430/840 | DET 13.8ms | TRK 0.3ms | FPS 30.8 | Tracks 1 | 51.2%
+2026-05-09 19:40:59 | INFO     | __main__                       | Frame   452/840 | DET 17.2ms | TRK 0.3ms | FPS 22.0 | Tracks 1 | 53.8%
+2026-05-09 19:41:01 | INFO     | __main__                       | Frame   473/840 | DET 23.7ms | TRK 73.5ms | FPS 20.4 | Tracks 1 | 56.3%
+2026-05-09 19:41:02 | INFO     | __main__                       | Frame   483/840 | DET 24.8ms | TRK 100.2ms | FPS 9.7 | Tracks 2 | 57.5%
+2026-05-09 19:41:03 | INFO     | __main__                       | Frame   498/840 | DET 23.7ms | TRK 2.4ms | FPS 14.7 | Tracks 2 | 59.3%
+2026-05-09 19:41:04 | INFO     | __main__                       | Frame   524/840 | DET 31.6ms | TRK 0.4ms | FPS 25.2 | Tracks 2 | 62.4%
+2026-05-09 19:41:05 | INFO     | __main__                       | Frame   537/840 | DET 21.6ms | TRK 0.4ms | FPS 12.9 | Tracks 1 | 63.9%
+2026-05-09 19:41:06 | INFO     | __main__                       | Frame   564/840 | DET 37.2ms | TRK 45.3ms | FPS 26.4 | Tracks 1 | 67.1%
+2026-05-09 19:41:07 | INFO     | __main__                       | Frame   593/840 | DET 24.4ms | TRK 23.4ms | FPS 27.6 | Tracks 0 | 70.6%
+2026-05-09 19:41:08 | INFO     | __main__                       | Frame   623/840 | DET 23.6ms | TRK 0.1ms | FPS 29.6 | Tracks 0 | 74.2%
+2026-05-09 19:41:09 | INFO     | __main__                       | Frame   654/840 | DET 19.3ms | TRK 0.1ms | FPS 30.8 | Tracks 0 | 77.9%
+2026-05-09 19:41:10 | INFO     | __main__                       | Frame   686/840 | DET 18.6ms | TRK 0.1ms | FPS 31.5 | Tracks 0 | 81.7%
+2026-05-09 19:41:11 | INFO     | __main__                       | Frame   717/840 | DET 15.1ms | TRK 0.1ms | FPS 30.7 | Tracks 0 | 85.4%
+2026-05-09 19:41:12 | INFO     | __main__                       | Frame   748/840 | DET 20.7ms | TRK 0.1ms | FPS 30.5 | Tracks 0 | 89.0%
+2026-05-09 19:41:12 | INFO     | __main__                       | ============================================================
+2026-05-09 19:41:12 | INFO     | __main__                       | STATS
+2026-05-09 19:41:12 | INFO     | __main__                       | ============================================================
+2026-05-09 19:41:12 | INFO     | __main__                       | frames_processed: 840
+2026-05-09 19:41:12 | INFO     | __main__                       | total_detections: 148
+2026-05-09 19:41:12 | INFO     | __main__                       | avg_detections_per_frame: 0.18
+2026-05-09 19:41:12 | INFO     | __main__                       | total_tracks_created: 9
+2026-05-09 19:41:12 | INFO     | __main__                       | currently_active: 0
+2026-05-09 19:41:12 | INFO     | __main__                       | Output: outputs/tracking_output.mp4
+2026-05-09 19:45:13 | INFO     | __main__                       | ============================================================
+2026-05-09 19:45:13 | INFO     | __main__                       | TRAFFIC AI SYSTEM
+2026-05-09 19:45:13 | INFO     | __main__                       | ============================================================
+2026-05-09 19:45:13 | INFO     | __main__                       | Source : videos/linh_nam.mp4
+2026-05-09 19:45:13 | INFO     | __main__                       | Device : cuda
+2026-05-09 19:45:13 | INFO     | detector.vehicle_detector      | VehicleDetector init | device=cuda | conf=0.2 | iou=0.5
+2026-05-09 19:45:13 | INFO     | detector.vehicle_detector      | Classes filter: [2, 3, 5, 7]
+2026-05-09 19:45:13 | INFO     | detector.vehicle_detector      | Loading YOLOv8 model: models/yolov8s.pt
+2026-05-09 19:45:13 | WARNING  | detector.vehicle_detector      | Model không tồn tại tại models/yolov8s.pt. Auto-downloading yolov8n.pt...
+2026-05-09 19:45:14 | INFO     | detector.vehicle_detector      | Model warmup...
+2026-05-09 19:45:15 | INFO     | detector.vehicle_detector      | Model ready.
+2026-05-09 19:45:15 | INFO     | tracker.deep_sort_tracker      | DeepSORTTracker init | max_age=60 | n_init=3 | max_cosine_dist=0.5 | λ_motion=0.7
+2026-05-09 19:45:16 | INFO     | tracker.deep_sort_tracker      | DeepSort engine ready | GPU embedder: True
+2026-05-09 19:45:16 | INFO     | __main__                       | Video: 2560x1440 @ 60.0 FPS
+2026-05-09 19:45:16 | INFO     | __main__                       | Saving output: outputs/tracking_output.mp4
+2026-05-09 19:45:16 | INFO     | __main__                       | [Q] Quit | [P] Pause | [S] Screenshot
+2026-05-09 19:45:17 | INFO     | __main__                       | Frame    19/840 | DET 16.4ms | TRK 0.1ms | FPS 18.5 | Tracks 0 | 2.3%
+2026-05-09 19:45:18 | INFO     | __main__                       | Frame    51/840 | DET 29.0ms | TRK 0.1ms | FPS 31.6 | Tracks 0 | 6.1%
+2026-05-09 19:45:19 | INFO     | __main__                       | Frame    85/840 | DET 14.3ms | TRK 0.1ms | FPS 33.3 | Tracks 0 | 10.1%
+2026-05-09 19:45:20 | INFO     | __main__                       | Frame   114/840 | DET 19.7ms | TRK 0.3ms | FPS 28.8 | Tracks 1 | 13.6%
+2026-05-09 19:45:21 | INFO     | __main__                       | Frame   132/840 | DET 22.2ms | TRK 0.3ms | FPS 17.9 | Tracks 1 | 15.7%
+2026-05-09 19:45:22 | INFO     | __main__                       | Frame   147/840 | DET 25.3ms | TRK 20.2ms | FPS 14.3 | Tracks 1 | 17.5%
+2026-05-09 19:45:23 | INFO     | __main__                       | Frame   166/840 | DET 22.7ms | TRK 0.4ms | FPS 18.6 | Tracks 2 | 19.8%
+2026-05-09 19:45:24 | INFO     | __main__                       | Frame   194/840 | DET 20.9ms | TRK 0.6ms | FPS 27.2 | Tracks 1 | 23.1%
+2026-05-09 19:45:25 | INFO     | __main__                       | Frame   214/840 | DET 25.2ms | TRK 25.0ms | FPS 19.4 | Tracks 1 | 25.5%
+2026-05-09 19:45:26 | INFO     | __main__                       | Frame   237/840 | DET 25.7ms | TRK 70.2ms | FPS 21.5 | Tracks 1 | 28.2%
+2026-05-09 19:45:27 | INFO     | __main__                       | Frame   253/840 | DET 22.5ms | TRK 28.7ms | FPS 15.1 | Tracks 2 | 30.1%
+2026-05-09 19:45:28 | INFO     | __main__                       | Frame   275/840 | DET 26.7ms | TRK 0.4ms | FPS 21.7 | Tracks 2 | 32.7%
+2026-05-09 19:45:29 | INFO     | __main__                       | Frame   291/840 | DET 39.0ms | TRK 41.3ms | FPS 15.3 | Tracks 4 | 34.6%
+2026-05-09 19:45:30 | INFO     | __main__                       | Frame   312/840 | DET 19.5ms | TRK 0.5ms | FPS 20.6 | Tracks 4 | 37.1%
+2026-05-09 19:45:31 | INFO     | __main__                       | Frame   342/840 | DET 20.3ms | TRK 0.6ms | FPS 29.8 | Tracks 3 | 40.7%
+2026-05-09 19:45:32 | INFO     | __main__                       | Frame   373/840 | DET 27.4ms | TRK 0.3ms | FPS 30.7 | Tracks 0 | 44.4%
+2026-05-09 19:45:33 | INFO     | __main__                       | Frame   400/840 | DET 21.1ms | TRK 0.3ms | FPS 26.1 | Tracks 1 | 47.6%
+2026-05-09 19:45:34 | INFO     | __main__                       | Frame   432/840 | DET 17.2ms | TRK 0.3ms | FPS 31.2 | Tracks 1 | 51.4%
+2026-05-09 19:45:35 | INFO     | __main__                       | Frame   454/840 | DET 27.2ms | TRK 0.4ms | FPS 21.8 | Tracks 1 | 54.0%
+2026-05-09 19:45:36 | INFO     | __main__                       | Frame   475/840 | DET 22.0ms | TRK 74.8ms | FPS 19.0 | Tracks 2 | 56.5%
+2026-05-09 19:45:37 | INFO     | __main__                       | Frame   487/840 | DET 28.1ms | TRK 19.2ms | FPS 11.3 | Tracks 2 | 58.0%
+2026-05-09 19:45:38 | INFO     | __main__                       | Frame   509/840 | DET 15.5ms | TRK 0.4ms | FPS 21.4 | Tracks 2 | 60.6%
+2026-05-09 19:45:39 | INFO     | __main__                       | Frame   532/840 | DET 23.8ms | TRK 24.4ms | FPS 23.0 | Tracks 1 | 63.3%
+2026-05-09 19:45:40 | INFO     | __main__                       | Frame   563/840 | DET 14.6ms | TRK 0.3ms | FPS 30.4 | Tracks 1 | 67.0%
+2026-05-09 19:45:41 | INFO     | __main__                       | Frame   670/840 | DET 27.9ms | TRK 0.1ms | FPS 106.3 | Tracks 0 | 79.8%
+2026-05-09 19:45:43 | INFO     | __main__                       | Frame   704/840 | DET 26.6ms | TRK 0.1ms | FPS 32.8 | Tracks 0 | 83.8%
+2026-05-09 19:45:44 | INFO     | __main__                       | Frame   735/840 | DET 16.0ms | TRK 0.1ms | FPS 30.9 | Tracks 0 | 87.5%
+2026-05-09 19:45:45 | INFO     | __main__                       | Frame   768/840 | DET 17.7ms | TRK 0.1ms | FPS 32.2 | Tracks 0 | 91.4%
+2026-05-09 19:45:46 | INFO     | __main__                       | Frame   800/840 | DET 13.5ms | TRK 0.1ms | FPS 31.9 | Tracks 0 | 95.2%
+2026-05-09 19:45:47 | INFO     | __main__                       | Frame   831/840 | DET 12.4ms | TRK 0.1ms | FPS 30.9 | Tracks 0 | 98.9%
+2026-05-09 19:45:47 | INFO     | __main__                       | ============================================================
+2026-05-09 19:45:47 | INFO     | __main__                       | STATS
+2026-05-09 19:45:47 | INFO     | __main__                       | ============================================================
+2026-05-09 19:45:47 | INFO     | __main__                       | frames_processed: 840
+2026-05-09 19:45:47 | INFO     | __main__                       | total_detections: 148
+2026-05-09 19:45:47 | INFO     | __main__                       | avg_detections_per_frame: 0.18
+2026-05-09 19:45:47 | INFO     | __main__                       | total_tracks_created: 9
+2026-05-09 19:45:47 | INFO     | __main__                       | currently_active: 0
+2026-05-09 19:45:47 | INFO     | __main__                       | Output: outputs/tracking_output.mp4
+2026-05-09 19:49:39 | INFO     | __main__                       | ============================================================
+2026-05-09 19:49:39 | INFO     | __main__                       | TRAFFIC AI SYSTEM
+2026-05-09 19:49:39 | INFO     | __main__                       | ============================================================
+2026-05-09 19:49:39 | INFO     | __main__                       | Source : videos/linh_nam.mp4
+2026-05-09 19:49:39 | INFO     | __main__                       | Device : cuda
+2026-05-09 19:49:39 | INFO     | detector.vehicle_detector      | VehicleDetector init | device=cuda | conf=0.2 | iou=0.5
+2026-05-09 19:49:39 | INFO     | detector.vehicle_detector      | Classes filter: [2, 3, 5, 7]
+2026-05-09 19:49:39 | INFO     | detector.vehicle_detector      | Loading YOLOv8 model: models/yolov8s.pt
+2026-05-09 19:49:39 | WARNING  | detector.vehicle_detector      | Model không tồn tại tại models/yolov8s.pt. Auto-downloading yolov8n.pt...
+2026-05-09 19:49:40 | INFO     | detector.vehicle_detector      | Model warmup...
+2026-05-09 19:49:42 | INFO     | detector.vehicle_detector      | Model ready.
+2026-05-09 19:49:42 | INFO     | tracker.deep_sort_tracker      | DeepSORTTracker init | max_age=60 | n_init=3 | max_cosine_dist=0.5 | λ_motion=0.7
+2026-05-09 19:49:42 | INFO     | tracker.deep_sort_tracker      | DeepSort engine ready | GPU embedder: True
+2026-05-09 19:49:42 | INFO     | __main__                       | Video: 1280x720 @ 30.0 FPS
+2026-05-09 19:49:42 | INFO     | __main__                       | Saving output: outputs/tracking_output.mp4
+2026-05-09 19:49:42 | INFO     | __main__                       | [Q] Quit | [P] Pause | [S] Screenshot
+2026-05-09 19:49:43 | INFO     | __main__                       | Frame     6/4742 | DET 42.9ms | TRK 32.2ms | FPS 5.8 | Tracks 9 | 0.1%
+2026-05-09 19:49:44 | INFO     | __main__                       | Frame    16/4742 | DET 35.2ms | TRK 35.3ms | FPS 9.5 | Tracks 11 | 0.3%
+2026-05-09 19:49:45 | INFO     | __main__                       | Frame    29/4742 | DET 21.0ms | TRK 33.9ms | FPS 12.5 | Tracks 11 | 0.6%
+2026-05-09 19:49:47 | INFO     | __main__                       | Frame    37/4742 | DET 32.1ms | TRK 151.8ms | FPS 7.1 | Tracks 14 | 0.8%
+2026-05-09 19:49:48 | INFO     | __main__                       | Frame    45/4742 | DET 28.9ms | TRK 92.8ms | FPS 8.0 | Tracks 15 | 0.9%
+2026-05-09 19:49:49 | INFO     | __main__                       | Frame    53/4742 | DET 27.6ms | TRK 90.9ms | FPS 7.4 | Tracks 16 | 1.1%
+2026-05-09 19:49:50 | INFO     | __main__                       | Frame    60/4742 | DET 31.8ms | TRK 116.3ms | FPS 6.9 | Tracks 16 | 1.3%
+2026-05-09 19:49:51 | INFO     | __main__                       | Frame    67/4742 | DET 41.9ms | TRK 72.0ms | FPS 6.6 | Tracks 17 | 1.4%
+2026-05-09 19:49:52 | INFO     | __main__                       | Frame    74/4742 | DET 63.4ms | TRK 74.0ms | FPS 6.5 | Tracks 17 | 1.6%
+2026-05-09 19:49:53 | INFO     | __main__                       | Frame    81/4742 | DET 36.2ms | TRK 105.5ms | FPS 6.5 | Tracks 16 | 1.7%
+2026-05-09 19:49:54 | INFO     | __main__                       | Frame    88/4742 | DET 30.4ms | TRK 62.4ms | FPS 6.9 | Tracks 17 | 1.9%
+2026-05-09 19:49:55 | INFO     | __main__                       | Frame    96/4742 | DET 37.3ms | TRK 95.6ms | FPS 7.9 | Tracks 20 | 2.0%
+2026-05-09 19:49:56 | INFO     | __main__                       | Frame   103/4742 | DET 55.2ms | TRK 72.4ms | FPS 6.1 | Tracks 23 | 2.2%
+2026-05-09 19:49:57 | INFO     | __main__                       | Frame   110/4742 | DET 38.3ms | TRK 101.6ms | FPS 6.3 | Tracks 21 | 2.3%
+2026-05-09 19:49:58 | INFO     | __main__                       | Frame   117/4742 | DET 29.5ms | TRK 109.2ms | FPS 7.0 | Tracks 23 | 2.5%
+2026-05-09 19:49:59 | INFO     | __main__                       | Frame   124/4742 | DET 31.7ms | TRK 136.4ms | FPS 6.3 | Tracks 23 | 2.6%
+2026-05-09 19:50:00 | INFO     | __main__                       | Frame   131/4742 | DET 32.6ms | TRK 93.0ms | FPS 6.5 | Tracks 22 | 2.8%
+2026-05-09 19:50:01 | INFO     | __main__                       | Frame   139/4742 | DET 28.3ms | TRK 137.5ms | FPS 7.3 | Tracks 19 | 2.9%
+2026-05-09 19:50:03 | INFO     | __main__                       | Frame   147/4742 | DET 45.3ms | TRK 59.4ms | FPS 7.2 | Tracks 19 | 3.1%
+2026-05-09 19:50:04 | INFO     | __main__                       | Frame   156/4742 | DET 25.3ms | TRK 85.9ms | FPS 8.3 | Tracks 18 | 3.3%
+2026-05-09 19:50:05 | INFO     | __main__                       | Frame   165/4742 | DET 27.0ms | TRK 57.9ms | FPS 8.7 | Tracks 19 | 3.5%
+2026-05-09 19:50:06 | INFO     | __main__                       | Frame   173/4742 | DET 37.6ms | TRK 48.7ms | FPS 8.0 | Tracks 19 | 3.6%
+2026-05-09 19:50:07 | INFO     | __main__                       | Frame   180/4742 | DET 46.7ms | TRK 68.4ms | FPS 6.9 | Tracks 19 | 3.8%
+2026-05-09 19:50:08 | INFO     | __main__                       | Frame   189/4742 | DET 36.1ms | TRK 43.4ms | FPS 9.0 | Tracks 17 | 4.0%
+2026-05-09 19:50:09 | INFO     | __main__                       | Frame   198/4742 | DET 27.3ms | TRK 98.0ms | FPS 8.0 | Tracks 16 | 4.2%
+2026-05-09 19:50:10 | INFO     | __main__                       | Frame   207/4742 | DET 31.0ms | TRK 90.7ms | FPS 8.4 | Tracks 17 | 4.4%
+2026-05-09 19:50:11 | INFO     | __main__                       | Frame   236/4742 | DET 36.8ms | TRK 49.1ms | FPS 27.9 | Tracks 14 | 5.0%
+2026-05-09 19:50:12 | INFO     | __main__                       | Frame   244/4742 | DET 29.0ms | TRK 90.5ms | FPS 7.8 | Tracks 13 | 5.1%
+2026-05-09 19:50:13 | INFO     | __main__                       | Frame   253/4742 | DET 31.8ms | TRK 89.2ms | FPS 8.2 | Tracks 12 | 5.3%
+2026-05-09 19:50:14 | INFO     | __main__                       | Frame   262/4742 | DET 32.2ms | TRK 81.4ms | FPS 8.2 | Tracks 13 | 5.5%
+2026-05-09 19:50:15 | INFO     | __main__                       | Frame   270/4742 | DET 28.9ms | TRK 93.6ms | FPS 7.8 | Tracks 16 | 5.7%
+2026-05-09 19:50:16 | INFO     | __main__                       | Frame   278/4742 | DET 28.8ms | TRK 86.8ms | FPS 7.4 | Tracks 16 | 5.9%
+2026-05-09 19:50:17 | INFO     | __main__                       | Frame   286/4742 | DET 30.1ms | TRK 87.8ms | FPS 7.7 | Tracks 17 | 6.0%
+2026-05-09 19:50:18 | INFO     | __main__                       | Frame   294/4742 | DET 36.8ms | TRK 65.9ms | FPS 7.9 | Tracks 18 | 6.2%
+2026-05-09 19:50:19 | INFO     | __main__                       | Frame   303/4742 | DET 36.1ms | TRK 78.0ms | FPS 8.0 | Tracks 17 | 6.4%
+2026-05-09 19:50:20 | INFO     | __main__                       | Frame   311/4742 | DET 27.7ms | TRK 129.9ms | FPS 7.8 | Tracks 18 | 6.6%
+2026-05-09 19:50:21 | INFO     | __main__                       | Frame   319/4742 | DET 31.2ms | TRK 90.1ms | FPS 7.3 | Tracks 20 | 6.7%
+2026-05-09 19:50:23 | INFO     | __main__                       | Frame   327/4742 | DET 44.0ms | TRK 63.4ms | FPS 7.7 | Tracks 17 | 6.9%
+2026-05-09 19:50:24 | INFO     | __main__                       | Frame   335/4742 | DET 33.6ms | TRK 61.9ms | FPS 7.7 | Tracks 17 | 7.1%
+2026-05-09 19:50:25 | INFO     | __main__                       | Frame   343/4742 | DET 35.6ms | TRK 76.7ms | FPS 7.4 | Tracks 15 | 7.2%
+2026-05-09 19:50:26 | INFO     | __main__                       | Frame   351/4742 | DET 39.4ms | TRK 93.8ms | FPS 7.4 | Tracks 19 | 7.4%
+2026-05-09 19:50:27 | INFO     | __main__                       | Frame   359/4742 | DET 29.3ms | TRK 86.8ms | FPS 8.0 | Tracks 22 | 7.6%
+2026-05-09 19:50:28 | INFO     | __main__                       | Frame   367/4742 | DET 36.1ms | TRK 102.7ms | FPS 7.3 | Tracks 23 | 7.7%
+2026-05-09 19:55:48 | INFO     | __main__                       | ============================================================
+2026-05-09 19:55:48 | INFO     | __main__                       | TRAFFIC AI SYSTEM
+2026-05-09 19:55:48 | INFO     | __main__                       | ============================================================
+2026-05-09 19:55:48 | INFO     | __main__                       | Source : videos/linh_nam.mp4
+2026-05-09 19:55:48 | INFO     | __main__                       | Device : cuda
+2026-05-09 19:55:48 | INFO     | detector.vehicle_detector      | VehicleDetector init | device=cuda | conf=0.25 | iou=0.5
+2026-05-09 19:55:48 | INFO     | detector.vehicle_detector      | Classes filter: [2, 3, 5, 7]
+2026-05-09 19:55:48 | INFO     | detector.vehicle_detector      | Loading YOLOv8 model: models/yolov8s.pt
+2026-05-09 19:55:48 | WARNING  | detector.vehicle_detector      | Model không tồn tại tại models/yolov8s.pt. Auto-downloading yolov8n.pt...
+2026-05-09 19:55:49 | INFO     | detector.vehicle_detector      | Model warmup...
+2026-05-09 19:55:50 | INFO     | detector.vehicle_detector      | Model ready.
+2026-05-09 19:55:50 | INFO     | tracker.deep_sort_tracker      | DeepSORTTracker init | max_age=20 | n_init=2 | max_cosine_dist=0.4 | λ_motion=0.7
+2026-05-09 19:55:51 | INFO     | tracker.deep_sort_tracker      | DeepSort engine ready | GPU embedder: True
+2026-05-09 19:55:51 | INFO     | __main__                       | Video: 1280x720 @ 30.0 FPS
+2026-05-09 19:58:36 | INFO     | __main__                       | ============================================================
+2026-05-09 19:58:36 | INFO     | __main__                       | TRAFFIC AI SYSTEM
+2026-05-09 19:58:36 | INFO     | __main__                       | ============================================================
+2026-05-09 19:58:36 | INFO     | __main__                       | Source : videos/linh_nam.mp4
+2026-05-09 19:58:36 | INFO     | __main__                       | Device : cuda
+2026-05-09 19:58:36 | INFO     | detector.vehicle_detector      | VehicleDetector init | device=cuda | conf=0.25 | iou=0.5
+2026-05-09 19:58:36 | INFO     | detector.vehicle_detector      | Classes filter: [2, 3, 5, 7]
+2026-05-09 19:58:36 | INFO     | detector.vehicle_detector      | Loading YOLOv8 model: models/yolov8s.pt
+2026-05-09 19:58:36 | WARNING  | detector.vehicle_detector      | Model không tồn tại tại models/yolov8s.pt. Auto-downloading yolov8n.pt...
+2026-05-09 19:58:37 | INFO     | detector.vehicle_detector      | Model warmup...
+2026-05-09 19:58:38 | INFO     | detector.vehicle_detector      | Model ready.
+2026-05-09 19:58:38 | INFO     | tracker.deep_sort_tracker      | DeepSORTTracker init | max_age=20 | n_init=2 | max_cosine_dist=0.4 | λ_motion=0.7
+2026-05-09 19:58:39 | INFO     | tracker.deep_sort_tracker      | DeepSort engine ready | GPU embedder: True
+2026-05-09 19:58:39 | INFO     | __main__                       | Video: 1280x720 @ 30.0 FPS
+2026-05-09 19:58:39 | INFO     | __main__                       | Saving output: outputs/tracking_output.mp4
+2026-05-09 19:58:39 | INFO     | __main__                       | [Q] Quit | [P] Pause | [S] Screenshot
+2026-05-09 19:58:40 | INFO     | __main__                       | Frame    16/4742 | DET 16.2ms | TRK 29.3ms | FPS 7.8 | Tracks 8 | 0.3%
+2026-05-09 19:58:41 | INFO     | __main__                       | Frame    44/4742 | DET 14.3ms | TRK 31.1ms | FPS 13.2 | Tracks 13 | 0.9%
+2026-05-09 19:58:42 | INFO     | __main__                       | Frame    74/4742 | DET 26.3ms | TRK 32.4ms | FPS 14.2 | Tracks 15 | 1.6%
+2026-05-09 19:58:43 | INFO     | __main__                       | Frame   100/4742 | DET 13.2ms | TRK 35.0ms | FPS 12.6 | Tracks 15 | 2.1%
+2026-05-09 19:58:44 | INFO     | __main__                       | Frame   128/4742 | DET 21.5ms | TRK 35.0ms | FPS 13.6 | Tracks 19 | 2.7%
+2026-05-09 19:58:45 | INFO     | __main__                       | Frame   158/4742 | DET 27.2ms | TRK 29.1ms | FPS 14.4 | Tracks 16 | 3.3%
+2026-05-09 19:58:46 | INFO     | __main__                       | Frame   188/4742 | DET 23.5ms | TRK 66.2ms | FPS 14.7 | Tracks 13 | 4.0%
+2026-05-09 19:58:47 | INFO     | __main__                       | Frame   214/4742 | DET 12.9ms | TRK 34.3ms | FPS 12.3 | Tracks 13 | 4.5%
+2026-05-09 19:58:48 | INFO     | __main__                       | Frame   240/4742 | DET 27.7ms | TRK 66.3ms | FPS 12.9 | Tracks 11 | 5.1%
+2026-05-09 19:58:49 | INFO     | __main__                       | Frame   270/4742 | DET 13.9ms | TRK 31.1ms | FPS 14.4 | Tracks 14 | 5.7%
+2026-05-09 19:58:50 | INFO     | __main__                       | Frame   298/4742 | DET 37.2ms | TRK 51.9ms | FPS 13.3 | Tracks 11 | 6.3%
+2026-05-09 19:58:51 | INFO     | __main__                       | Frame   326/4742 | DET 21.0ms | TRK 29.6ms | FPS 13.7 | Tracks 8 | 6.9%
+2026-05-09 19:58:53 | INFO     | __main__                       | Frame   376/4742 | DET 17.6ms | TRK 26.6ms | FPS 24.0 | Tracks 18 | 7.9%
+2026-05-09 19:58:54 | INFO     | __main__                       | Frame   406/4742 | DET 32.2ms | TRK 62.8ms | FPS 14.5 | Tracks 13 | 8.6%
+2026-05-09 19:58:55 | INFO     | __main__                       | Frame   434/4742 | DET 14.6ms | TRK 28.8ms | FPS 13.9 | Tracks 15 | 9.2%
+2026-05-09 19:58:56 | INFO     | __main__                       | Frame   464/4742 | DET 21.1ms | TRK 23.3ms | FPS 14.6 | Tracks 14 | 9.8%
+2026-05-09 19:58:57 | INFO     | __main__                       | Frame   498/4742 | DET 19.3ms | TRK 39.9ms | FPS 16.5 | Tracks 10 | 10.5%
+2026-05-09 19:58:58 | INFO     | __main__                       | Frame   530/4742 | DET 13.4ms | TRK 23.9ms | FPS 16.0 | Tracks 10 | 11.2%
+2026-05-09 19:58:59 | INFO     | __main__                       | Frame   560/4742 | DET 26.3ms | TRK 41.6ms | FPS 14.4 | Tracks 10 | 11.8%
+2026-05-09 19:59:00 | INFO     | __main__                       | Frame   586/4742 | DET 16.8ms | TRK 98.4ms | FPS 13.0 | Tracks 17 | 12.4%
+2026-05-09 19:59:01 | INFO     | __main__                       | Frame   610/4742 | DET 22.4ms | TRK 52.1ms | FPS 11.7 | Tracks 30 | 12.9%
+2026-05-09 19:59:02 | INFO     | __main__                       | Frame   636/4742 | DET 20.2ms | TRK 42.6ms | FPS 12.3 | Tracks 31 | 13.4%
+2026-05-09 19:59:03 | INFO     | __main__                       | Frame   662/4742 | DET 21.0ms | TRK 39.9ms | FPS 12.3 | Tracks 31 | 14.0%
+2026-05-09 19:59:04 | INFO     | __main__                       | Frame   688/4742 | DET 19.8ms | TRK 44.7ms | FPS 12.7 | Tracks 29 | 14.5%
+2026-05-09 19:59:05 | INFO     | __main__                       | Frame   714/4742 | DET 21.1ms | TRK 33.5ms | FPS 12.4 | Tracks 24 | 15.1%
+2026-05-09 19:59:06 | INFO     | __main__                       | Frame   740/4742 | DET 31.7ms | TRK 45.2ms | FPS 12.8 | Tracks 20 | 15.6%
+2026-05-09 19:59:07 | INFO     | __main__                       | Frame   768/4742 | DET 15.4ms | TRK 44.8ms | FPS 13.1 | Tracks 24 | 16.2%
+2026-05-09 19:59:08 | INFO     | __main__                       | Frame   794/4742 | DET 25.6ms | TRK 36.2ms | FPS 12.6 | Tracks 23 | 16.7%
+2026-05-09 19:59:09 | INFO     | __main__                       | Frame   820/4742 | DET 17.1ms | TRK 43.8ms | FPS 12.8 | Tracks 23 | 17.3%
+2026-05-09 19:59:10 | INFO     | __main__                       | Frame   844/4742 | DET 16.0ms | TRK 32.5ms | FPS 11.5 | Tracks 18 | 17.8%
+2026-05-09 19:59:11 | INFO     | __main__                       | Frame   866/4742 | DET 23.9ms | TRK 89.0ms | FPS 9.9 | Tracks 17 | 18.3%
+2026-05-09 19:59:12 | INFO     | __main__                       | Frame   888/4742 | DET 27.2ms | TRK 44.3ms | FPS 10.8 | Tracks 16 | 18.7%
+2026-05-09 19:59:13 | INFO     | __main__                       | Frame   910/4742 | DET 43.4ms | TRK 69.3ms | FPS 10.0 | Tracks 17 | 19.2%
+2026-05-09 19:59:14 | INFO     | __main__                       | Frame   932/4742 | DET 27.5ms | TRK 50.7ms | FPS 10.1 | Tracks 16 | 19.7%
+2026-05-09 19:59:15 | INFO     | __main__                       | Frame   950/4742 | DET 18.5ms | TRK 37.8ms | FPS 8.7 | Tracks 13 | 20.0%
+2026-05-09 19:59:16 | INFO     | __main__                       | Frame   978/4742 | DET 13.5ms | TRK 35.8ms | FPS 13.4 | Tracks 14 | 20.6%
+2026-05-09 19:59:17 | INFO     | __main__                       | Frame   998/4742 | DET 21.4ms | TRK 49.4ms | FPS 9.7 | Tracks 16 | 21.0%
+2026-05-09 19:59:19 | INFO     | __main__                       | Frame  1024/4742 | DET 17.1ms | TRK 43.4ms | FPS 12.7 | Tracks 20 | 21.6%
+2026-05-09 19:59:20 | INFO     | __main__                       | Frame  1048/4742 | DET 31.2ms | TRK 37.2ms | FPS 11.2 | Tracks 18 | 22.1%
+2026-05-09 19:59:21 | INFO     | __main__                       | Frame  1070/4742 | DET 26.6ms | TRK 45.7ms | FPS 10.5 | Tracks 20 | 22.6%
+2026-05-09 19:59:22 | INFO     | __main__                       | Frame  1096/4742 | DET 16.9ms | TRK 45.9ms | FPS 12.2 | Tracks 22 | 23.1%
+2026-05-09 19:59:23 | INFO     | __main__                       | Frame  1122/4742 | DET 10.8ms | TRK 3.4ms | FPS 12.7 | Tracks 27 | 23.7%
+2026-05-09 19:59:24 | INFO     | __main__                       | Frame  1184/4742 | DET 19.6ms | TRK 19.3ms | FPS 30.8 | Tracks 2 | 25.0%
+2026-05-09 19:59:25 | INFO     | __main__                       | Frame  1266/4742 | DET 13.1ms | TRK 12.6ms | FPS 39.9 | Tracks 7 | 26.7%
+2026-05-09 19:59:26 | INFO     | __main__                       | Frame  1306/4742 | DET 13.7ms | TRK 24.0ms | FPS 19.9 | Tracks 10 | 27.5%
+2026-05-09 19:59:27 | INFO     | __main__                       | Frame  1342/4742 | DET 26.3ms | TRK 60.6ms | FPS 17.1 | Tracks 12 | 28.3%
+2026-05-09 19:59:28 | INFO     | __main__                       | Frame  1372/4742 | DET 24.0ms | TRK 65.9ms | FPS 14.5 | Tracks 13 | 28.9%
+2026-05-09 19:59:29 | INFO     | __main__                       | Frame  1394/4742 | DET 32.3ms | TRK 52.8ms | FPS 10.6 | Tracks 13 | 29.4%
+2026-05-09 19:59:30 | INFO     | __main__                       | Frame  1426/4742 | DET 28.6ms | TRK 65.6ms | FPS 15.6 | Tracks 11 | 30.1%
+2026-05-09 19:59:31 | INFO     | __main__                       | Frame  1456/4742 | DET 16.8ms | TRK 17.7ms | FPS 14.9 | Tracks 7 | 30.7%
+2026-05-09 19:59:32 | INFO     | __main__                       | Frame  1494/4742 | DET 14.9ms | TRK 19.8ms | FPS 18.3 | Tracks 9 | 31.5%
+2026-05-09 19:59:33 | INFO     | __main__                       | Frame  1528/4742 | DET 12.8ms | TRK 23.0ms | FPS 16.8 | Tracks 17 | 32.2%
+2026-05-09 19:59:34 | INFO     | __main__                       | Frame  1558/4742 | DET 14.9ms | TRK 36.3ms | FPS 14.9 | Tracks 20 | 32.9%
+2026-05-09 19:59:35 | INFO     | __main__                       | Frame  1586/4742 | DET 19.7ms | TRK 27.8ms | FPS 13.8 | Tracks 19 | 33.4%
+2026-05-09 19:59:36 | INFO     | __main__                       | Frame  1616/4742 | DET 15.6ms | TRK 24.1ms | FPS 14.5 | Tracks 17 | 34.1%
+2026-05-09 19:59:37 | INFO     | __main__                       | Frame  1642/4742 | DET 31.8ms | TRK 37.9ms | FPS 12.0 | Tracks 19 | 34.6%
+2026-05-09 19:59:38 | INFO     | __main__                       | Frame  1670/4742 | DET 24.4ms | TRK 29.9ms | FPS 13.7 | Tracks 15 | 35.2%
+2026-05-09 19:59:39 | INFO     | __main__                       | Frame  1696/4742 | DET 19.8ms | TRK 46.6ms | FPS 13.0 | Tracks 18 | 35.8%
+2026-05-09 19:59:40 | INFO     | __main__                       | Frame  1722/4742 | DET 23.8ms | TRK 54.9ms | FPS 12.0 | Tracks 15 | 36.3%
+2026-05-09 19:59:41 | INFO     | __main__                       | Frame  1752/4742 | DET 12.5ms | TRK 20.2ms | FPS 14.9 | Tracks 7 | 36.9%
+2026-05-09 19:59:42 | INFO     | __main__                       | Frame  1782/4742 | DET 14.6ms | TRK 22.8ms | FPS 14.9 | Tracks 8 | 37.6%
+2026-05-09 19:59:43 | INFO     | __main__                       | Frame  1814/4742 | DET 11.3ms | TRK 20.7ms | FPS 15.3 | Tracks 12 | 38.3%
+2026-05-09 19:59:44 | INFO     | __main__                       | Frame  1844/4742 | DET 30.1ms | TRK 74.1ms | FPS 13.7 | Tracks 6 | 38.9%
+2026-05-09 19:59:45 | INFO     | __main__                       | Frame  1876/4742 | DET 20.3ms | TRK 25.2ms | FPS 15.8 | Tracks 11 | 39.6%
+2026-05-09 19:59:46 | INFO     | __main__                       | Frame  1898/4742 | DET 25.0ms | TRK 63.2ms | FPS 10.5 | Tracks 10 | 40.0%
+2026-05-09 19:59:47 | INFO     | __main__                       | Frame  1934/4742 | DET 14.9ms | TRK 75.0ms | FPS 17.9 | Tracks 10 | 40.8%
+2026-05-09 19:59:48 | INFO     | __main__                       | Frame  1972/4742 | DET 10.6ms | TRK 22.8ms | FPS 18.4 | Tracks 15 | 41.6%
+2026-05-09 19:59:50 | INFO     | __main__                       | Frame  2006/4742 | DET 13.0ms | TRK 111.2ms | FPS 15.6 | Tracks 18 | 42.3%
+2026-05-09 19:59:51 | INFO     | __main__                       | Frame  2034/4742 | DET 19.0ms | TRK 80.6ms | FPS 13.6 | Tracks 18 | 42.9%
+2026-05-09 19:59:52 | INFO     | __main__                       | Frame  2060/4742 | DET 21.5ms | TRK 38.4ms | FPS 13.0 | Tracks 17 | 43.4%
+2026-05-09 19:59:53 | INFO     | __main__                       | Frame  2088/4742 | DET 21.7ms | TRK 28.8ms | FPS 13.9 | Tracks 16 | 44.0%
+2026-05-09 19:59:54 | INFO     | __main__                       | Frame  2114/4742 | DET 20.7ms | TRK 83.2ms | FPS 12.2 | Tracks 16 | 44.6%
+2026-05-09 19:59:55 | INFO     | __main__                       | Frame  2136/4742 | DET 25.7ms | TRK 76.9ms | FPS 10.8 | Tracks 15 | 45.0%
+2026-05-09 19:59:56 | INFO     | __main__                       | Frame  2164/4742 | DET 14.2ms | TRK 28.4ms | FPS 13.4 | Tracks 20 | 45.6%
+2026-05-09 19:59:57 | INFO     | __main__                       | Frame  2218/4742 | DET 15.2ms | TRK 36.3ms | FPS 25.9 | Tracks 17 | 46.8%
+2026-05-09 19:59:58 | INFO     | __main__                       | Frame  2246/4742 | DET 21.2ms | TRK 29.6ms | FPS 13.2 | Tracks 15 | 47.4%
+2026-05-09 19:59:59 | INFO     | __main__                       | Frame  2276/4742 | DET 19.3ms | TRK 25.8ms | FPS 15.0 | Tracks 24 | 48.0%
+2026-05-09 20:00:00 | INFO     | __main__                       | Frame  2300/4742 | DET 30.4ms | TRK 65.5ms | FPS 11.7 | Tracks 30 | 48.5%
+2026-05-09 20:00:01 | INFO     | __main__                       | Frame  2322/4742 | DET 32.2ms | TRK 44.4ms | FPS 10.4 | Tracks 26 | 49.0%
+2026-05-09 20:00:02 | INFO     | __main__                       | Frame  2354/4742 | DET 19.7ms | TRK 24.0ms | FPS 15.6 | Tracks 20 | 49.6%
+2026-05-09 20:00:03 | INFO     | __main__                       | Frame  2382/4742 | DET 17.4ms | TRK 35.4ms | FPS 14.0 | Tracks 14 | 50.2%
+2026-05-09 20:00:04 | INFO     | __main__                       | Frame  2416/4742 | DET 20.2ms | TRK 31.9ms | FPS 17.0 | Tracks 11 | 50.9%
+2026-05-09 20:00:05 | INFO     | __main__                       | Frame  2448/4742 | DET 18.1ms | TRK 75.9ms | FPS 15.1 | Tracks 9 | 51.6%
+2026-05-09 20:00:06 | INFO     | __main__                       | Frame  2474/4742 | DET 20.8ms | TRK 23.6ms | FPS 12.3 | Tracks 9 | 52.2%
+2026-05-09 20:00:07 | INFO     | __main__                       | Frame  2504/4742 | DET 19.7ms | TRK 41.3ms | FPS 14.4 | Tracks 15 | 52.8%
+2026-05-09 20:00:08 | INFO     | __main__                       | Frame  2526/4742 | DET 20.5ms | TRK 46.5ms | FPS 10.5 | Tracks 25 | 53.3%
+2026-05-09 20:00:09 | INFO     | __main__                       | Frame  2546/4742 | DET 15.6ms | TRK 39.8ms | FPS 9.9 | Tracks 27 | 53.7%
+2026-05-09 20:00:10 | INFO     | __main__                       | Frame  2566/4742 | DET 26.2ms | TRK 46.1ms | FPS 9.9 | Tracks 36 | 54.1%
+2026-05-09 20:00:11 | INFO     | __main__                       | Frame  2592/4742 | DET 23.5ms | TRK 67.3ms | FPS 12.1 | Tracks 35 | 54.7%
+2026-05-09 20:00:12 | INFO     | __main__                       | Frame  2618/4742 | DET 18.7ms | TRK 26.1ms | FPS 12.5 | Tracks 9 | 55.2%
+2026-05-09 20:00:13 | INFO     | __main__                       | Frame  2648/4742 | DET 19.3ms | TRK 43.9ms | FPS 14.3 | Tracks 6 | 55.8%
+2026-05-09 20:00:14 | INFO     | __main__                       | Frame  2684/4742 | DET 12.8ms | TRK 27.8ms | FPS 17.7 | Tracks 8 | 56.6%
+2026-05-09 20:00:15 | INFO     | __main__                       | Frame  2710/4742 | DET 17.5ms | TRK 34.0ms | FPS 12.3 | Tracks 16 | 57.1%
+2026-05-09 20:00:16 | INFO     | __main__                       | Frame  2736/4742 | DET 17.2ms | TRK 40.5ms | FPS 12.5 | Tracks 32 | 57.7%
+2026-05-09 20:00:17 | INFO     | __main__                       | Frame  2764/4742 | DET 18.1ms | TRK 31.0ms | FPS 13.4 | Tracks 22 | 58.3%
+2026-05-09 20:00:19 | INFO     | __main__                       | Frame  2786/4742 | DET 23.0ms | TRK 39.3ms | FPS 10.6 | Tracks 17 | 58.8%
+2026-05-09 20:00:20 | INFO     | __main__                       | Frame  2814/4742 | DET 15.6ms | TRK 31.7ms | FPS 13.5 | Tracks 13 | 59.3%
+2026-05-09 20:00:21 | INFO     | __main__                       | Frame  2842/4742 | DET 15.3ms | TRK 31.3ms | FPS 13.2 | Tracks 14 | 59.9%
+2026-05-09 20:00:22 | INFO     | __main__                       | Frame  2868/4742 | DET 20.0ms | TRK 62.5ms | FPS 12.8 | Tracks 10 | 60.5%
+2026-05-09 20:00:23 | INFO     | __main__                       | Frame  2898/4742 | DET 22.0ms | TRK 38.6ms | FPS 14.5 | Tracks 14 | 61.1%
+2026-05-09 20:00:24 | INFO     | __main__                       | Frame  2930/4742 | DET 23.3ms | TRK 34.5ms | FPS 15.3 | Tracks 25 | 61.8%
+2026-05-09 20:00:25 | INFO     | __main__                       | Frame  2978/4742 | DET 16.8ms | TRK 25.9ms | FPS 23.2 | Tracks 1 | 62.8%
+2026-05-09 20:00:26 | INFO     | __main__                       | Frame  3016/4742 | DET 15.8ms | TRK 25.9ms | FPS 18.6 | Tracks 8 | 63.6%
+2026-05-09 20:00:27 | INFO     | __main__                       | Frame  3048/4742 | DET 21.2ms | TRK 76.0ms | FPS 15.4 | Tracks 10 | 64.3%
+2026-05-09 20:00:28 | INFO     | __main__                       | Frame  3078/4742 | DET 28.2ms | TRK 27.2ms | FPS 14.8 | Tracks 7 | 64.9%
+2026-05-09 20:00:29 | INFO     | __main__                       | Frame  3122/4742 | DET 11.3ms | TRK 19.6ms | FPS 21.3 | Tracks 8 | 65.8%
+2026-05-09 20:00:30 | INFO     | __main__                       | Frame  3156/4742 | DET 12.8ms | TRK 17.8ms | FPS 16.8 | Tracks 9 | 66.6%
+2026-05-09 20:00:31 | INFO     | __main__                       | Frame  3184/4742 | DET 12.7ms | TRK 20.8ms | FPS 13.8 | Tracks 9 | 67.1%
+2026-05-09 20:00:32 | INFO     | __main__                       | Frame  3222/4742 | DET 22.6ms | TRK 27.5ms | FPS 18.2 | Tracks 7 | 67.9%
+2026-05-09 20:00:33 | INFO     | __main__                       | Frame  3256/4742 | DET 10.9ms | TRK 30.7ms | FPS 16.2 | Tracks 7 | 68.7%
+2026-05-09 20:00:34 | INFO     | __main__                       | Frame  3292/4742 | DET 23.8ms | TRK 29.2ms | FPS 17.4 | Tracks 10 | 69.4%
+2026-05-09 20:00:35 | INFO     | __main__                       | Frame  3320/4742 | DET 20.5ms | TRK 55.5ms | FPS 13.6 | Tracks 22 | 70.0%
+2026-05-09 20:00:36 | INFO     | __main__                       | Frame  3338/4742 | DET 22.6ms | TRK 43.4ms | FPS 8.5 | Tracks 43 | 70.4%
+2026-05-09 20:00:37 | INFO     | __main__                       | Frame  3358/4742 | DET 29.1ms | TRK 85.1ms | FPS 8.8 | Tracks 51 | 70.8%
+2026-05-09 20:00:38 | INFO     | __main__                       | Frame  3378/4742 | DET 26.0ms | TRK 55.1ms | FPS 9.9 | Tracks 47 | 71.2%
+2026-05-09 20:00:39 | INFO     | __main__                       | Frame  3396/4742 | DET 23.0ms | TRK 83.8ms | FPS 8.1 | Tracks 29 | 71.6%
+2026-05-09 20:00:40 | INFO     | __main__                       | Frame  3418/4742 | DET 27.1ms | TRK 48.5ms | FPS 10.2 | Tracks 20 | 72.1%
+2026-05-09 20:00:41 | INFO     | __main__                       | Frame  3444/4742 | DET 16.6ms | TRK 39.8ms | FPS 12.9 | Tracks 19 | 72.6%
+2026-05-09 20:00:43 | INFO     | __main__                       | Frame  3464/4742 | DET 40.3ms | TRK 100.5ms | FPS 9.3 | Tracks 19 | 73.0%
+2026-05-09 20:00:44 | INFO     | __main__                       | Frame  3490/4742 | DET 20.7ms | TRK 47.7ms | FPS 12.3 | Tracks 20 | 73.6%
+2026-05-09 20:00:45 | INFO     | __main__                       | Frame  3518/4742 | DET 24.1ms | TRK 37.0ms | FPS 13.2 | Tracks 21 | 74.2%
+2026-05-09 20:00:46 | INFO     | __main__                       | Frame  3546/4742 | DET 17.5ms | TRK 41.1ms | FPS 13.2 | Tracks 27 | 74.8%
+2026-05-09 20:00:47 | INFO     | __main__                       | Frame  3572/4742 | DET 15.6ms | TRK 42.1ms | FPS 12.5 | Tracks 31 | 75.3%
+2026-05-09 20:00:48 | INFO     | __main__                       | Frame  3594/4742 | DET 31.4ms | TRK 71.5ms | FPS 9.9 | Tracks 41 | 75.8%
+2026-05-09 20:00:49 | INFO     | __main__                       | Frame  3614/4742 | DET 25.0ms | TRK 59.3ms | FPS 9.6 | Tracks 53 | 76.2%
+2026-05-09 20:00:50 | INFO     | __main__                       | Frame  3636/4742 | DET 25.0ms | TRK 57.4ms | FPS 10.2 | Tracks 57 | 76.7%
+2026-05-09 20:00:51 | INFO     | __main__                       | Frame  3656/4742 | DET 31.9ms | TRK 57.0ms | FPS 9.5 | Tracks 45 | 77.1%
+2026-05-09 20:00:52 | INFO     | __main__                       | Frame  3678/4742 | DET 17.9ms | TRK 60.2ms | FPS 10.2 | Tracks 32 | 77.6%
+2026-05-09 20:00:53 | INFO     | __main__                       | Frame  3704/4742 | DET 25.4ms | TRK 41.7ms | FPS 12.8 | Tracks 28 | 78.1%
+2026-05-09 20:00:54 | INFO     | __main__                       | Frame  3730/4742 | DET 17.2ms | TRK 73.3ms | FPS 12.5 | Tracks 26 | 78.7%
+2026-05-09 20:00:55 | INFO     | __main__                       | Frame  3750/4742 | DET 18.8ms | TRK 43.7ms | FPS 9.9 | Tracks 32 | 79.1%
+2026-05-09 20:00:56 | INFO     | __main__                       | Frame  3768/4742 | DET 19.7ms | TRK 86.4ms | FPS 8.3 | Tracks 38 | 79.5%
+2026-05-09 20:00:57 | INFO     | __main__                       | Frame  3788/4742 | DET 28.6ms | TRK 60.0ms | FPS 9.3 | Tracks 50 | 79.9%
+2026-05-09 20:00:58 | INFO     | __main__                       | Frame  3808/4742 | DET 32.3ms | TRK 79.9ms | FPS 9.8 | Tracks 54 | 80.3%
+2026-05-09 20:00:59 | INFO     | __main__                       | Frame  3830/4742 | DET 27.0ms | TRK 49.2ms | FPS 10.1 | Tracks 40 | 80.8%
+2026-05-09 20:01:01 | INFO     | __main__                       | Frame  3866/4742 | DET 23.8ms | TRK 51.7ms | FPS 16.7 | Tracks 54 | 81.5%
+2026-05-09 20:01:02 | INFO     | __main__                       | Frame  3890/4742 | DET 24.3ms | TRK 54.6ms | FPS 11.5 | Tracks 35 | 82.0%
+2026-05-09 20:01:03 | INFO     | __main__                       | Frame  3914/4742 | DET 17.1ms | TRK 37.0ms | FPS 11.7 | Tracks 21 | 82.5%
+2026-05-09 20:01:04 | INFO     | __main__                       | Frame  3940/4742 | DET 22.7ms | TRK 34.6ms | FPS 12.3 | Tracks 23 | 83.1%
+2026-05-09 20:01:05 | INFO     | __main__                       | Frame  3978/4742 | DET 14.1ms | TRK 47.1ms | FPS 18.5 | Tracks 16 | 83.9%
+2026-05-09 20:01:06 | INFO     | __main__                       | Frame  4008/4742 | DET 28.3ms | TRK 34.9ms | FPS 14.9 | Tracks 10 | 84.5%
+2026-05-09 20:01:07 | INFO     | __main__                       | Frame  4040/4742 | DET 19.6ms | TRK 28.9ms | FPS 15.5 | Tracks 7 | 85.2%
+2026-05-09 20:01:08 | INFO     | __main__                       | Frame  4072/4742 | DET 21.7ms | TRK 42.7ms | FPS 15.0 | Tracks 14 | 85.9%
+2026-05-09 20:01:09 | INFO     | __main__                       | Frame  4100/4742 | DET 16.1ms | TRK 40.0ms | FPS 13.7 | Tracks 28 | 86.5%
+2026-05-09 20:01:10 | INFO     | __main__                       | Frame  4126/4742 | DET 14.7ms | TRK 44.9ms | FPS 12.1 | Tracks 40 | 87.0%
+2026-05-09 20:01:11 | INFO     | __main__                       | Frame  4150/4742 | DET 34.3ms | TRK 58.1ms | FPS 10.8 | Tracks 32 | 87.5%
+2026-05-09 20:01:12 | INFO     | __main__                       | Frame  4174/4742 | DET 31.7ms | TRK 32.7ms | FPS 11.6 | Tracks 25 | 88.0%
+2026-05-09 20:01:13 | INFO     | __main__                       | Frame  4202/4742 | DET 28.7ms | TRK 34.1ms | FPS 13.1 | Tracks 22 | 88.6%
+2026-05-09 20:01:14 | INFO     | __main__                       | Frame  4232/4742 | DET 22.8ms | TRK 39.4ms | FPS 14.4 | Tracks 16 | 89.2%
+2026-05-09 20:01:15 | INFO     | __main__                       | Frame  4256/4742 | DET 24.9ms | TRK 41.4ms | FPS 11.6 | Tracks 16 | 89.8%
+2026-05-09 20:01:16 | INFO     | __main__                       | Frame  4282/4742 | DET 27.3ms | TRK 56.9ms | FPS 12.1 | Tracks 16 | 90.3%
+2026-05-09 20:01:17 | INFO     | __main__                       | Frame  4310/4742 | DET 13.3ms | TRK 32.2ms | FPS 13.4 | Tracks 21 | 90.9%
+2026-05-09 20:01:18 | INFO     | __main__                       | Frame  4338/4742 | DET 20.6ms | TRK 33.5ms | FPS 13.9 | Tracks 25 | 91.5%
+2026-05-09 20:01:19 | INFO     | __main__                       | Frame  4370/4742 | DET 14.1ms | TRK 30.4ms | FPS 15.5 | Tracks 15 | 92.2%
+2026-05-09 20:01:20 | INFO     | __main__                       | Frame  4398/4742 | DET 13.7ms | TRK 30.4ms | FPS 13.8 | Tracks 24 | 92.7%
+2026-05-09 20:01:21 | INFO     | __main__                       | Frame  4430/4742 | DET 12.8ms | TRK 30.5ms | FPS 15.2 | Tracks 25 | 93.4%
+2026-05-09 20:01:22 | INFO     | __main__                       | Frame  4460/4742 | DET 18.9ms | TRK 80.8ms | FPS 13.7 | Tracks 14 | 94.1%
+2026-05-09 20:01:24 | INFO     | __main__                       | Frame  4492/4742 | DET 20.6ms | TRK 32.7ms | FPS 15.1 | Tracks 17 | 94.7%
+2026-05-09 20:01:25 | INFO     | __main__                       | Frame  4520/4742 | DET 25.0ms | TRK 74.3ms | FPS 13.1 | Tracks 15 | 95.3%
+2026-05-09 20:01:26 | INFO     | __main__                       | Frame  4544/4742 | DET 22.0ms | TRK 82.7ms | FPS 11.8 | Tracks 16 | 95.8%
+2026-05-09 20:01:27 | INFO     | __main__                       | Frame  4570/4742 | DET 23.8ms | TRK 74.2ms | FPS 11.8 | Tracks 14 | 96.4%
+2026-05-09 20:01:28 | INFO     | __main__                       | Frame  4596/4742 | DET 20.2ms | TRK 33.2ms | FPS 12.9 | Tracks 15 | 96.9%
+2026-05-09 20:01:29 | INFO     | __main__                       | Frame  4620/4742 | DET 57.3ms | TRK 56.7ms | FPS 12.0 | Tracks 16 | 97.4%
+2026-05-09 20:01:30 | INFO     | __main__                       | Frame  4648/4742 | DET 31.1ms | TRK 84.9ms | FPS 13.7 | Tracks 11 | 98.0%
+2026-05-09 20:01:31 | INFO     | __main__                       | Frame  4668/4742 | DET 23.3ms | TRK 38.4ms | FPS 9.4 | Tracks 11 | 98.4%
+2026-05-09 20:01:32 | INFO     | __main__                       | Frame  4710/4742 | DET 23.4ms | TRK 44.4ms | FPS 21.0 | Tracks 15 | 99.3%
+2026-05-09 20:01:33 | INFO     | __main__                       | Frame  4738/4742 | DET 17.9ms | TRK 28.3ms | FPS 13.3 | Tracks 18 | 99.9%
+2026-05-09 20:01:33 | INFO     | __main__                       | ============================================================
+2026-05-09 20:01:33 | INFO     | __main__                       | STATS
+2026-05-09 20:01:33 | INFO     | __main__                       | ============================================================
+2026-05-09 20:01:33 | INFO     | __main__                       | frames_processed: 2371
+2026-05-09 20:01:33 | INFO     | __main__                       | total_detections: 18451
+2026-05-09 20:01:33 | INFO     | __main__                       | avg_detections_per_frame: 7.78
+2026-05-09 20:01:33 | INFO     | __main__                       | total_tracks_created: 1131
+2026-05-09 20:01:33 | INFO     | __main__                       | currently_active: 22
+2026-05-09 20:01:33 | INFO     | __main__                       | Output: outputs/tracking_output.mp4
+2026-05-09 20:05:57 | INFO     | __main__                       | ============================================================
+2026-05-09 20:05:57 | INFO     | __main__                       | TRAFFIC AI SYSTEM
+2026-05-09 20:05:57 | INFO     | __main__                       | ============================================================
+2026-05-09 20:05:57 | INFO     | __main__                       | Source : videos/linh_nam.mp4
+2026-05-09 20:05:57 | INFO     | __main__                       | Device : cuda
+2026-05-09 20:05:57 | INFO     | detector.vehicle_detector      | VehicleDetector init | device=cuda | conf=0.25 | iou=0.5
+2026-05-09 20:05:57 | INFO     | detector.vehicle_detector      | Classes filter: [2, 3, 5, 7]
+2026-05-09 20:05:57 | INFO     | detector.vehicle_detector      | Loading YOLOv8 model: models/yolov8s.pt
+2026-05-09 20:05:57 | WARNING  | detector.vehicle_detector      | Model không tồn tại tại models/yolov8s.pt. Auto-downloading yolov8n.pt...
+2026-05-09 20:05:58 | INFO     | detector.vehicle_detector      | Model warmup...
+2026-05-09 20:05:59 | INFO     | detector.vehicle_detector      | Model ready.
+2026-05-09 20:05:59 | INFO     | tracker.deep_sort_tracker      | DeepSORTTracker init | max_age=20 | n_init=2 | max_cosine_dist=0.4 | λ_motion=0.7
+2026-05-09 20:05:59 | INFO     | tracker.deep_sort_tracker      | DeepSort engine ready | GPU embedder: True
+2026-05-09 20:05:59 | INFO     | __main__                       | Video: 720x1280 @ 29.9 FPS
+2026-05-09 20:05:59 | INFO     | __main__                       | Saving output: outputs/tracking_output.mp4
+2026-05-09 20:05:59 | INFO     | __main__                       | [Q] Quit | [P] Pause | [S] Screenshot
+2026-05-09 20:06:00 | INFO     | __main__                       | Frame    30/433 | DET 20.0ms | TRK 21.6ms | FPS 14.9 | Tracks 2 | 6.9%
+2026-05-09 20:06:01 | INFO     | __main__                       | Frame    62/433 | DET 20.0ms | TRK 25.3ms | FPS 15.3 | Tracks 5 | 14.3%
+2026-05-09 20:06:02 | INFO     | __main__                       | Frame    90/433 | DET 15.8ms | TRK 29.0ms | FPS 13.8 | Tracks 7 | 20.8%
+2026-05-09 20:06:03 | INFO     | __main__                       | Frame   122/433 | DET 24.5ms | TRK 20.0ms | FPS 15.2 | Tracks 4 | 28.2%
+2026-05-09 20:06:04 | INFO     | __main__                       | Frame   154/433 | DET 22.4ms | TRK 56.6ms | FPS 15.6 | Tracks 3 | 35.6%
+2026-05-09 20:06:05 | INFO     | __main__                       | Frame   182/433 | DET 25.2ms | TRK 39.9ms | FPS 13.9 | Tracks 5 | 42.0%
+2026-05-09 20:06:07 | INFO     | __main__                       | Frame   208/433 | DET 30.2ms | TRK 49.8ms | FPS 12.6 | Tracks 5 | 48.0%
+2026-05-09 20:06:08 | INFO     | __main__                       | Frame   256/433 | DET 21.0ms | TRK 20.5ms | FPS 23.2 | Tracks 2 | 59.1%
+2026-05-09 20:06:09 | INFO     | __main__                       | Frame   308/433 | DET 14.3ms | TRK 20.5ms | FPS 25.5 | Tracks 3 | 71.1%
+2026-05-09 20:06:10 | INFO     | __main__                       | Frame   342/433 | DET 15.3ms | TRK 21.7ms | FPS 16.4 | Tracks 6 | 79.0%
+2026-05-09 20:06:11 | INFO     | __main__                       | Frame   370/433 | DET 15.8ms | TRK 20.5ms | FPS 13.8 | Tracks 5 | 85.5%
+2026-05-09 20:06:12 | INFO     | __main__                       | Frame   402/433 | DET 21.7ms | TRK 22.0ms | FPS 15.4 | Tracks 6 | 92.8%
+2026-05-09 20:06:13 | INFO     | __main__                       | Frame   432/433 | DET 21.6ms | TRK 0.8ms | FPS 14.9 | Tracks 6 | 99.8%
+2026-05-09 20:06:13 | INFO     | __main__                       | ============================================================
+2026-05-09 20:06:13 | INFO     | __main__                       | STATS
+2026-05-09 20:06:13 | INFO     | __main__                       | ============================================================
+2026-05-09 20:06:13 | INFO     | __main__                       | frames_processed: 216
+2026-05-09 20:06:13 | INFO     | __main__                       | total_detections: 374
+2026-05-09 20:06:13 | INFO     | __main__                       | avg_detections_per_frame: 1.73
+2026-05-09 20:06:13 | INFO     | __main__                       | total_tracks_created: 28
+2026-05-09 20:06:13 | INFO     | __main__                       | currently_active: 8
+2026-05-09 20:06:13 | INFO     | __main__                       | Output: outputs/tracking_output.mp4

@@ -1,0 +1,17 @@
+venv/
+__pycache__/
+*.pyc
+
+outputs/
+runs/
+
+*.pt
+*.engine
+*.pkl
+
+*.mp4
+*.avi
+
+.idea/
+.vscode/
+
