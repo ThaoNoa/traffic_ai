@@ -1,0 +1,91 @@
+======================================================================
+EVAL — Phát hiện sự cố giao thông
+======================================================================
+
+Video sự cố: 3
+  → Recall = 0/3 = 0.00%
+
+Video bình thường: 2
+  → Tổng thời lượng: 0.8 phút
+  → False alerts: 0
+  → False-alert rate: 0.0 /giờ
+
+Chi tiết từng video:
+----------------------------------------------------------------------
+  [INC]  MISS | videos/eval/v51.mov | alerts=0 | sys_fps=6.9 | gt=(4.0, 10.0)
+  [INC]  MISS | videos/eval/v49.mov | alerts=0 | sys_fps=7.4 | gt=(3.0, 8.0)
+  [INC]  MISS | videos/eval/v48.mov | alerts=0 | sys_fps=22.7 | gt=(3.0, 7.5)
+  [NORM] videos/eval/linh_nam_normal_01.mp4 | alerts=0 | sys_fps=26.6
+  [NORM] videos/eval/cctv_normal_02.mp4 | alerts=0 | sys_fps=32.7
+
+[JSON dump]
+{
+  "incidents": [
+    {
+      "video": "videos/eval/v51.mov",
+      "n_frames": 648,
+      "fps_video": 59.1904047976012,
+      "runtime_s": 94.51730802700013,
+      "system_fps": 6.855887175869315,
+      "alerts": [],
+      "n_alerts": 0,
+      "hit_in_window": false,
+      "gt_window": [
+        4.0,
+        10.0
+      ]
+    },
+    {
+      "video": "videos/eval/v49.mov",
+      "n_frames": 631,
+      "fps_video": 57.803806734992676,
+      "runtime_s": 84.80666723100012,
+      "system_fps": 7.440452745080225,
+      "alerts": [],
+      "n_alerts": 0,
+      "hit_in_window": false,
+      "gt_window": [
+        3.0,
+        8.0
+      ]
+    },
+    {
+      "video": "videos/eval/v48.mov",
+      "n_frames": 728,
+      "fps_video": 59.11528150134048,
+      "runtime_s": 32.093040724000275,
+      "system_fps": 22.68404562412114,
+      "alerts": [],
+      "n_alerts": 0,
+      "hit_in_window": false,
+      "gt_window": [
+        3.0,
+        7.5
+      ]
+    }
+  ],
+  "normals": [
+    {
+      "video": "videos/eval/linh_nam_normal_01.mp4",
+      "n_frames": 433,
+      "fps_video": 29.930875576036865,
+      "runtime_s": 16.28145664700014,
+      "system_fps": 26.594672048571297,
+      "alerts": [],
+      "n_alerts": 0,
+      "hit_in_window": false,
+      "gt_window": null
+    },
+    {
+      "video": "videos/eval/cctv_normal_02.mp4",
+      "n_frames": 937,
+      "fps_video": 30.0,
+      "runtime_s": 28.624094916000104,
+      "system_fps": 32.73465948005371,
+      "alerts": [],
+      "n_alerts": 0,
+      "hit_in_window": false,
+      "gt_window": null
+    }
+  ]
+}

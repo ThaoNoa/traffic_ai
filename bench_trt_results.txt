@@ -1,0 +1,34 @@
+================================================================
+BENCHMARK YOLOv8 — PyTorch vs TensorRT
+================================================================
+GPU: NVIDIA GeForce RTX 3050 Laptop GPU
+Input size: 640x640
+N runs: 200
+
+Cấu hình               Latency (ms)        FPS
+----------------------------------------------
+PyTorch FP32                  14.80       67.6
+PyTorch FP16                  12.37       80.8
+TensorRT FP16                  6.09      164.3
+
+[JSON dump]
+{
+  "gpu": "NVIDIA GeForce RTX 3050 Laptop GPU",
+  "imgsz": 640,
+  "n_bench": 200,
+  "pytorch_fp32": {
+    "latency_ms": 14.80153436500018,
+    "fps": 67.56056334028501,
+    "n_runs": 200
+  },
+  "pytorch_fp16": {
+    "latency_ms": 12.371249405000526,
+    "fps": 80.83257941560814,
+    "n_runs": 200
+  },
+  "tensorrt_fp16": {
+    "latency_ms": 6.088066334999667,
+    "fps": 164.2557661126494,
+    "n_runs": 200
+  }
+}

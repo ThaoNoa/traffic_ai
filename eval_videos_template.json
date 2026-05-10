@@ -1,0 +1,12 @@
+{
+  "_comment": "Sửa file này thành tên video thực tế của bạn. t_start, t_end là giây (xem video, ghi lại khoảng có sự cố). Có thể chỉ cần 2-3 video sự cố + 1-2 video bình thường là đủ cho NCKH. Nguồn video sự cố: bạn có thể tải CADP từ https://github.com/ankitshah009/CarCrash-Dataset-CADP hoặc DoTA, hoặc dùng video Lĩnh Nam thật nếu có.",
+  "incidents": [
+    {"path": "videos/eval/incident_01.mp4", "t_start": 12.0, "t_end": 16.0},
+    {"path": "videos/eval/incident_02.mp4", "t_start":  8.5, "t_end": 11.0},
+    {"path": "videos/eval/incident_03.mp4", "t_start": 18.0, "t_end": 22.0}
+  ],
+  "normals": [
+    {"path": "videos/eval/linh_nam_normal_01.mp4"},
+    {"path": "videos/eval/linh_nam_normal_02.mp4"}
+  ]
+}

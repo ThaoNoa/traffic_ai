@@ -1,0 +1,46 @@
+======================================================================
+ABLATION STUDY — Đóng góp của từng module
+======================================================================
+
+Cấu hình                             F1     Prec      Rec      FPR       FA/h      Rec@Inc
+--------------------------------------------------------------------------------
+#1: Pixel + Threshold                 0        0        0        0          0          0/3
+#2: IPM + Threshold                 0.0      0.0      0.0      0.0        0.0          0/3
+#3: IPM + Rule Engine               0.0      0.0      0.0      0.0        0.0          0/3
+#4: IPM + Rule + LGBM               0.0      0.0      0.0      0.0        0.0          0/3
+
+[JSON dump]
+{
+  "#1: Pixel + Threshold": {
+    "F1": 0,
+    "Precision": 0,
+    "Recall": 0,
+    "FPR": 0,
+    "recall@incident": "0/3",
+    "false_alerts_per_hour": 0
+  },
+  "#2: IPM + Threshold": {
+    "F1": 0.0,
+    "Precision": 0.0,
+    "Recall": 0.0,
+    "FPR": 0.0,
+    "recall@incident": "0/3",
+    "false_alerts_per_hour": 0.0
+  },
+  "#3: IPM + Rule Engine": {
+    "F1": 0.0,
+    "Precision": 0.0,
+    "Recall": 0.0,
+    "FPR": 0.0,
+    "recall@incident": "0/3",
+    "false_alerts_per_hour": 0.0
+  },
+  "#4: IPM + Rule + LGBM": {
+    "F1": 0.0,
+    "Precision": 0.0,
+    "Recall": 0.0,
+    "FPR": 0.0,
+    "recall@incident": "0/3",
+    "false_alerts_per_hour": 0.0
+  }
+}
