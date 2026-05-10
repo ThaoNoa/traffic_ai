@@ -1721,3 +1721,62 @@
 2026-05-09 21:24:18 | WARNING  | anomaly.alert_manager          | 🚨 ACCIDENT DETECTED | Track 236 | Score=1.000 | Frame=1080 | Violations: ['SUDDEN_BRAKE']
 2026-05-09 21:24:18 | INFO     | MAIN1                          | End of video.
 2026-05-09 21:24:18 | INFO     | MAIN1                          | Saved output: outputs/demo_result.mp4
+2026-05-09 22:36:42 | INFO     | detector.vehicle_detector      | VehicleDetector init | device=cuda | conf=0.25 | iou=0.5
+2026-05-09 22:36:42 | INFO     | detector.vehicle_detector      | Classes filter: [2, 3, 5, 7]
+2026-05-09 22:36:42 | INFO     | detector.vehicle_detector      | Loading YOLOv8 model: models/yolov8s.pt
+2026-05-09 22:36:42 | WARNING  | detector.vehicle_detector      | Model không tồn tại tại models/yolov8s.pt. Auto-downloading yolov8n.pt...
+2026-05-09 22:36:44 | INFO     | detector.vehicle_detector      | Model warmup...
+2026-05-09 22:36:45 | INFO     | detector.vehicle_detector      | Model ready.
+2026-05-09 22:36:45 | INFO     | tracker.deep_sort_tracker      | DeepSORTTracker init | max_age=20 | n_init=2 | max_cosine_dist=0.4 | λ_motion=0.7
+2026-05-09 22:36:46 | INFO     | tracker.deep_sort_tracker      | DeepSort engine ready | GPU embedder: True
+2026-05-09 22:36:46 | INFO     | geometry.ipm                   | IPMTransformer init | BEV size: 500×800 | scale: 50.0px/m (X), 26.7px/m (Y)
+2026-05-09 22:36:46 | INFO     | geometry.ipm                   | IPM calibrated.
+2026-05-09 22:36:46 | INFO     | features.feature_extractor     | FeatureExtractor init | window=25 | stride=5
+2026-05-09 23:17:25 | INFO     | detector.vehicle_detector      | VehicleDetector init | device=cuda | conf=0.25 | iou=0.5
+2026-05-09 23:17:25 | INFO     | detector.vehicle_detector      | Classes filter: [2, 3, 5, 7]
+2026-05-09 23:17:25 | INFO     | detector.vehicle_detector      | Loading YOLOv8 model: models/yolov8s.pt
+2026-05-09 23:17:25 | WARNING  | detector.vehicle_detector      | Model không tồn tại tại models/yolov8s.pt. Auto-downloading yolov8n.pt...
+2026-05-09 23:17:27 | INFO     | detector.vehicle_detector      | Model warmup...
+2026-05-09 23:17:28 | INFO     | detector.vehicle_detector      | Model ready.
+2026-05-09 23:29:39 | INFO     | detector.vehicle_detector      | VehicleDetector init | device=cuda | conf=0.25 | iou=0.5
+2026-05-09 23:29:39 | INFO     | detector.vehicle_detector      | Classes filter: [2, 3, 5, 7]
+2026-05-09 23:29:39 | INFO     | detector.vehicle_detector      | Loading YOLOv8 model: models/yolov8s.pt
+2026-05-09 23:29:39 | WARNING  | detector.vehicle_detector      | Model không tồn tại tại models/yolov8s.pt. Auto-downloading yolov8n.pt...
+2026-05-09 23:29:40 | INFO     | detector.vehicle_detector      | Model warmup...
+2026-05-09 23:29:43 | INFO     | detector.vehicle_detector      | Model ready.
+2026-05-09 23:30:22 | INFO     | detector.vehicle_detector      | VehicleDetector init | device=cuda | conf=0.25 | iou=0.5
+2026-05-09 23:30:22 | INFO     | detector.vehicle_detector      | Classes filter: [2, 3, 5, 7]
+2026-05-09 23:30:22 | INFO     | detector.vehicle_detector      | Loading YOLOv8 model: models/yolov8s.pt
+2026-05-09 23:30:22 | WARNING  | detector.vehicle_detector      | Model không tồn tại tại models/yolov8s.pt. Auto-downloading yolov8n.pt...
+2026-05-09 23:30:22 | INFO     | detector.vehicle_detector      | Model warmup...
+2026-05-09 23:30:23 | INFO     | detector.vehicle_detector      | Model ready.
+2026-05-09 23:34:23 | INFO     | detector.vehicle_detector      | VehicleDetector init | device=cuda | conf=0.25 | iou=0.5
+2026-05-09 23:34:23 | INFO     | detector.vehicle_detector      | Classes filter: [2, 3, 5, 7]
+2026-05-09 23:34:23 | INFO     | detector.vehicle_detector      | Loading YOLOv8 model: models/yolov8s.pt
+2026-05-09 23:34:23 | WARNING  | detector.vehicle_detector      | Model không tồn tại tại models/yolov8s.pt. Auto-downloading yolov8n.pt...
+2026-05-09 23:34:25 | INFO     | detector.vehicle_detector      | Model warmup...
+2026-05-09 23:34:26 | INFO     | detector.vehicle_detector      | Model ready.
+2026-05-09 23:45:08 | INFO     | detector.vehicle_detector      | VehicleDetector init | device=cuda | conf=0.25 | iou=0.5
+2026-05-09 23:45:08 | INFO     | detector.vehicle_detector      | Classes filter: [2, 3, 5, 7]
+2026-05-09 23:45:08 | INFO     | detector.vehicle_detector      | Loading YOLOv8 model: models/yolov8s.pt
+2026-05-09 23:45:08 | WARNING  | detector.vehicle_detector      | Model không tồn tại tại models/yolov8s.pt. Auto-downloading yolov8n.pt...
+2026-05-09 23:45:09 | INFO     | detector.vehicle_detector      | Model warmup...
+2026-05-09 23:45:10 | INFO     | detector.vehicle_detector      | Model ready.
+2026-05-09 23:51:08 | INFO     | detector.vehicle_detector      | VehicleDetector init | device=cuda | conf=0.25 | iou=0.5
+2026-05-09 23:51:08 | INFO     | detector.vehicle_detector      | Classes filter: [2, 3, 5, 7]
+2026-05-09 23:51:08 | INFO     | detector.vehicle_detector      | Loading YOLOv8 model: models/yolov8s.pt
+2026-05-09 23:51:08 | WARNING  | detector.vehicle_detector      | Model không tồn tại tại models/yolov8s.pt. Auto-downloading yolov8n.pt...
+2026-05-09 23:51:09 | INFO     | detector.vehicle_detector      | Model warmup...
+2026-05-09 23:51:10 | INFO     | detector.vehicle_detector      | Model ready.
+2026-05-09 23:51:45 | INFO     | detector.vehicle_detector      | VehicleDetector init | device=cuda | conf=0.25 | iou=0.5
+2026-05-09 23:51:45 | INFO     | detector.vehicle_detector      | Classes filter: [2, 3, 5, 7]
+2026-05-09 23:51:45 | INFO     | detector.vehicle_detector      | Loading YOLOv8 model: models/yolov8s.pt
+2026-05-09 23:51:45 | WARNING  | detector.vehicle_detector      | Model không tồn tại tại models/yolov8s.pt. Auto-downloading yolov8n.pt...
+2026-05-09 23:51:45 | INFO     | detector.vehicle_detector      | Model warmup...
+2026-05-09 23:51:45 | INFO     | detector.vehicle_detector      | Model ready.
+2026-05-09 23:51:58 | INFO     | detector.vehicle_detector      | VehicleDetector init | device=cuda | conf=0.25 | iou=0.5
+2026-05-09 23:51:58 | INFO     | detector.vehicle_detector      | Classes filter: [2, 3, 5, 7]
+2026-05-09 23:51:58 | INFO     | detector.vehicle_detector      | Loading YOLOv8 model: models/yolov8s.pt
+2026-05-09 23:51:58 | WARNING  | detector.vehicle_detector      | Model không tồn tại tại models/yolov8s.pt. Auto-downloading yolov8n.pt...
+2026-05-09 23:51:58 | INFO     | detector.vehicle_detector      | Model warmup...
+2026-05-09 23:51:59 | INFO     | detector.vehicle_detector      | Model ready.

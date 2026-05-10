@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Bao cao Phan tich Giao thong</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: 'Times New Roman', 'Segoe UI', serif;
+    color: #2c3e50;
+    background: #f5f6fa;
+    padding: 40px;
+}
+.container { max-width: 850px; margin: 0 auto; }
+.header {
+    text-align: center;
+    padding: 30px;
+    background: #ffffff;
+    border: 1px solid #c0c7cf;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+.header h1 { font-size: 22px; color: #1a3a5c; margin-bottom: 6px; }
+.header p { color: #5a6c7d; font-size: 13px; }
+.card {
+    background: #ffffff;
+    border: 1px solid #d0d5db;
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 16px;
+}
+.card h2 {
+    color: #1a3a5c;
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e8ecf0;
+}
+.info-table { width: 100%; border-collapse: collapse; }
+.info-table td {
+    padding: 8px 12px;
+    border-bottom: 1px solid #f0f2f5;
+    font-size: 13px;
+}
+.info-table td:first-child { color: #5a6c7d; width: 200px; }
+.stats { display: flex; gap: 16px; }
+.stat {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    background: #f8f9fb;
+    border-radius: 4px;
+}
+.stat .num { font-size: 30px; font-weight: bold; color: #1a3a5c; display: block; }
+.stat .lbl { color: #8a9aa8; font-size: 12px; margin-top: 4px; }
+.footer {
+    text-align: center;
+    color: #8a9aa8;
+    font-size: 12px;
+    padding: 20px;
+    margin-top: 10px;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="header">
+    <h1>He thong Giam sat Giao thong Linh Nam</h1>
+    <p>Bao cao phan tich giao thong tu dong</p>
+    <p style="margin-top:4px;">09/05/2026 23:51:22 | 1.0.0 - NCKH 2026</p>
+</div>
+<div class="card">
+    <h2>Thong tin Video</h2>
+    <table class="info-table">
+        <tr><td>Nguon:</td><td><b>linh_nam.mp4</b></td></tr><tr><td>Do Phan Giai:</td><td><b>720x1280</b></td></tr><tr><td>Fps:</td><td><b>29.9</b></td></tr><tr><td>Tong Khung Hinh:</td><td><b>433</b></td></tr></table></div>
+<div class="card">
+    <h2>Ket qua Phan tich</h2>
+    <div class="stats"><div class="stat"><span class="num">40.1</span><span class="lbl">fps</span></div><div class="stat"><span class="num">1</span><span class="lbl">phuong_tien</span></div><div class="stat"><span class="num">0</span><span class="lbl">canh_bao</span></div></div></div>
+<div class="card">
+    <h2>Cau hinh He thong</h2>
+    <table class="info-table"><tr><td>Nguong Phat Hien:</td><td><b>0.65</b></td></tr><tr><td>Mo Hinh:</td><td><b>YOLOv8n + DeepSORT + LightGBM</b></td></tr><tr><td>Thiet Bi:</td><td><b>CUDA (GPU)</b></td></tr><tr><td>Dac Trung:</td><td><b>20-chieu (IPM + Pose + Dong hoc)</b></td></tr></table></div>
+<div class="footer">
+    <p>De tai NCKH 2026: Thiet ke He thong Camera AI Phan tich Giao thong Khu vuc Linh Nam - Ha Noi</p>
+    <p>Truong Dai hoc Kinh te - Ky thuat Cong nghiep | Khoa CNTT</p>
+    <p style="color:#1a3a5c; margin-top:6px;">GVHD: Th.S Hoang Thi Phuong | Nhom SV: DHTI17A4HN</p>
+</div>
+</div>
+</body>
+</html>

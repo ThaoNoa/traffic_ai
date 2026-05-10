@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Báo cáo Phân tích Giao thông</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #0a0a1a 0%, #1a1a2e 100%);
+            color: #fff;
+            padding: 30px;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(135deg, #e94560, #c23152);
+            border-radius: 16px;
+            margin-bottom: 25px;
+        }
+        .header h1 {
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+        .header p {
+            opacity: 0.9;
+            font-size: 14px;
+        }
+        .card {
+            background: #16213e;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #e9456033;
+        }
+        .card h2 {
+            color: #e94560;
+            font-size: 18px;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #e9456044;
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+        .info-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 12px;
+            background: #0f0f23;
+            border-radius: 6px;
+        }
+        .info-label { color: #888; font-size: 13px; }
+        .info-value { color: #fff; font-weight: bold; font-size: 13px; }
+        
+        .stats-row {
+            display: flex;
+            gap: 15px;
+        }
+        .stat-box {
+            flex: 1;
+            text-align: center;
+            padding: 18px;
+            background: #0f0f23;
+            border-radius: 10px;
+        }
+        .stat-box .number {
+            font-size: 32px;
+            font-weight: bold;
+            color: #e94560;
+            display: block;
+        }
+        .stat-box .label {
+            color: #888;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+        
+        .footer {
+            text-align: center;
+            color: #666;
+            font-size: 12px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        
+        .alert-badge {
+            display: inline-block;
+            background: #e74c3c;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- HEADER -->
+        <div class="header">
+            <h1>🚦 Traffic AI System - Lĩnh Nam Hà Nội</h1>
+            <p>Báo cáo phân tích giao thông tự động</p>
+            <p style="font-size: 12px; margin-top: 5px;">09/05/2026 23:35:02 | 1.0.0 - NCKH 2026</p>
+        </div>
+        
+        <!-- THÔNG TIN VIDEO -->
+        <div class="card">
+            <h2>📹 Thông tin Video</h2>
+            <div class="info-grid">
+                <div class="info-item">
+                    <span class="info-label">Nguồn:</span>
+                    <span class="info-value">demo.mp4</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Độ phân giải:</span>
+                    <span class="info-value">2560×1440</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">FPS gốc:</span>
+                    <span class="info-value">60.0</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Tổng frame:</span>
+                    <span class="info-value">1084</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- KẾT QUẢ PHÂN TÍCH -->
+        <div class="card">
+            <h2>📊 Kết quả Phân tích</h2>
+            <div class="stats-row">
+                <div class="stat-box">
+                    <span class="number">35.2</span>
+                    <span class="label">FPS xử lý</span>
+                </div>
+                <div class="stat-box">
+                    <span class="number">8</span>
+                    <span class="label">Phương tiện phát hiện</span>
+                </div>
+                <div class="stat-box">
+                    <span class="number">0</span>
+                    <span class="label">Cảnh báo sự cố</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- CẤU HÌNH HỆ THỐNG -->
+        <div class="card">
+            <h2>⚙ Cấu hình Hệ thống</h2>
+            <div class="info-grid">
+
+                <div class="info-item">
+                    <span class="info-label">Confidence Threshold:</span>
+                    <span class="info-value">0.65</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Model:</span>
+                    <span class="info-value">YOLOv8n + DeepSORT + LightGBM</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Device:</span>
+                    <span class="info-value">CUDA (GPU)</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Features:</span>
+                    <span class="info-value">20-dim vector (IPM + Pose + Dynamics)</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- CÔNG NGHỆ -->
+        <div class="card">
+            <h2>🔬 Công nghệ sử dụng</h2>
+            <div class="info-grid">
+                <div class="info-item">
+                    <span class="info-label">Phát hiện:</span>
+                    <span class="info-value">YOLOv8n (Ultralytics)</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Theo dõi:</span>
+                    <span class="info-value">DeepSORT (λ=0.7)</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Phân loại sự cố:</span>
+                    <span class="info-value">LightGBM + IPM + Pose</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Đặc trưng:</span>
+                    <span class="info-value">20-dim (Vận tốc, Gia tốc, Góc nghiêng, Khoảng cách)</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Tăng tốc:</span>
+                    <span class="info-value">TensorRT FP16</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Giao diện:</span>
+                    <span class="info-value">PyQt5</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- FOOTER -->
+        <div class="footer">
+            <p>© 2026 - Đề tài NCKH: Thiết kế Hệ thống Camera AI Phân tích Giao thông Khu vực Lĩnh Nam - Hà Nội</p>
+            <p>Trường Đại học Kinh tế - Kỹ thuật Công nghiệp | Khoa CNTT</p>
+            <p style="margin-top: 8px; color: #e94560;">GVHD: Th.S Hoàng Thị Phượng | Nhóm sinh viên: DHTI17A4HN</p>
+        </div>
+    </div>
+</body>
+</html>
