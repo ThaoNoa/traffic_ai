@@ -115,7 +115,7 @@ class AccidentClassifier:
             return -1.0  # Signal: no ML model
 
         x = feature_vector.reshape(1, -1)
-        prob = self._model.predict_proba(x)[0, 1]  # class=1 (accident)
+        prob = self._model.predict(x)[0]  # class=1 (accident)
         return float(prob)
 
     def predict_batch(self, feature_matrix: np.ndarray) -> np.ndarray:
@@ -131,7 +131,7 @@ class AccidentClassifier:
         if not self._is_loaded:
             return np.full(len(feature_matrix), -1.0)
 
-        return self._model.predict_proba(feature_matrix)[:, 1]
+        return self._model.predict_proba(feature_matrix)
 
     def is_accident(self, prob: float) -> bool:
         return prob >= self.accident_threshold
@@ -192,9 +192,14 @@ class AccidentClassifier:
             raise ValueError("Không có mẫu accident (y=1) trong training set!")
 
         spw = n_neg / n_pos
-        logger.info(f"Imbalance ratio: {spw:.1f}:1 → scale_pos_weight={spw:.0f}")
 
-        params = {**self.lgbm_params, "scale_pos_weight": spw}
+        # Không dùng scale_pos_weight nữa, chỉ dùng is_unbalance
+        # Xóa scale_pos_weight nếu có trong params gốc
+        params = {**self.lgbm_params}
+        params.pop('scale_pos_weight', None)  # loại bỏ key này
+        params['is_unbalance'] = True  # tự động cân bằng
+
+        logger.info(f"Imbalance ratio: {spw:.1f}:1 (normal:accident = {n_neg}:{n_pos})")
 
         # Auto split val nếu không có
         if X_val is None:
