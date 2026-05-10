@@ -20,6 +20,7 @@ from enum import Enum
 
 from config.settings import get_config
 from utils.logger import get_logger
+from pathlib import Path
 
 logger = get_logger(__name__)
 
@@ -84,10 +85,10 @@ class IPMTransformer:
         # === SOURCE POINTS ===
         # Thu tu: TL, TR, BL, BR (OpenCV standard)
         raw_points = getattr(ipm_cfg, 'src_points', [
-            [530, 220],    # TL
-            [930, 220],    # TR
-            [180, 760],    # BL
-            [1260, 760],   # BR
+            [560, 360],   # TL
+            [860, 360],   # TR
+            [260, 760],   # BL
+            [1180, 760],  # BR
         ])
         self.src_points = self._validate_and_order_points(raw_points)
 
@@ -95,9 +96,9 @@ class IPMTransformer:
         # Thu tu: TL, TR, BL, BR
         self.dst_points_m = np.array([
             [0, 0],
-            [10, 0],
-            [0, 60],
-            [10, 60],
+            [8, 0],
+            [0, 30],
+            [8, 30],
         ], dtype=np.float32)
 
         # === ISOTROPIC SCALE (pixels per meter) ===
@@ -196,8 +197,8 @@ class IPMTransformer:
                 return (x1 + x2) / 2
             return x1 + (x2 - x1) * (y - y1) / (y2 - y1)
         
-        top_y = roi_y_start + int(h * 0.08)
-        bottom_y = roi_y_end - int(h * 0.05)
+        top_y = int(h * 0.38)
+        bottom_y = int(h * 0.88)
         
         # Tinh 4 diem
         tl_x = get_x_at(left_edge, top_y)
@@ -209,6 +210,14 @@ class IPMTransformer:
         # Top phai hep hon bottom
         top_w = tr_x - tl_x
         bot_w = br_x - bl_x
+
+        ratio = top_w / max(bot_w, 1.0)
+
+        if ratio < 0.18:
+            return HomographyResult(
+                is_valid=False,
+                error_msg=f"Perspective too aggressive ({ratio:.3f})"
+            )
         
         if top_w > bot_w or top_w < 30:
             # Force trapezoid dung
@@ -428,7 +437,7 @@ class IPMTransformer:
         except:
             cond = 1e6
         
-        if cond > 1e5 or np.isnan(cond) or np.isinf(cond):
+        if np.isnan(cond) or np.isinf(cond):
             msg = f"Poorly conditioned (cond={cond:.0f})"
             logger.error(msg)
             return HomographyResult(is_valid=False, error_msg=msg, condition_number=cond)
@@ -445,7 +454,13 @@ class IPMTransformer:
 
         # === SUCCESS ===
         self.H = H
-        self.H_inv = np.linalg.inv(H)
+        try:
+            self.H_inv = np.linalg.inv(H)
+        except np.linalg.LinAlgError:
+            return HomographyResult(
+                is_valid=False,
+                error_msg="Homography singular"
+            )
         self._calibrated = True
         
         # Tinh lane angle
@@ -768,6 +783,46 @@ class IPMTransformer:
             'vehicle_count': vehicle_count,
             'area_m2': area
         }
+
+    def save_calibration(self, filepath: str = "outputs/ipm_calibration.json") -> bool:
+        """Lưu điểm calibration vào file JSON."""
+        import json
+        try:
+            data = {
+                'src_points': self.src_points.tolist(),
+                'dst_points_m': self.dst_points_m.tolist(),
+                'scale': self.scale,
+                'frame_info': f'w={self.bev_w}h={self.bev_h}'
+            }
+            Path(filepath).parent.mkdir(parents=True, exist_ok=True)
+            with open(filepath, 'w') as f:
+                json.dump(data, f, indent=2)
+            logger.info(f"Calibration saved to {filepath}")
+            return True
+        except Exception as e:
+            logger.warning(f"Failed to save calibration: {e}")
+            return False
+    
+    def load_calibration(self, filepath: str = "outputs/ipm_calibration.json") -> bool:
+        """Load điểm calibration từ file JSON."""
+        import json
+        try:
+            if not Path(filepath).exists():
+                return False
+            with open(filepath, 'r') as f:
+                data = json.load(f)
+            self.src_points = np.float32(data['src_points'])
+            self.dst_points_m = np.float32(data['dst_points_m'])
+            self.scale = float(data['scale'])
+            result = self.calibrate()
+            if result.is_valid:
+                logger.info(f"Calibration loaded from {filepath}")
+                return True
+            return False
+        except Exception as e:
+            logger.warning(f"Failed to load calibration: {e}")
+            return False
+        
 
     @property
     def is_calibrated(self) -> bool:

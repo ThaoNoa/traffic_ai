@@ -1,5 +1,12 @@
 # run_gui.py
-import sys, os
+import os
+os.environ.pop("QT_QPA_PLATFORM_PLUGIN_PATH", None)  # Đã có sẵn
+
+# THÊM DÒNG NÀY:
+import cv2  
+# ĐỂ cv2 import TRƯỚC PyQt5 — fix xung đột plugin
+
+import sys
 os.environ.pop("QT_QPA_PLATFORM_PLUGIN_PATH", None)
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 

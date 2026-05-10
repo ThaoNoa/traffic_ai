@@ -1,0 +1,11 @@
+{
+  "incidents": [
+    {"path": "videos/eval_25fps/v51_25fps.mp4", "t_start": 4.0, "t_end": 10.0},
+    {"path": "videos/eval_25fps/v49_25fps.mp4", "t_start": 3.0, "t_end": 8.0},
+    {"path": "videos/eval_25fps/v48_25fps.mp4", "t_start": 3.0, "t_end": 7.5}
+  ],
+  "normals": [
+    {"path": "videos/eval/linh_nam_normal_01.mp4"},
+    {"path": "videos/eval/cctv_normal_02.mp4"}
+  ]
+}

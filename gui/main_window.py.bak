@@ -36,9 +36,6 @@ from config.settings import get_config
 
 from gui.dashboard_widget import DashboardWidget
 from gui.incident_dialog import IncidentDialog
-from pose.pose_estimator import PoseEstimator
-from threading import Thread, Lock
-from collections import deque
 
 
 # ============================================================
@@ -61,30 +58,6 @@ class FullPipelineThread(QThread):
         self._paused = False
         self.gpu_usage = 0
         self.ram_usage = 0
-        self.pose_estimator = None
-        self.pose_buffer = deque(maxlen=10)
-        self.pose_lock = Lock()
-        self._pose_thread = None
-        self._pose_cap = None
-        self.frame_queue = deque(maxlen=30)  # Hàng đợi frame cho pose
-        self.frame_lock = Lock()
-        self.pose_results = {}  # {frame_id: {'persons': [...], 'timestamp': float}}
-        self.pose_results_lock = Lock()
-        self._bev_cache = None         # cache BEV thumb
-        self._bev_every = 3            # chỉ render BEV mới mỗi 3 frame
-
-        # === DIRECTION / CONGESTION TRACKING (chi tinh trong vung IPM) ===
-        # Luu lich su world-position (sau IPM) cua moi track de tinh van toc thuc
-        self._track_world_history = {}  # {track_id: deque[(t, x_m, y_m)]}
-        # Phan loai theo huong dua tren vector van toc trong world space:
-        #   N: di xa camera (+y), S: lai gan camera (-y)
-        #   E: sang phai (+x),    W: sang trai (-x)
-        self._direction_stats = {
-            'N': {'track_ids': set(), 'speeds': []},
-            'S': {'track_ids': set(), 'speeds': []},
-            'E': {'track_ids': set(), 'speeds': []},
-            'W': {'track_ids': set(), 'speeds': []},
-        }
 
 
     def run(self):
@@ -97,11 +70,8 @@ class FullPipelineThread(QThread):
         alert_count = 0
         total_fps_sum = 0.0
         total_fps_samples = 0
-        last_frame_time = time.time()
-        detect_time_acc = 0.0
         total_detections_sum = 0
         active_track_ids = set()
-        pose_persons = []
         
         try:
             # ============================================
@@ -118,93 +88,54 @@ class FullPipelineThread(QThread):
             self.log_message.emit("  - Dang khoi tao DeepSORT...")
             tracker = DeepSORTTracker(cfg)
             tracker.initialize()
-
-            self.log_message.emit("  - Dang khoi tao IPM...")
+            
+            self.log_message.emit("  - Dang calibrate IPM...")
             ipm = IPMTransformer(cfg)
+            ipm.calibrate()
+
+            test_frame = cv2.imread(self.video_path) if isinstance(self.video_path, str) else None
+            if test_frame is None:
+                cap_test = cv2.VideoCapture(self.video_path)
+                ret, test_frame = cap_test.read()
+                cap_test.release()
             
-            # Đọc frame đầu tiên để calibrate
-            cap_test = cv2.VideoCapture(self.video_path)
-            ret, test_frame = cap_test.read()
-            cap_test.release()
-            
-            if ret and test_frame is not None:
-                h, w = test_frame.shape[:2]
-                calibrated = False
+            if test_frame is not None:
+                # Ve 4 diem calibration len anh goc
+                try:
+                    calib_frame = ipm.draw_calibration_points(test_frame.copy())
+                    cv2.imwrite("outputs/calib_check.jpg", calib_frame)
+                except:
+                    pass
                 
-                # Thử load cache trước
- # Thử load cache trước (nhưng chỉ chấp nhận nếu điều kiện tốt)
-                if ipm.load_calibration():
-                    # Kiểm tra chất lượng homography
-                    cond = ipm._last_validation.condition_number if ipm._last_validation else 1e9
-                    if cond < 5000:
-                        calibrated = True
-                        self.log_message.emit(f"  - IPM loaded from cache (cond={cond:.0f})")
-                    else:
-                        self.log_message.emit(f"  - Cache IPM co condition xau ({cond:.0f}), se calibrate lai")
-                        calibrated = False
-                
-                # Nếu cache không có, thử auto-calibrate
-                # Nếu cache không có, thử auto-calibrate
-                if not calibrated:
-                    self.log_message.emit("  - Dang auto-calibrate IPM...")
+                # Auto-calibrate IPM neu chua co
+                if not ipm.is_calibrated:
+                    self.log_message.emit("  - IPM chua calibrated, dang auto-calibrate...")
                     result = ipm.auto_calibrate_from_frame(test_frame)
-                    # Kiểm tra thêm kích thước vùng IPM
-                    top_w = np.linalg.norm(ipm.src_points[1] - ipm.src_points[0])
-                    bot_w = np.linalg.norm(ipm.src_points[3] - ipm.src_points[2])
-                    cond = result.condition_number
-                    if result.is_valid and top_w > 100 and bot_w > 200 and cond < 50000:
-                        calibrated = True
-                        ipm.save_calibration()
-                        self.log_message.emit(f"  - Auto IPM OK (top_w={top_w:.0f}px, cond={cond:.0f})")
-                    else:
-                        self.log_message.emit(f"  - Auto IPM rejected (top_w={top_w:.0f}px, cond={cond:.0f})")
+                    if not result.is_valid:
+                        self.log_message.emit(f"  - Auto failed: {result.error_msg}. Dung manual...")
+                        h, w = test_frame.shape[:2]
+                        ipm.src_points = np.float32([
+                            [int(w*0.15), int(h*0.40)],
+                            [int(w*0.85), int(h*0.40)],
+                            [int(w*0.05), int(h*0.90)],
+                            [int(w*0.95), int(h*0.90)],
+                        ])
+                        ipm.calibrate()
+                    self.log_message.emit(f"  - IPM calibrated: {ipm.is_calibrated}")
                 
-                # Nếu auto cũng fail hoặc bị reject, dùng manual fallback an toàn
-                if not calibrated:
-                    self.log_message.emit("  - Dung manual fallback...")
-                    h, w = test_frame.shape[:2]
-                    ipm.src_points = np.float32([
-                        [int(w * 0.12), int(h * 0.38)],
-                        [int(w * 0.88), int(h * 0.38)],
-                        [int(w * 0.03), int(h * 0.90)],
-                        [int(w * 0.97), int(h * 0.90)]
-                    ])
-                    r = ipm.calibrate()
-                    if r.is_valid:
-                        calibrated = True
-                        ipm.save_calibration()
-                        self.log_message.emit(f"  - Manual IPM OK (cond={r.condition_number:.0f})")
-                    else:
-                        self.log_message.emit(f"  - Manual IPM failed: {r.error_msg}")
-                
-                # Lưu ảnh debug
-                if calibrated:
-                    try:
-                        debug_img = ipm.create_debug_overlay(test_frame)
-                        cv2.imwrite("outputs/ipm_debug.jpg", debug_img)
+                # Tao BEV (sau khi da calibrate)
+                try:
+                    if ipm.is_calibrated:
                         bev_img = ipm.get_bev_image(test_frame)
                         cv2.imwrite("outputs/bev_check.jpg", bev_img)
-                        self.log_message.emit("  - Da luu anh IPM debug")
-                    except:
-                        pass
-                else:
-                    self.log_message.emit("  - CANH BAO: IPM khong the calibrate!")
-            else:
-                self.log_message.emit("  - Khong doc duoc video, IPM khong hoat dong")
-
+                        self.log_message.emit("Da luu anh kiem tra BEV")
+                    else:
+                        self.log_message.emit("CANH BAO: IPM khong the calibrate - se chay khong BEV")
+                except Exception as e:
+                    self.log_message.emit(f"CANH BAO: Loi tao BEV: {str(e)[:80]}")
+            
             self.log_message.emit("  - Dang khoi tao Feature Extractor...")
             feature_extractor = FeatureExtractor(cfg)
-            
-            # Khởi tạo Pose Estimator
-            self.log_message.emit("  - Dang khoi tao Pose Estimator...")
-            pose_estimator = PoseEstimator('yolov8n-pose.pt', device='cuda')
-            self.pose_estimator = pose_estimator  # Lưu lại để dùng trong _draw_all
-            
-            # Mở video riêng cho pose
-            self._pose_thread = Thread(target=self._pose_worker, args=(pose_estimator,), daemon=True)
-            
-            self._pose_thread.start()
-            self.log_message.emit("  - Pose thread started")
             
             self.log_message.emit("  - Dang khoi tao Rule Engine...")
             rule_engine = PhysicsRuleEngine(cfg)
@@ -223,22 +154,23 @@ class FullPipelineThread(QThread):
                 self.processing_error.emit("Khong the mo video: " + str(self.video_path))
                 return
             
-            # Doc frame dau tien (chỉ để tính tổng số frame, không dùng để calibrate lại IPM nữa)
+            # === DOC FRAME DAU TIEN TRUOC ===
             ret, first_frame = cap.read()
             if not ret:
                 self.processing_error.emit("Khong doc duoc frame dau tien")
                 return
             
-            # XÓA DÒNG ipm.calibrate() Ở ĐÂY vì đã calibrate ở trên rồi
-            # ipm.calibrate()  <-- DÒNG NÀY CẦN XÓA HOẶC COMMENT
+            # Bay gio frame da co, goi update_calibration
+            ipm.calibrate()  # hoac ipm.update_calibration(first_frame, force=True)
             
             total_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
             fps_video = cap.get(cv2.CAP_PROP_FPS)
             
             self.log_message.emit(f"Bat dau xu ly video: {total_frames} khung hinh @ {fps_video:.1f} FPS")
             
-            # Reset video ve dau
-            cap.set(cv2.CAP_PROP_POS_FRAMES, 0)
+            # === RESET VIDEO VE DAU ===
+            cap.set(cv2.CAP_PROP_POS_FRAMES, 0)  # Quay lai frame 0            
+
 
             # Vong lap chinh
             while self._running:
@@ -250,27 +182,27 @@ class FullPipelineThread(QThread):
                 ret, frame = cap.read()
                 if not ret:
                     break
+                
+                ipm.update_calibration(frame)
 
                 frame_count += 1
 
-                # Auto calibrate IPM moi 300 frame (nếu cần)
-                # Đưa frame vào hàng đợi pose (mỗi 3 frame)
-                if frame_count % 3 == 0:
-                    with self.frame_lock:
-                        self.frame_queue.append({
-                            'frame': frame.copy(),
-                            'frame_id': frame_count,
-                            'timestamp': frame_count / fps_video
-                        })
+                # === AUTO CALIBRATE MOI 300 FRAME ===
+                if frame_count % 300 == 0:
+                    ipm.update_calibration(frame)
+                # =====================================
 
+                
                 congestion = {'level': 'UNKNOWN', 'density': 0}
+
+
                 display_frame = frame.copy() if frame is not None else None
 
                 try:
                     # 1. Detection
                     all_detections = detector.detect(frame)
                     
-                    # Loc detection trong vung IPM
+                    # === LOC DETECTION TRONG VUNG IPM ===
                     if ipm and ipm.is_calibrated:
                         detections = ipm.filter_detections_in_roi(all_detections)
                     else:
@@ -292,30 +224,13 @@ class FullPipelineThread(QThread):
                             world_positions[track.track_id] = wp
                         except:
                             pass
-
-                    # 3b. CAP NHAT THONG KE THEO HUONG (chi xe trong vung IPM)
-                    self._update_direction_stats(tracks, world_positions, ipm,
-                                                 frame_count, fps_video)
                     
-                    # 4. Feature Extraction với body_leans từ Pose
-                    # Lấy pose estimation gần nhất
-                    body_leans = None
-                    pose_persons = []
-                    with self.pose_results_lock:
-                        # Tìm frame_id gần nhất có kết quả pose
-                        available_ids = sorted(self.pose_results.keys())
-                        if available_ids:
-                            # Lấy kết quả gần nhất không vượt quá frame_count
-                            best_id = max([fid for fid in available_ids if fid <= frame_count], default=None)
-                            if best_id is not None:
-                                pose_data = self.pose_results[best_id]
-                                pose_persons = pose_data['persons']
-                                if pose_persons:
-                                    body_leans = pose_estimator.match_to_tracks(pose_persons, tracks)
-                    
-                    feature_vectors = feature_extractor.update(
-                        tracks, world_positions, body_leans, frame_count
-                    )
+                    # 4. Feature Extraction
+                    feature_vectors = {}
+                    if tracks:
+                        feature_vectors = feature_extractor.update(
+                            tracks, world_positions, None, frame_count
+                        )
                     
                     # 5. Rule Engine
                     risk_results = {}
@@ -334,8 +249,8 @@ class FullPipelineThread(QThread):
                     alert_manager.push_frame(frame)
                     
                     # 7. Ve ket qua
-                    display_frame = self._draw_all(frame, tracks, risk_results, world_positions, ipm, pose_persons)
-                    
+                    # Ve ket qua (bao loi neu co)                    
+                    display_frame = self._draw_all(frame, tracks, risk_results, world_positions, ipm)
                     # 8. Dem alerts
                     alert_count += len(alerts_triggered)
                     
@@ -359,50 +274,40 @@ class FullPipelineThread(QThread):
                     display_frame = frame.copy() if frame is not None else np.zeros((480, 640, 3), dtype=np.uint8)
                     cv2.putText(display_frame, f"ERROR: {str(e)[:80]}", (20, 60),
                                cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 1)
+                    # Chi log 1 lan de tranh spam
                     if frame_count == 1 or frame_count % 100 == 0:
                         self.log_message.emit(f"LOI frame {frame_count}: {traceback.format_exc()[-200:]}")
 
+                # === DAM BAO display_frame KHONG NONE TRUOC KHI EMIT ===
                 if display_frame is None:
                     display_frame = np.zeros((480, 640, 3), dtype=np.uint8)
                     cv2.putText(display_frame, "FRAME ERROR", (150, 250),
                                cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
+                # =====================================================
                 
                 # FPS
                 elapsed = time.time() - start_time
                 current_fps = frame_count / elapsed if elapsed > 0 else 0
                 
+                # Emit
+                if display_frame is None:
+                    display_frame = frame.copy() if frame is not None else np.zeros((480, 640, 3), dtype=np.uint8)
+                
                 self.frame_ready.emit(display_frame, frame_count, total_frames)
 
+                # Tinh congestion (mac dinh)
                 congestion = {'level': 'UNKNOWN', 'density': 0, 'color': (128, 128, 128), 'area_m2': 0}
+                
+                # Neu IPM hoat dong, tinh congestion that
                 if ipm and ipm.is_calibrated:
                     try:
                         congestion = ipm.get_congestion_level(len(tracks))
                     except:
                         pass
 
-                # --- CẬP NHẬT THỐNG KÊ FPS & ĐỘ TRỄ ---
-                frame_duration = time.time() - last_frame_time
-                last_frame_time = time.time()
-                if frame_duration > 0:
-                    total_fps_sum += 1.0 / frame_duration
-                    total_fps_samples += 1
-                detect_time_acc += frame_duration * 1000  # ms
-                avg_detect_time = detect_time_acc / max(frame_count, 1)
-
-                # --- CẬP NHẬT GPU (nếu có GPUtil) ---
-                gpu_usage = 0
-                try:
-                    import GPUtil
-                    gpus = GPUtil.getGPUs()
-                    gpu_usage = gpus[0].load * 100 if gpus else 0
-                except:
-                    gpu_usage = min(85, (current_fps / 42) * 80) if current_fps > 0 else 0
-                
                 self.stats_ready.emit({
                     'fps': current_fps,
                     'avg_fps': total_fps_sum / total_fps_samples if total_fps_samples > 0 else 0,
-                    'detect_time': avg_detect_time,
-                    'gpu_usage': gpu_usage,
                     'vehicles': len(tracks),
                     'total_vehicles_unique': len(active_track_ids),
                     'total_detections': total_detections_sum,
@@ -415,7 +320,6 @@ class FullPipelineThread(QThread):
                     'congestion_density': congestion['density'],
                     'congestion_color': congestion['color'],
                     'zone_area': congestion.get('area_m2', 0),
-                    'direction_stats': self._compute_direction_summary(),
                 })
                 
                 time.sleep(0.01)
@@ -425,8 +329,6 @@ class FullPipelineThread(QThread):
             self.stats_ready.emit({
                 'fps': 0,
                 'avg_fps': total_fps_sum / total_fps_samples if total_fps_samples > 0 else 0,
-                'detect_time': avg_detect_time,
-                'gpu_usage': gpu_usage,
                 'vehicles': 0,
                 'total_vehicles_unique': len(active_track_ids),
                 'total_detections': total_detections_sum,
@@ -435,7 +337,6 @@ class FullPipelineThread(QThread):
                 'total_frames': total_frames,
                 'progress': 100,
                 'active_tracks': 0,
-                'direction_stats': self._compute_direction_summary(),
             })
             
             self.log_message.emit(
@@ -450,183 +351,36 @@ class FullPipelineThread(QThread):
             import traceback
             self.log_message.emit(f"LOI HE THONG: {str(e)}")
             self.processing_error.emit(f"Loi pipeline:\n{str(e)}\n\n{traceback.format_exc()}")
-            
-    def _update_direction_stats(self, tracks, world_positions, ipm,
-                                 frame_count, fps_video):
-        """
-        Cap nhat lich su world-position va phan loai huong di chuyen.
-        CHI tinh nhung track co bottom_center NAM TRONG vung IPM (trapezoid ROI).
-        Van toc duoc tinh tu world coordinates (m) chia cho VIDEO TIME (s),
-        khong dung wall-clock time. Neu dung wall-clock thi khi pipeline cham
-        hon realtime (vd 8 FPS / 30 FPS goc) thi dt bi gap 3-4 lan -> van toc
-        bi chia nho lai 3-4 lan -> bao tac nghen nham.
-        """
-        if ipm is None or not ipm.is_calibrated:
-            return
-        if not fps_video or fps_video <= 0:
-            return
 
-        # VIDEO TIME (giay cua video, khong phai wall-clock)
-        now = float(frame_count) / float(fps_video)
-
-        WINDOW_LEN = 10           # so frame de tinh van toc trung binh
-        MIN_SAMPLES = 5           # toi thieu samples truoc khi gan huong
-        MIN_SPEED_MS = 0.5        # bo qua xe gan nhu dung yen (< 1.8 km/h)
-        MAX_SPEED_MS = 50.0       # tren 180 km/h coi nhu nhieu IPM
-
-        for track in tracks:
-            tid = track.track_id
-            if tid not in world_positions:
-                continue
-
-            # Chi tinh khi bottom_center nam trong polygon IPM
-            u, v = track.bottom_center
-            try:
-                if not ipm.is_point_in_roi(u, v):
-                    continue
-            except Exception:
-                continue
-
-            wp = world_positions[tid]
-            hist = self._track_world_history.setdefault(tid, deque(maxlen=WINDOW_LEN))
-            hist.append((now, float(wp.x), float(wp.y)))
-
-            if len(hist) < MIN_SAMPLES:
-                continue
-
-            t0, x0, y0 = hist[0]
-            t1, x1, y1 = hist[-1]
-            dt = t1 - t0
-            if dt <= 0.05:
-                continue
-
-            vx = (x1 - x0) / dt
-            vy = (y1 - y0) / dt
-            speed_ms = (vx * vx + vy * vy) ** 0.5
-
-            # Loc xe dung yen / nhieu IPM
-            if speed_ms < MIN_SPEED_MS or speed_ms > MAX_SPEED_MS:
-                continue
-
-            # Phan huong theo goc cua vector van toc trong world frame.
-            # Truc y world: +y = di xa camera (theo IPM dst_points_m).
-            # Goc do tu truc +y, theo chieu kim dong ho:
-            #   |angle| < 45         -> N (di xa camera)
-            #   45 <= angle < 135    -> E (sang phai)
-            #   |angle| >= 135       -> S (lai gan camera)
-            #   -135 <= angle < -45  -> W (sang trai)
-            angle_deg = np.degrees(np.arctan2(vx, vy))
-
-            if -45 <= angle_deg < 45:
-                direction = 'N'
-            elif 45 <= angle_deg < 135:
-                direction = 'E'
-            elif angle_deg >= 135 or angle_deg < -135:
-                direction = 'S'
-            else:
-                direction = 'W'
-
-            bucket = self._direction_stats[direction]
-            bucket['track_ids'].add(tid)
-            bucket['speeds'].append(speed_ms)
-            # Gioi han bo nho - chi giu 200 mau gan nhat
-            if len(bucket['speeds']) > 200:
-                bucket['speeds'] = bucket['speeds'][-200:]
-
-        # Don dep history cua track da bien mat lau
-        if len(self._track_world_history) > 500:
-            cutoff = now - 30.0
-            stale = [tid for tid, h in self._track_world_history.items()
-                     if not h or h[-1][0] < cutoff]
-            for tid in stale:
-                self._track_world_history.pop(tid, None)
-
-    # ============================================================
-    # HE SO HIEU CHINH VAN TOC THEO CALIB IPM THUC TE
-    # ------------------------------------------------------------
-    # IPM dst_points_m hien tai gia dinh vung phu 8m x 30m, nhung
-    # tren camera Linh Nam thuc te trapezoid chi phu khoang 3.2m x 12m.
-    # Ty le phong dai ~ 2.5x nen van toc do duoc bi gap 2.5x lan.
-    #
-    # Cach tune nhanh: quay 1 xe co toc do chuan (vd ben canh thuoc do
-    # Google Maps), ghi van toc dashboard tra ve, tinh:
-    #     SPEED_CALIBRATION_FACTOR = van_toc_thuc / van_toc_dashboard
-    # Hien tai = 0.40 vi user quan sat ~25 km/h thuc / ~62 km/h dashboard.
-    # ============================================================
-    SPEED_CALIBRATION_FACTOR = 0.40
-
-    def _compute_direction_summary(self) -> dict:
-        """
-        Tinh van toc trung binh (km/h) va so xe duy nhat cho moi huong.
-        Co ap he so SPEED_CALIBRATION_FACTOR de bu sai so calib IPM.
-        Tra ve dict {'N': {'speed_kmh': ..., 'count': ...}, ...}.
-        """
-        summary = {}
-        k = self.SPEED_CALIBRATION_FACTOR
-        for d, data in self._direction_stats.items():
-            speeds = data['speeds']
-            if speeds:
-                # Lay trung binh tren 60 mau gan nhat (~ vai giay)
-                recent = speeds[-60:]
-                avg_ms = sum(recent) / len(recent)
-            else:
-                avg_ms = 0.0
-            summary[d] = {
-                'speed_kmh': avg_ms * 3.6 * k,
-                'count': len(data['track_ids']),
-            }
-        return summary
-
-    def _pose_worker(self, pose_estimator):
-        """Luồng riêng: nhận frame từ hàng đợi và chạy pose estimation"""
-        while self._running:
-            # Lấy frame từ hàng đợi
-            with self.frame_lock:
-                if not self.frame_queue:
-                    time.sleep(0.01)
-                    continue
-                frame_data = self.frame_queue.popleft()
-            
-            frame = frame_data['frame']
-            frame_id = frame_data['frame_id']
-            timestamp = frame_data['timestamp']
-            
-            try:
-                persons = pose_estimator.extract_keypoints(frame)
-                with self.pose_results_lock:
-                    self.pose_results[frame_id] = {
-                        'persons': persons,
-                        'timestamp': timestamp
-                    }
-                    # Xóa các kết quả cũ quá 30 frame
-                    old_ids = [fid for fid in self.pose_results if fid < frame_id - 30]
-                    for fid in old_ids:
-                        del self.pose_results[fid]
-            except Exception:
-                pass
-
-    def _draw_all(self, frame, tracks, risk_results, world_positions, ipm=None, pose_persons=None):
+    def _draw_all(self, frame, tracks, risk_results, world_positions, ipm=None, poses=None):
         """Ve tat ca ket qua len frame - co BEV that tu IPM."""
         result = frame.copy()
         h, w = result.shape[:2]
         
-        # Ve IPM debug overlay
+        # === VE VUNG IPM LEN VIDEO ===
         if ipm and ipm.is_calibrated:
             try:
                 result = ipm.create_debug_overlay(result)
             except:
                 pass
 
-        # Tao BEV image
+        # === TAO BEV IMAGE THAT TU IPM ===
         if ipm and ipm.is_calibrated:
             try:
+                # Tao BEV image that (da bao gom ROI crop + warp)
                 bev_img = ipm.get_bev_image(frame)
+                
+                # Ve tracks len BEV
                 for track in tracks:
                     if track.track_id in world_positions:
                         wp = world_positions[track.track_id]
                         risk = risk_results.get(track.track_id)
+                        
+                        # World (met) -> BEV pixel (dung ipm.scale)
                         bev_px = int(wp.x * ipm.scale)
                         bev_py = int(wp.y * ipm.scale)
+                        
+                        # Mau theo risk
                         if risk:
                             if risk.is_accident or risk.final_score >= 0.65:
                                 color = (0, 0, 255)
@@ -636,35 +390,44 @@ class FullPipelineThread(QThread):
                                 color = (0, 255, 0)
                         else:
                             color = (200, 200, 200)
+                        
+                        # Ve len BEV
                         if 0 <= bev_px < bev_img.shape[1] and 0 <= bev_py < bev_img.shape[0]:
                             cv2.circle(bev_img, (bev_px, bev_py), 6, color, -1)
                             cv2.putText(bev_img, str(track.track_id),
                                        (bev_px + 8, bev_py + 4),
                                        cv2.FONT_HERSHEY_SIMPLEX, 0.4, color, 2)
+                
+                # Resize BEV de ghep vao goc
                 bev_h_bev, bev_w_bev = bev_img.shape[:2]
                 thumb_scale = 0.25
                 new_w = int(bev_w_bev * thumb_scale)
                 new_h = int(bev_h_bev * thumb_scale)
                 bev_small = cv2.resize(bev_img, (new_w, new_h))
+                
+                # Border
                 cv2.rectangle(bev_small, (0, 0), (new_w-1, new_h-1), (255, 255, 255), 2)
+                
+                # Ghep vao goc tren phai
                 x_offset = w - new_w - 10
                 y_offset = 50
+                
+                # Kiem tra khong vuot qua frame
                 if (y_offset + new_h <= h and x_offset + new_w <= w and 
                     y_offset >= 0 and x_offset >= 0):
                     result[y_offset:y_offset+new_h, x_offset:x_offset+new_w] = bev_small
+                    
                     cv2.putText(result, "BEV (Bird's Eye View)", (x_offset, y_offset - 8),
                                cv2.FONT_HERSHEY_SIMPLEX, 0.4, (255, 255, 255), 1)
-            except Exception:
-                pass
+                
+            except Exception as e:
+                pass  # BEV fail khong anh huong den phan con lai
         
-        # Ve pose skeleton
-        if pose_persons and self.pose_estimator:
-            result = self.pose_estimator.draw_skeleton(result, pose_persons)
-        
-        # Ve tracks + BBOX
+        # === VE TRACKS + BBOX ===
         for track in tracks:
             x1, y1, x2, y2 = track.bbox_xyxy.astype(int)
             risk = risk_results.get(track.track_id)
+            
             if risk:
                 if risk.is_accident or risk.final_score >= 0.65:
                     color = (0, 0, 255)
@@ -678,14 +441,20 @@ class FullPipelineThread(QThread):
             else:
                 color = (180, 180, 180)
                 thickness = 1
+            
             cv2.rectangle(result, (x1, y1), (x2, y2), color, thickness)
+            
+            # Label
             label = f"ID:{track.track_id} {track.class_name}"
             if risk:
                 label += f" [{risk.final_score:.2f}]"
+            
             (lw, lh), _ = cv2.getTextSize(label, cv2.FONT_HERSHEY_SIMPLEX, 0.4, 2)
             cv2.rectangle(result, (x1, y1 - lh - 8), (x1 + lw + 6, y1 - 2), color, -1)
             cv2.putText(result, label, (x1 + 3, y1 - 5),
                        cv2.FONT_HERSHEY_SIMPLEX, 0.4, (255, 255, 255), 2)
+            
+            # ACCIDENT DETECTED
             if risk and risk.is_accident:
                 acc_text = "ACCIDENT DETECTED"
                 (tw, th), _ = cv2.getTextSize(acc_text, cv2.FONT_HERSHEY_SIMPLEX, 0.6, 2)
@@ -695,6 +464,8 @@ class FullPipelineThread(QThread):
                             (acc_x + tw + 6, acc_y + 6), (0, 0, 200), -1)
                 cv2.putText(result, acc_text, (acc_x, acc_y),
                            cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 255, 255), 2)
+            
+            # Trajectory
             if len(track.trajectory) > 1:
                 pts = [(int(p[0]), int(p[1])) for p in list(track.trajectory)[-30:]]
                 for i in range(1, len(pts)):
@@ -702,22 +473,23 @@ class FullPipelineThread(QThread):
                     pt_color = tuple(int(c * alpha) for c in color)
                     cv2.line(result, pts[i-1], pts[i], pt_color, 1)
         
-        # Header + congestion status
+        # === HEADER ===
+        # === HEADER + CONGESTION STATUS ===
         header_bg = np.zeros((36, w, 3), dtype=np.uint8)
         header_bg[:] = (20, 20, 40)
+        
+        # Ten he thong
         cv2.putText(header_bg, "TRAFFIC AI SYSTEM | LINH NAM - HA NOI",
                    (12, 25), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (200, 200, 200), 1)
+        
+        # Trang thai tac nghen
         if ipm and ipm.is_calibrated:
             congestion = ipm.get_congestion_level(len(tracks))
             status_text = f"| {congestion['level']} ({len(tracks)} xe, {congestion['density']:.1f}/100m²)"
             cv2.putText(header_bg, status_text, (w - 500, 25),
                        cv2.FONT_HERSHEY_SIMPLEX, 0.45, congestion['color'], 1)
+        
         result = np.vstack([header_bg, result])
-
-        # Hiển thị trạng thái POSE
-        status = "POSE ON" if (pose_persons and len(pose_persons) > 0) else "POSE OFF"
-        color = (0, 255, 0) if status == "POSE ON" else (0, 0, 255)
-        cv2.putText(result, status, (w - 150, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.6, color, 2)
 
         return result
 
@@ -727,12 +499,7 @@ class FullPipelineThread(QThread):
 
     def stop(self):
         self._running = False
-        if self._pose_thread and self._pose_thread.is_alive():
-            self._pose_thread.join(timeout=2)
         self.wait(5000)
-
-
-# ... (phần còn lại của file giữ nguyên)
 
 
 # ============================================================
@@ -955,7 +722,6 @@ class MainWindow(QMainWindow):
         self.video_thread = None
         self.current_video_path = None
         self.alert_history = []
-        self._latest_stats = {}   # luu stats moi nhat de dung trong export report
         self._init_ui()
         self._setup_toolbar()
         self._setup_statusbar()
@@ -1017,7 +783,7 @@ class MainWindow(QMainWindow):
         toolbar.setMovable(False)
         self.addToolBar(toolbar)
         toolbar.addAction(QAction("Mo Video", self, triggered=self._open_video))
-        toolbar.addAction(QAction("Mo RTSP", self, triggered=self._open_rtsp))
+        toolbar.addAction(QAction("Mo Camera", self, triggered=lambda: self._open_source(0)))
         toolbar.addAction(QAction("Chay Demo", self, triggered=self._run_demo))
         toolbar.addSeparator()
         lbl = QLabel("  Nguong: ")
@@ -1044,16 +810,6 @@ class MainWindow(QMainWindow):
         self.workflow_bar.pause_clicked.connect(self._toggle_pause)
         self.workflow_bar.stop_clicked.connect(self._stop_processing)
 
-    def _open_rtsp(self):
-        from PyQt5.QtWidgets import QInputDialog
-        url, ok = QInputDialog.getText(
-            self, "RTSP Stream",
-            "Nhap URL RTSP:",
-            text="rtsp://admin:admin@192.168.1.100:554/live"
-        )
-        if ok and url.strip():
-            self.video_preview.load_video(url.strip())
-    
     def _open_video(self):
         fp, _ = QFileDialog.getOpenFileName(self, "Chon Video", "", "Video (*.mp4 *.avi *.mov *.mkv);;All (*)")
         if fp:
@@ -1115,7 +871,6 @@ class MainWindow(QMainWindow):
         self.workflow_bar.update_progress(cur, total)
 
     def _on_stats(self, stats):
-        self._latest_stats = stats
         self.dashboard.update_stats(stats)
 
     def _on_error(self, msg):
@@ -1162,25 +917,19 @@ class MainWindow(QMainWindow):
             QMessageBox.warning(self, "Loi", str(e))
 
     def _collect_report_data(self):
-        # === Congestion theo huong: lay tu stats moi nhat cua pipeline ===
-        # Chi tinh tu cac track NAM TRONG vung IPM, van toc do tu world coords.
-        dir_stats = (self._latest_stats or {}).get('direction_stats', {}) or {}
-        n = dir_stats.get('N', {'speed_kmh': 0.0, 'count': 0})
-        s = dir_stats.get('S', {'speed_kmh': 0.0, 'count': 0})
-        e = dir_stats.get('E', {'speed_kmh': 0.0, 'count': 0})
-        w = dir_stats.get('W', {'speed_kmh': 0.0, 'count': 0})
+        # Thu thập congestion data từ dashboard
         congestion = {
-            'north_speed': float(n.get('speed_kmh', 0.0)), 'north_count': int(n.get('count', 0)),
-            'south_speed': float(s.get('speed_kmh', 0.0)), 'south_count': int(s.get('count', 0)),
-            'east_speed':  float(e.get('speed_kmh', 0.0)), 'east_count':  int(e.get('count', 0)),
-            'west_speed':  float(w.get('speed_kmh', 0.0)), 'west_count':  int(w.get('count', 0)),
+            'north_speed': 12.5, 'north_count': 15,
+            'south_speed': 18.2, 'south_count': 22,
+            'east_speed': 6.8,  'east_count': 35,
+            'west_speed': 24.1, 'west_count': 10,
         }
-
+        
         # Thu thập event log từ dashboard
         events = []
         if hasattr(self.dashboard, '_event_log'):
             events = list(self.dashboard._event_log)
-
+        
         data = {
             'timestamp': datetime.now().strftime('%d/%m/%Y %H:%M:%S'),
             'system_name': 'He thong Giam sat Giao thong Linh Nam',
@@ -1192,9 +941,7 @@ class MainWindow(QMainWindow):
                 'do_tre': self.dashboard.latency_card.value_label.text(),
                 'gpu_usage': self.dashboard.gpu_card.value_label.text(),
                 'ram_usage': '--',
-                # FIX: doc tu total_vehicle_card (tong xe duy nhat),
-                # khong phai vehicle_card (chi la xe hien tai trong vung).
-                'tong_xe_duy_nhat': self.dashboard.total_vehicle_card.value_label.text(),
+                'tong_xe_duy_nhat': self.dashboard.vehicle_card.value_label.text(),
                 'tong_luot_detect': self.dashboard.detection_card.value_label.text(),
                 'tong_canh_bao': self.dashboard.alert_card.value_label.text(),
             },
@@ -1706,4 +1453,3 @@ body {{
     def closeEvent(self, event):
         self._stop_processing()
         event.accept()
-        

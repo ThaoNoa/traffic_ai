@@ -12,21 +12,21 @@ Video bình thường: 2
 
 Chi tiết từng video:
 ----------------------------------------------------------------------
-  [INC]  MISS | videos/eval/v51.mov | alerts=0 | sys_fps=6.3 | gt=(4.0, 10.0)
-  [INC]  MISS | videos/eval/v49.mov | alerts=0 | sys_fps=7.1 | gt=(3.0, 8.0)
-  [INC]  MISS | videos/eval/v48.mov | alerts=0 | sys_fps=21.6 | gt=(3.0, 7.5)
-  [NORM] videos/eval/linh_nam_normal_01.mp4 | alerts=0 | sys_fps=24.1
-  [NORM] videos/eval/cctv_normal_02.mp4 | alerts=0 | sys_fps=17.0
+  [INC]  MISS | videos/eval_25fps/v51_25fps.mp4 | alerts=0 | sys_fps=25.7 | gt=(4.0, 10.0)
+  [INC]  MISS | videos/eval_25fps/v49_25fps.mp4 | alerts=0 | sys_fps=21.5 | gt=(3.0, 8.0)
+  [INC]  MISS | videos/eval_25fps/v48_25fps.mp4 | alerts=0 | sys_fps=31.3 | gt=(3.0, 7.5)
+  [NORM] videos/eval/linh_nam_normal_01.mp4 | alerts=0 | sys_fps=36.6
+  [NORM] videos/eval/cctv_normal_02.mp4 | alerts=0 | sys_fps=40.5
 
 [JSON dump]
 {
   "incidents": [
     {
-      "video": "videos/eval/v51.mov",
-      "n_frames": 648,
-      "fps_video": 59.1904047976012,
-      "runtime_s": 102.39894574000027,
-      "system_fps": 6.328190151931131,
+      "video": "videos/eval_25fps/v51_25fps.mp4",
+      "n_frames": 270,
+      "fps_video": 25.0,
+      "runtime_s": 10.493301696000344,
+      "system_fps": 25.730700195431716,
       "alerts": [],
       "n_alerts": 0,
       "hit_in_window": false,
@@ -36,11 +36,11 @@ Chi tiết từng video:
       ]
     },
     {
-      "video": "videos/eval/v49.mov",
-      "n_frames": 631,
-      "fps_video": 57.803806734992676,
-      "runtime_s": 89.40019289199972,
-      "system_fps": 7.058150319231214,
+      "video": "videos/eval_25fps/v49_25fps.mp4",
+      "n_frames": 263,
+      "fps_video": 25.0,
+      "runtime_s": 12.227108344999579,
+      "system_fps": 21.509582853051022,
       "alerts": [],
       "n_alerts": 0,
       "hit_in_window": false,
@@ -50,11 +50,11 @@ Chi tiết từng video:
       ]
     },
     {
-      "video": "videos/eval/v48.mov",
-      "n_frames": 728,
-      "fps_video": 59.11528150134048,
-      "runtime_s": 33.700250797999615,
-      "system_fps": 21.602213121903908,
+      "video": "videos/eval_25fps/v48_25fps.mp4",
+      "n_frames": 308,
+      "fps_video": 25.0,
+      "runtime_s": 9.82647540400012,
+      "system_fps": 31.34389364823736,
       "alerts": [],
       "n_alerts": 0,
       "hit_in_window": false,
@@ -69,8 +69,8 @@ Chi tiết từng video:
       "video": "videos/eval/linh_nam_normal_01.mp4",
       "n_frames": 433,
       "fps_video": 29.930875576036865,
-      "runtime_s": 17.96721109000009,
-      "system_fps": 24.099455270550717,
+      "runtime_s": 11.824526465000417,
+      "system_fps": 36.61880256107023,
       "alerts": [],
       "n_alerts": 0,
       "hit_in_window": false,
@@ -80,8 +80,8 @@ Chi tiết từng video:
       "video": "videos/eval/cctv_normal_02.mp4",
       "n_frames": 937,
       "fps_video": 30.0,
-      "runtime_s": 55.06050728399987,
-      "system_fps": 17.017641976434977,
+      "runtime_s": 23.14003505399978,
+      "system_fps": 40.492592073149794,
       "alerts": [],
       "n_alerts": 0,
       "hit_in_window": false,

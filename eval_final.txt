@@ -1,0 +1,714 @@
+======================================================================
+EVAL — Phát hiện sự cố giao thông
+======================================================================
+
+Video sự cố: 3
+  → Recall = 1/3 = 33.33%
+
+Video bình thường: 2
+  → Tổng thời lượng: 0.8 phút
+  → False alerts: 46
+  → False-alert rate: 3623.6 /giờ
+
+Chi tiết từng video:
+----------------------------------------------------------------------
+  [INC]  MISS | videos/eval_25fps/v51_25fps.mp4 | alerts=0 | sys_fps=22.8 | gt=(4.0, 10.0)
+  [INC]  MISS | videos/eval_25fps/v49_25fps.mp4 | alerts=0 | sys_fps=18.4 | gt=(3.0, 8.0)
+  [INC]  HIT | videos/eval_25fps/v48_25fps.mp4 | alerts=9 | sys_fps=25.3 | gt=(3.0, 7.5)
+  [NORM] videos/eval/linh_nam_normal_01.mp4 | alerts=23 | sys_fps=33.9
+  [NORM] videos/eval/cctv_normal_02.mp4 | alerts=23 | sys_fps=34.4
+
+[JSON dump]
+{
+  "incidents": [
+    {
+      "video": "videos/eval_25fps/v51_25fps.mp4",
+      "n_frames": 270,
+      "fps_video": 25.0,
+      "runtime_s": 11.829991544998848,
+      "system_fps": 22.82334682767741,
+      "alerts": [],
+      "n_alerts": 0,
+      "hit_in_window": false,
+      "gt_window": [
+        4.0,
+        10.0
+      ]
+    },
+    {
+      "video": "videos/eval_25fps/v49_25fps.mp4",
+      "n_frames": 263,
+      "fps_video": 25.0,
+      "runtime_s": 14.27182165799968,
+      "system_fps": 18.427920857081514,
+      "alerts": [],
+      "n_alerts": 0,
+      "hit_in_window": false,
+      "gt_window": [
+        3.0,
+        8.0
+      ]
+    },
+    {
+      "video": "videos/eval_25fps/v48_25fps.mp4",
+      "n_frames": 308,
+      "fps_video": 25.0,
+      "runtime_s": 12.153036415000315,
+      "system_fps": 25.34346063670476,
+      "alerts": [
+        {
+          "frame": 70,
+          "t": 2.8,
+          "track_id": 1,
+          "final_score": 1.0,
+          "rule": 1.0,
+          "ml": 0.5219308413337838,
+          "violations": [
+            "SUDDEN_BRAKE"
+          ]
+        },
+        {
+          "frame": 70,
+          "t": 2.8,
+          "track_id": 2,
+          "final_score": 0.9511692520460017,
+          "rule": 0.9511692520460017,
+          "ml": 0.5575246762073715,
+          "violations": [
+            "SUDDEN_BRAKE",
+            "COLLISION_RISK"
+          ]
+        },
+        {
+          "frame": 95,
+          "t": 3.8,
+          "track_id": 6,
+          "final_score": 1.0,
+          "rule": 1.0,
+          "ml": 0.5437282671631893,
+          "violations": [
+            "SUDDEN_BRAKE"
+          ]
+        },
+        {
+          "frame": 105,
+          "t": 4.2,
+          "track_id": 5,
+          "final_score": 1.0,
+          "rule": 1.0,
+          "ml": 0.519601316131404,
+          "violations": [
+            "SUDDEN_BRAKE"
+          ]
+        },
+        {
+          "frame": 125,
+          "t": 5.0,
+          "track_id": 11,
+          "final_score": 1.0,
+          "rule": 1.0,
+          "ml": 0.7948483001330413,
+          "violations": [
+            "SUDDEN_BRAKE"
+          ]
+        },
+        {
+          "frame": 140,
+          "t": 5.6,
+          "track_id": 14,
+          "final_score": 0.9551172962796864,
+          "rule": 0.9551172962796864,
+          "ml": 0.8396090375506358,
+          "violations": [
+            "SUDDEN_BRAKE",
+            "COLLISION_RISK"
+          ]
+        },
+        {
+          "frame": 160,
+          "t": 6.4,
+          "track_id": 16,
+          "final_score": 0.9329560541188149,
+          "rule": 0.9329560541188149,
+          "ml": 0.6431836380898893,
+          "violations": [
+            "SUDDEN_BRAKE"
+          ]
+        },
+        {
+          "frame": 170,
+          "t": 6.8,
+          "track_id": 17,
+          "final_score": 1.0,
+          "rule": 1.0,
+          "ml": 0.7591416492046403,
+          "violations": [
+            "SUDDEN_BRAKE"
+          ]
+        },
+        {
+          "frame": 290,
+          "t": 11.6,
+          "track_id": 20,
+          "final_score": 1.0,
+          "rule": 1.0,
+          "ml": 0.3328501433438489,
+          "violations": [
+            "SUDDEN_BRAKE"
+          ]
+        }
+      ],
+      "n_alerts": 9,
+      "hit_in_window": true,
+      "gt_window": [
+        3.0,
+        7.5
+      ]
+    }
+  ],
+  "normals": [
+    {
+      "video": "videos/eval/linh_nam_normal_01.mp4",
+      "n_frames": 433,
+      "fps_video": 29.930875576036865,
+      "runtime_s": 12.75903847399968,
+      "system_fps": 33.93672657092192,
+      "alerts": [
+        {
+          "frame": 35,
+          "t": 1.1693610469591995,
+          "track_id": 1,
+          "final_score": 0.9467218795782777,
+          "rule": 0.9467218795782777,
+          "ml": 0.723489566962966,
+          "violations": [
+            "SUDDEN_BRAKE",
+            "COLLISION_RISK"
+          ]
+        },
+        {
+          "frame": 35,
+          "t": 1.1693610469591995,
+          "track_id": 3,
+          "final_score": 0.9496130265963757,
+          "rule": 0.9496130265963757,
+          "ml": 0.36315794806055496,
+          "violations": [
+            "SUDDEN_BRAKE",
+            "COLLISION_RISK"
+          ]
+        },
+        {
+          "frame": 40,
+          "t": 1.336412625096228,
+          "track_id": 4,
+          "final_score": 0.9490323014246913,
+          "rule": 0.9490323014246913,
+          "ml": 0.5539440299061754,
+          "violations": [
+            "SUDDEN_BRAKE",
+            "COLLISION_RISK"
+          ]
+        },
+        {
+          "frame": 50,
+          "t": 1.670515781370285,
+          "track_id": 7,
+          "final_score": 1.0,
+          "rule": 1.0,
+          "ml": 0.5864593478524833,
+          "violations": [
+            "SUDDEN_BRAKE"
+          ]
+        },
+        {
+          "frame": 60,
+          "t": 2.004618937644342,
+          "track_id": 10,
+          "final_score": 0.9087026832046226,
+          "rule": 0.9087026832046226,
+          "ml": 0.6088867772553777,
+          "violations": [
+            "COLLISION_RISK"
+          ]
+        },
+        {
+          "frame": 60,
+          "t": 2.004618937644342,
+          "track_id": 11,
+          "final_score": 1.0,
+          "rule": 1.0,
+          "ml": 0.519263131679982,
+          "violations": [
+            "SUDDEN_BRAKE"
+          ]
+        },
+        {
+          "frame": 60,
+          "t": 2.004618937644342,
+          "track_id": 12,
+          "final_score": 0.9817405366409245,
+          "rule": 0.9817405366409245,
+          "ml": 0.4729772872578278,
+          "violations": [
+            "SUDDEN_BRAKE",
+            "COLLISION_RISK"
+          ]
+        },
+        {
+          "frame": 95,
+          "t": 3.1739799846035415,
+          "track_id": 17,
+          "final_score": 0.8884980857907464,
+          "rule": 0.8884980857907464,
+          "ml": 0.40607879314558015,
+          "violations": [
+            "COLLISION_RISK"
+          ]
+        },
+        {
+          "frame": 105,
+          "t": 3.5080831408775985,
+          "track_id": 20,
+          "final_score": 1.0,
+          "rule": 1.0,
+          "ml": 0.5012655155893855,
+          "violations": [
+            "SUDDEN_BRAKE"
+          ]
+        },
+        {
+          "frame": 125,
+          "t": 4.176289453425713,
+          "track_id": 27,
+          "final_score": 0.9003454986591111,
+          "rule": 0.9003454986591111,
+          "ml": 0.6156130662580593,
+          "violations": [
+            "SUDDEN_BRAKE"
+          ]
+        },
+        {
+          "frame": 135,
+          "t": 4.510392609699769,
+          "track_id": 30,
+          "final_score": 1.0,
+          "rule": 1.0,
+          "ml": 0.5505235595931653,
+          "violations": [
+            "SUDDEN_BRAKE"
+          ]
+        },
+        {
+          "frame": 140,
+          "t": 4.677444187836798,
+          "track_id": 33,
+          "final_score": 1.0,
+          "rule": 1.0,
+          "ml": 0.3965069238619191,
+          "violations": [
+            "SUDDEN_BRAKE"
+          ]
+        },
+        {
+          "frame": 210,
+          "t": 7.016166281755197,
+          "track_id": 54,
+          "final_score": 1.0,
+          "rule": 1.0,
+          "ml": 0.3757448844939592,
+          "violations": [
+            "SUDDEN_BRAKE"
+          ]
+        },
+        {
+          "frame": 220,
+          "t": 7.350269438029254,
+          "track_id": 57,
+          "final_score": 1.0,
+          "rule": 1.0,
+          "ml": 0.47549895959025035,
+          "violations": [
+            "SUDDEN_BRAKE"
+          ]
+        },
+        {
+          "frame": 225,
+          "t": 7.5173210161662825,
+          "track_id": 61,
+          "final_score": 1.0,
+          "rule": 1.0,
+          "ml": 0.7632239710628929,
+          "violations": [
+            "SUDDEN_BRAKE"
+          ]
+        },
+        {
+          "frame": 245,
+          "t": 8.185527328714397,
+          "track_id": 60,
+          "final_score": 1.0,
+          "rule": 1.0,
+          "ml": 0.5492031102377604,
+          "violations": [
+            "SUDDEN_BRAKE"
+          ]
+        },
+        {
+          "frame": 260,
+          "t": 8.686682063125481,
+          "track_id": 66,
+          "final_score": 0.9968139518522818,
+          "rule": 0.9968139518522818,
+          "ml": 0.5091548241342831,
+          "violations": [
+            "SUDDEN_BRAKE",
+            "COLLISION_RISK"
+          ]
+        },
+        {
+          "frame": 265,
+          "t": 8.85373364126251,
+          "track_id": 67,
+          "final_score": 0.9652254021473572,
+          "rule": 0.9652254021473572,
+          "ml": 0.6681686778350975,
+          "violations": [
+            "SUDDEN_BRAKE",
+            "COLLISION_RISK"
+          ]
+        },
+        {
+          "frame": 270,
+          "t": 9.020785219399539,
+          "track_id": 69,
+          "final_score": 0.8902277752343652,
+          "rule": 0.8654645376653607,
+          "ml": 0.8902277752343652,
+          "violations": [
+            "SUDDEN_BRAKE",
+            "COLLISION_RISK"
+          ]
+        },
+        {
+          "frame": 330,
+          "t": 11.02540415704388,
+          "track_id": 75,
+          "final_score": 1.0,
+          "rule": 1.0,
+          "ml": 0.5858238384274197,
+          "violations": [
+            "SUDDEN_BRAKE"
+          ]
+        },
+        {
+          "frame": 360,
+          "t": 12.02771362586605,
+          "track_id": 76,
+          "final_score": 0.9365772493122273,
+          "rule": 0.9365772493122273,
+          "ml": 0.7983115050469266,
+          "violations": [
+            "SUDDEN_BRAKE",
+            "COLLISION_RISK"
+          ]
+        },
+        {
+          "frame": 370,
+          "t": 12.361816782140108,
+          "track_id": 78,
+          "final_score": 0.9616832411622651,
+          "rule": 0.9616832411622651,
+          "ml": 0.701139786715796,
+          "violations": [
+            "COLLISION_RISK"
+          ]
+        },
+        {
+          "frame": 405,
+          "t": 13.531177829099308,
+          "track_id": 83,
+          "final_score": 1.0,
+          "rule": 1.0,
+          "ml": 0.45483910387049187,
+          "violations": [
+            "SUDDEN_BRAKE"
+          ]
+        }
+      ],
+      "n_alerts": 23,
+      "hit_in_window": false,
+      "gt_window": null
+    },
+    {
+      "video": "videos/eval/cctv_normal_02.mp4",
+      "n_frames": 937,
+      "fps_video": 30.0,
+      "runtime_s": 27.254277326999727,
+      "system_fps": 34.37992461725453,
+      "alerts": [
+        {
+          "frame": 45,
+          "t": 1.5,
+          "track_id": 2,
+          "final_score": 1.0,
+          "rule": 1.0,
+          "ml": 0.4144036231744519,
+          "violations": [
+            "SUDDEN_BRAKE"
+          ]
+        },
+        {
+          "frame": 85,
+          "t": 2.8333333333333335,
+          "track_id": 3,
+          "final_score": 0.9739823563654018,
+          "rule": 0.9739823563654018,
+          "ml": 0.6762165697197078,
+          "violations": [
+            "COLLISION_RISK"
+          ]
+        },
+        {
+          "frame": 120,
+          "t": 4.0,
+          "track_id": 5,
+          "final_score": 1.0,
+          "rule": 1.0,
+          "ml": 0.35239734301760456,
+          "violations": [
+            "SUDDEN_BRAKE"
+          ]
+        },
+        {
+          "frame": 195,
+          "t": 6.5,
+          "track_id": 9,
+          "final_score": 0.9192981721599253,
+          "rule": 0.9192981721599253,
+          "ml": 0.48079801103616165,
+          "violations": [
+            "SUDDEN_BRAKE",
+            "COLLISION_RISK"
+          ]
+        },
+        {
+          "frame": 205,
+          "t": 6.833333333333333,
+          "track_id": 8,
+          "final_score": 1.0,
+          "rule": 1.0,
+          "ml": 0.6306357451094705,
+          "violations": [
+            "SUDDEN_BRAKE"
+          ]
+        },
+        {
+          "frame": 225,
+          "t": 7.5,
+          "track_id": 12,
+          "final_score": 0.9986306278597787,
+          "rule": 0.9986306278597787,
+          "ml": 0.3580322492526548,
+          "violations": [
+            "COLLISION_RISK"
+          ]
+        },
+        {
+          "frame": 230,
+          "t": 7.666666666666667,
+          "track_id": 14,
+          "final_score": 0.9991421134894454,
+          "rule": 0.9991421134894454,
+          "ml": 0.6347316323648879,
+          "violations": [
+            "SUDDEN_BRAKE",
+            "COLLISION_RISK"
+          ]
+        },
+        {
+          "frame": 370,
+          "t": 12.333333333333334,
+          "track_id": 16,
+          "final_score": 1.0,
+          "rule": 1.0,
+          "ml": 0.6579026538771324,
+          "violations": [
+            "SUDDEN_BRAKE"
+          ]
+        },
+        {
+          "frame": 405,
+          "t": 13.5,
+          "track_id": 17,
+          "final_score": 1.0,
+          "rule": 1.0,
+          "ml": 0.7340371190369632,
+          "violations": [
+            "SUDDEN_BRAKE"
+          ]
+        },
+        {
+          "frame": 410,
+          "t": 13.666666666666666,
+          "track_id": 18,
+          "final_score": 1.0,
+          "rule": 1.0,
+          "ml": 0.6276364849480925,
+          "violations": [
+            "SUDDEN_BRAKE"
+          ]
+        },
+        {
+          "frame": 435,
+          "t": 14.5,
+          "track_id": 19,
+          "final_score": 1.0,
+          "rule": 1.0,
+          "ml": 0.45518847671288215,
+          "violations": [
+            "SUDDEN_BRAKE"
+          ]
+        },
+        {
+          "frame": 470,
+          "t": 15.666666666666666,
+          "track_id": 20,
+          "final_score": 1.0,
+          "rule": 1.0,
+          "ml": 0.5101354059506505,
+          "violations": [
+            "SUDDEN_BRAKE"
+          ]
+        },
+        {
+          "frame": 540,
+          "t": 18.0,
+          "track_id": 23,
+          "final_score": 1.0,
+          "rule": 1.0,
+          "ml": 0.5359748184550314,
+          "violations": [
+            "SUDDEN_BRAKE"
+          ]
+        },
+        {
+          "frame": 655,
+          "t": 21.833333333333332,
+          "track_id": 27,
+          "final_score": 1.0,
+          "rule": 1.0,
+          "ml": 0.48416549031273143,
+          "violations": [
+            "SUDDEN_BRAKE"
+          ]
+        },
+        {
+          "frame": 660,
+          "t": 22.0,
+          "track_id": 29,
+          "final_score": 1.0,
+          "rule": 1.0,
+          "ml": 0.6783266487249057,
+          "violations": [
+            "SUDDEN_BRAKE"
+          ]
+        },
+        {
+          "frame": 735,
+          "t": 24.5,
+          "track_id": 32,
+          "final_score": 0.9678806740553283,
+          "rule": 0.9678806740553283,
+          "ml": 0.7656638320791863,
+          "violations": [
+            "SUDDEN_BRAKE",
+            "COLLISION_RISK"
+          ]
+        },
+        {
+          "frame": 735,
+          "t": 24.5,
+          "track_id": 34,
+          "final_score": 0.8431304122688836,
+          "rule": 0.8394033702766417,
+          "ml": 0.8518268435841152,
+          "violations": [
+            "COLLISION_RISK"
+          ]
+        },
+        {
+          "frame": 750,
+          "t": 25.0,
+          "track_id": 36,
+          "final_score": 0.9629885914546257,
+          "rule": 0.9629885914546257,
+          "ml": 0.31164708816433534,
+          "violations": [
+            "COLLISION_RISK"
+          ]
+        },
+        {
+          "frame": 775,
+          "t": 25.833333333333332,
+          "track_id": 40,
+          "final_score": 1.0,
+          "rule": 1.0,
+          "ml": 0.597069310282526,
+          "violations": [
+            "SUDDEN_BRAKE"
+          ]
+        },
+        {
+          "frame": 880,
+          "t": 29.333333333333332,
+          "track_id": 42,
+          "final_score": 0.9469027295010891,
+          "rule": 0.9469027295010891,
+          "ml": 0.6862325395044142,
+          "violations": [
+            "SUDDEN_BRAKE",
+            "COLLISION_RISK"
+          ]
+        },
+        {
+          "frame": 900,
+          "t": 30.0,
+          "track_id": 43,
+          "final_score": 0.9959846199907315,
+          "rule": 0.9959846199907315,
+          "ml": 0.7521840883819112,
+          "violations": [
+            "SUDDEN_BRAKE",
+            "COLLISION_RISK"
+          ]
+        },
+        {
+          "frame": 900,
+          "t": 30.0,
+          "track_id": 46,
+          "final_score": 0.9799230999536575,
+          "rule": 0.9799230999536575,
+          "ml": 0.40481504581154604,
+          "violations": [
+            "COLLISION_RISK"
+          ]
+        },
+        {
+          "frame": 915,
+          "t": 30.5,
+          "track_id": 47,
+          "final_score": 1.0,
+          "rule": 1.0,
+          "ml": 0.4810030008849418,
+          "violations": [
+            "SUDDEN_BRAKE"
+          ]
+        }
+      ],
+      "n_alerts": 23,
+      "hit_in_window": false,
+      "gt_window": null
+    }
+  ]
+}

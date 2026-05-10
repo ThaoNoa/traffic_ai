@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Bao cao Phan tich Giao thong - Linh Nam - Ha Noi</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: 'Times New Roman', 'Segoe UI', serif;
+    color: #2c3e50;
+    background: #f5f6fa;
+    padding: 40px;
+}
+.container { max-width: 950px; margin: 0 auto; }
+.header {
+    text-align: center;
+    padding: 40px 30px;
+    background: linear-gradient(135deg, #ffffff 0%, #f0f3f7 100%);
+    border: 2px solid #1a3a5c;
+    border-radius: 6px;
+    margin-bottom: 24px;
+}
+.header h1 { font-size: 26px; color: #1a3a5c; margin-bottom: 8px; }
+.header .subtitle { font-size: 16px; color: #2c3e50; margin-bottom: 4px; }
+.header .meta { color: #5a6c7d; font-size: 13px; margin-top: 6px; }
+.card {
+    background: #ffffff;
+    border: 1px solid #d0d5db;
+    border-radius: 6px;
+    padding: 24px;
+    margin-bottom: 20px;
+    page-break-inside: avoid;
+}
+.card h2 {
+    color: #1a3a5c;
+    font-size: 18px;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #1a3a5c;
+}
+.card h3 {
+    color: #2c3e50;
+    font-size: 14px;
+    margin: 16px 0 10px 0;
+}
+
+/* Stats */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-bottom: 16px;
+}
+.stat-box {
+    text-align: center;
+    padding: 20px 14px;
+    background: #f8f9fb;
+    border: 1px solid #e0e4e8;
+    border-radius: 6px;
+}
+.stat-box.highlight {
+    background: #f0f4ff;
+    border-color: #1a3a5c;
+}
+.stat-box .number {
+    display: block;
+    font-size: 34px;
+    font-weight: bold;
+    color: #1a3a5c;
+}
+.stat-box .label {
+    display: block;
+    color: #5a6c7d;
+    font-size: 12px;
+    margin-top: 6px;
+}
+.stat-box .sub {
+    display: block;
+    color: #8a9aa8;
+    font-size: 10px;
+    margin-top: 2px;
+}
+
+/* Tables */
+.info-table { width: 100%; border-collapse: collapse; }
+.info-table td {
+    padding: 10px 14px;
+    border-bottom: 1px solid #e8ecf0;
+    font-size: 13px;
+}
+.info-table td:first-child {
+    color: #5a6c7d;
+    width: 200px;
+    font-weight: bold;
+}
+
+/* Alert Table */
+.alert-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+}
+.alert-table th {
+    background: #f0f3f7;
+    color: #2c3e50;
+    padding: 8px 10px;
+    text-align: left;
+    border-bottom: 2px solid #d0d5db;
+    font-size: 11px;
+    font-weight: bold;
+}
+.alert-table td {
+    padding: 7px 10px;
+    border-bottom: 1px solid #e8ecf0;
+}
+.alert-table tr:hover { background: #fafbfc; }
+
+/* Event Table */
+.event-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+}
+.event-table th {
+    background: #f0f3f7;
+    color: #2c3e50;
+    padding: 8px 10px;
+    text-align: left;
+    border-bottom: 2px solid #d0d5db;
+    font-size: 11px;
+}
+.event-table td {
+    padding: 6px 10px;
+    border-bottom: 1px solid #e8ecf0;
+}
+
+/* Congestion */
+.congestion-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+}
+.congestion-table td {
+    padding: 6px 10px;
+    border-bottom: 1px solid #e8ecf0;
+}
+
+.footer {
+    text-align: center;
+    color: #8a9aa8;
+    font-size: 12px;
+    padding: 30px 20px;
+    margin-top: 10px;
+    border-top: 2px solid #d0d5db;
+}
+.footer .highlight { color: #1a3a5c; font-weight: bold; }
+.footer .members { font-size: 11px; color: #5a6c7d; margin-top: 6px; }
+
+@media print {
+    body { padding: 20px; }
+    .card { page-break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- ============ HEADER ============ -->
+<div class="header">
+    <h1>He thong Giam sat Giao thong Linh Nam</h1>
+    <p class="subtitle">BAO CAO PHAN TICH GIAO THONG TU DONG</p>
+    <p class="meta">Thoi gian xuat bao cao: 10/05/2026 22:08:12</p>
+    <p class="meta">Phien ban he thong: 1.0.0 - NCKH 2026</p>
+</div>
+
+<!-- ============ KET QUA TONG HOP ============ -->
+<div class="card">
+    <h2>KET QUA TONG HOP</h2>
+    
+    <h3>Hieu nang He thong</h3>
+    <div class="stats-grid">
+        <div class="stat-box highlight">
+            <span class="number">7.7</span>
+            <span class="label">FPS Trung binh</span>
+            <span class="sub">Muc tieu: >= 25 FPS</span>
+        </div>
+        <div class="stat-box">
+            <span class="number">495 ms</span>
+            <span class="label">Do tre xu ly</span>
+            <span class="sub">Detection + Tracking</span>
+        </div>
+        <div class="stat-box">
+            <span class="number">36%</span>
+            <span class="label">GPU Usage</span>
+            <span class="sub">-- GB RAM</span>
+        </div>
+    </div>
+    
+    <h3>Thong ke Giao thong</h3>
+    <div class="stats-grid">
+        <div class="stat-box">
+            <span class="number">0</span>
+            <span class="label">Tong xe duy nhat</span>
+            <span class="sub">Track ID rieng biet</span>
+        </div>
+        <div class="stat-box">
+            <span class="number">300</span>
+            <span class="label">Tong luot phat hien</span>
+            <span class="sub">Detection events</span>
+        </div>
+        <div class="stat-box">
+            <span class="number">0</span>
+            <span class="label">Tong canh bao</span>
+            <span class="sub">Su co giao thong</span>
+        </div>
+    </div>
+</div>
+
+<!-- ============ MUC DO TAC NGHEN ============ -->
+<div class="card">
+    <h2>MUC DO TAC NGHEN THEO HUONG</h2>
+    <table class="congestion-table">
+        <tr style="background:#f0f3f7; font-weight:bold; font-size:11px;">
+            <td style="width:80px;">Huong</td>
+            <td style="width:120px;">Toc do TB</td>
+            <td style="width:100px;">Trang thai</td>
+            <td style="width:80px;">Luong xe</td>
+            <td>Muc do</td>
+        </tr>
+        
+            <tr>
+                <td style="width:80px; font-weight:bold;">Bac (North)</td>
+                <td style="width:120px;">12.5 km/h</td>
+                <td style="width:80px; color:#f39c12; font-weight:bold;">DONG VUA</td>
+                <td>15 xe</td>
+                <td>
+                    <div style="background:#e8ecf0; border-radius:4px; height:14px; width:120px;">
+                        <div style="background:#f39c12; width:55%; height:14px; border-radius:4px;"></div>
+                    </div>
+                </td>
+            </tr>
+        
+            <tr>
+                <td style="width:80px; font-weight:bold;">Nam (South)</td>
+                <td style="width:120px;">18.2 km/h</td>
+                <td style="width:80px; color:#27ae60; font-weight:bold;">THONG THOANG</td>
+                <td>22 xe</td>
+                <td>
+                    <div style="background:#e8ecf0; border-radius:4px; height:14px; width:120px;">
+                        <div style="background:#27ae60; width:25%; height:14px; border-radius:4px;"></div>
+                    </div>
+                </td>
+            </tr>
+        
+            <tr>
+                <td style="width:80px; font-weight:bold;">Dong (East)</td>
+                <td style="width:120px;">6.8 km/h</td>
+                <td style="width:80px; color:#e74c3c; font-weight:bold;">TAC NGHEN</td>
+                <td>35 xe</td>
+                <td>
+                    <div style="background:#e8ecf0; border-radius:4px; height:14px; width:120px;">
+                        <div style="background:#e74c3c; width:85%; height:14px; border-radius:4px;"></div>
+                    </div>
+                </td>
+            </tr>
+        
+            <tr>
+                <td style="width:80px; font-weight:bold;">Tay (West)</td>
+                <td style="width:120px;">24.1 km/h</td>
+                <td style="width:80px; color:#27ae60; font-weight:bold;">THONG THOANG</td>
+                <td>10 xe</td>
+                <td>
+                    <div style="background:#e8ecf0; border-radius:4px; height:14px; width:120px;">
+                        <div style="background:#27ae60; width:25%; height:14px; border-radius:4px;"></div>
+                    </div>
+                </td>
+            </tr>
+    </table>
+    <div style="margin-top:10px; font-size:10px; color:#8a9aa8;">
+        Chu thich: 
+        <span style="color:#27ae60;">Xanh > 15 km/h</span> | 
+        <span style="color:#f39c12;">Vang 8-15 km/h</span> | 
+        <span style="color:#e74c3c;">Do < 5 km/h</span>
+    </div>
+</div>
+
+<!-- ============ THONG TIN VIDEO ============ -->
+<div class="card">
+    <h2>THONG TIN VIDEO NGUON</h2>
+    <table class="info-table">
+        <tr><td>Nguon:</td><td><b>linh_nam.mp4</b></td></tr><tr><td>Do Phan Giai:</td><td><b>720x1280</b></td></tr><tr><td>Fps Goc:</td><td><b>29.9</b></td></tr><tr><td>Tong Khung Hinh:</td><td><b>433</b></td></tr><tr><td>Thoi Luong:</td><td><b>14s</b></td></tr>
+    </table>
+</div>
+
+<!-- ============ DANH SACH CANH BAO ============ -->
+<div class="card">
+    <h2>DANH SACH CANH BAO SU CO (0)</h2>
+    <table class="alert-table">
+        <tr>
+            <th>#</th>
+            <th>Thoi gian</th>
+            <th>Doi tuong</th>
+            <th>Score</th>
+            <th>Muc do</th>
+            <th>Vi pham</th>
+        </tr>
+        <tr><td colspan="6" style="text-align:center; color:#8a9aa8; padding:20px;">Khong co canh bao nao duoc ghi nhan</td></tr>
+    </table>
+</div>
+
+<!-- ============ NHAT KY SU KIEN ============ -->
+<div class="card">
+    <h2>NHAT KY SU KIEN (0)</h2>
+    <table class="event-table">
+        <tr>
+            <th>Thoi gian</th>
+            <th>Loai</th>
+            <th>Mo ta</th>
+        </tr>
+        <tr><td colspan="3" style="text-align:center; color:#8a9aa8;">Chua co su kien nao</td></tr>
+    </table>
+</div>
+
+<!-- ============ CAU HINH HE THONG ============ -->
+<div class="card">
+    <h2>CAU HINH HE THONG</h2>
+    <table class="info-table">
+        <tr><td>Nguong Phat Hien:</td><td><b>0.65</b></td></tr><tr><td>Mo Hinh Phat Hien:</td><td><b>YOLOv8n (Ultralytics)</b></td></tr><tr><td>Mo Hinh Theo Doi:</td><td><b>DeepSORT (lambda=0.7, max_age=60)</b></td></tr><tr><td>Phan Loai Su Co:</td><td><b>LightGBM + IPM + Dac trung Dong hoc</b></td></tr><tr><td>Dac Trung:</td><td><b>20-chieu (Van toc, Gia toc, Goc nghieng, Khoang cach)</b></td></tr><tr><td>Tang Toc Phan Cung:</td><td><b>TensorRT FP16</b></td></tr><tr><td>Thiet Bi Xu Ly:</td><td><b>NVIDIA RTX 3060 (CUDA)</b></td></tr><tr><td>Fps Muc Tieu:</td><td><b>>= 25 FPS (Full HD)</b></td></tr>
+    </table>
+</div>
+
+<!-- ============ FOOTER ============ -->
+<div class="footer">
+    <p class="highlight">DE TAI NGHIEN CUU KHOA HOC SINH VIEN 2026</p>
+    <p><strong>Thiet ke He thong Camera AI Phan tich Giao thong Khu vuc Linh Nam - Ha Noi</strong></p>
+    <p>Truong Dai hoc Kinh te - Ky thuat Cong nghiep | Khoa Cong nghe Thong tin</p>
+    <p style="margin-top:10px;">
+        <span class="highlight">GVHD:</span> Th.S Hoang Thi Phuong &nbsp;|&nbsp; 
+        <span class="highlight">Chu nhiem de tai:</span> Tran Phuong Thao (DHTI17A4HN)
+    </p>
+    <p class="members">
+        Thanh vien: Pham Duc Minh | Vu Trong Khue | Dang Hai Lam | Nguyen Ngoc Tu
+    </p>
+    <p style="margin-top:12px; font-size:10px; color:#b0b8c1;">
+        Bao cao duoc xuat tu dong boi Traffic AI System - Phien ban 1.0.0
+    </p>
+</div>
+
+</div>
+</body>
+</html>
