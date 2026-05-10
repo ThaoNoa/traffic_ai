@@ -102,8 +102,8 @@ class PhysicsRuleEngine:
         self.cfg = config or get_config()
 
         # Thresholds (có thể override qua config)
-        self.BRAKE_THRESH      = -4.0   # m/s² — phanh gấp
-        self.HARD_BRAKE_THRESH = -7.0   # m/s² — phanh rất gấp
+        self.BRAKE_THRESH      = -8.0   # m/s² — phanh gấp
+        self.HARD_BRAKE_THRESH = -11.0   # m/s² — phanh rất gấp
         self.LEAN_THRESH       = 25.0   # độ — nghiêng nguy hiểm
         self.HARD_LEAN_THRESH  = 40.0   # độ — nghiêng rất nguy hiểm
         self.LEAN_DELTA_THRESH = 15.0   # °/s — thay đổi góc nghiêng nhanh
@@ -112,8 +112,8 @@ class PhysicsRuleEngine:
         self.STOP_SPEED        = 0.5    # m/s — coi là "dừng"
 
         # Fusion weights
-        self.lambda_rule = 0.3
-        self.lambda_ml   = 0.7
+        self.lambda_rule = 0.1
+        self.lambda_ml   = 0.9
 
         # Decision thresholds
         self.WARNING_THRESH  = 0.3

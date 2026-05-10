@@ -100,7 +100,7 @@ classifier:
     max_depth: 5
     learning_rate: 0.05
     feature_fraction: 0.8
-    scale_pos_weight: 450    # Tỷ lệ normal:accident ≈ 450:1
+#    scale_pos_weight: 450    # Tỷ lệ normal:accident ≈ 450:1
     n_estimators: 1000
     early_stopping_rounds: 50
     verbose: -1
