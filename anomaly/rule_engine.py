@@ -185,6 +185,7 @@ class PhysicsRuleEngine:
             final_score=rule_score,   # sẽ update sau khi có ML score
             risk_level=self._score_to_level(rule_score),
             violations=violations,
+            is_accident=(rule_score >= self.ACCIDENT_THRESH),
         )
 
         return result

@@ -189,7 +189,7 @@ class IncidentDialog(QDialog):
         
         if info_text:
             info_label = QLabel(info_text)
-            info_label.setStyleSheet("color: #aaa; font-size: 12px; padding: 5px;")
+            info_label.setStyleSheet("color: #2c3e50; font-size: 12px; padding: 5px;")
             layout.addWidget(info_label)
         
         return panel
@@ -242,7 +242,7 @@ class IncidentDialog(QDialog):
                 violations_layout.addWidget(violation_label)
         else:
             no_violation = QLabel("Không có luật vi phạm cụ thể")
-            no_violation.setStyleSheet("color: #666; font-style: italic;")
+            no_violation.setStyleSheet("color: #5a6c7d; font-style: italic;")
             violations_layout.addWidget(no_violation)
         
         layout.addWidget(violations_group)
@@ -255,10 +255,12 @@ class IncidentDialog(QDialog):
         analysis_label = QLabel(analysis_text)
         analysis_label.setWordWrap(True)
         analysis_label.setStyleSheet("""
-            color: #ddd;
-            font-size: 12px;
-            line-height: 1.5;
-            padding: 5px;
+            color: #2c3e50;
+            background-color: #fafbfc;
+            font-size: 13px;
+            line-height: 1.6;
+            padding: 10px;
+            border-radius: 4px;
         """)
         analysis_layout.addWidget(analysis_label)
         
@@ -444,7 +446,7 @@ class IncidentDialog(QDialog):
     def _make_label(self, text):
         """Tạo label thông thường."""
         label = QLabel(text)
-        label.setStyleSheet("color: #aaa; font-size: 13px; font-weight: bold;")
+        label.setStyleSheet("color: #5a6c7d; font-size: 13px; font-weight: bold;")
         return label
 
     def _make_value(self, text, color="#ffffff"):

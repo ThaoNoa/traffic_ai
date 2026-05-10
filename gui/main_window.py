@@ -53,6 +53,7 @@ class FullPipelineThread(QThread):
     alert_detected = pyqtSignal(dict, np.ndarray)
     video_finished = pyqtSignal()
     log_message = pyqtSignal(str)
+    event_logged = pyqtSignal(str, str)
 
     def __init__(self, video_path):
         super().__init__()
@@ -319,6 +320,10 @@ class FullPipelineThread(QThread):
                     
                     # 5. Rule Engine
                     risk_results = {}
+                    # Throttle: chi log moi violation cho moi track 1 lan / 2 giay
+                    if not hasattr(self, '_last_event_frame'):
+                        self._last_event_frame = {}   # {(track_id, rule_name): frame_id}
+
                     for track in tracks:
                         buf = feature_extractor.get_buffer(track.track_id)
                         if buf:
@@ -326,6 +331,27 @@ class FullPipelineThread(QThread):
                             if window and len(window) >= 10:
                                 result = rule_engine.evaluate_state(window, track.track_id, frame_count)
                                 risk_results[track.track_id] = result
+
+                                # === EMIT EVENT cho moi violation ===
+                                for v in result.violations:
+                                    key = (track.track_id, v.rule_name)
+                                    last_f = self._last_event_frame.get(key, -9999)
+                                    # Cooldown 2 giay (~50 frame) cho moi (track, rule)
+                                    if frame_count - last_f < 50:
+                                        continue
+                                    self._last_event_frame[key] = frame_count
+
+                                    # Phan loai mau theo severity
+                                    if v.severity >= 0.7:
+                                        etype = "DANGER"
+                                    elif v.severity >= 0.4:
+                                        etype = "WARNING"
+                                    else:
+                                        etype = "INFO"
+                                    self.event_logged.emit(
+                                        etype,
+                                        f"Track #{track.track_id} | {v.rule_name}: {v.description}"
+                                    )
                     
                     # 6. Alert Manager
                     alerts_triggered = []
@@ -398,6 +424,19 @@ class FullPipelineThread(QThread):
                 except:
                     gpu_usage = min(85, (current_fps / 42) * 80) if current_fps > 0 else 0
                 
+                # === TINH AVG SPEED tu world_positions ===
+                speeds_kmh = []
+                for tid, wp in world_positions.items():
+                    # Lay state moi nhat tu feature_extractor de co speed
+                    buf = feature_extractor.get_buffer(tid)
+                    if buf:
+                        states = buf.get_window(3)   # 3 frame gan nhat
+                        if states:
+                            v_ms = states[-1].speed   # m/s
+                            if 0 < v_ms < 40:         # filter outlier
+                                speeds_kmh.append(v_ms * 3.6)
+                avg_speed_kmh = float(np.mean(speeds_kmh)) if speeds_kmh else 0.0
+
                 self.stats_ready.emit({
                     'fps': current_fps,
                     'avg_fps': total_fps_sum / total_fps_samples if total_fps_samples > 0 else 0,
@@ -415,6 +454,7 @@ class FullPipelineThread(QThread):
                     'congestion_density': congestion['density'],
                     'congestion_color': congestion['color'],
                     'zone_area': congestion.get('area_m2', 0),
+                    'avg_speed': avg_speed_kmh / 3.6,    # <-- THEM (m/s, dashboard chuyen sang km/h)
                     'direction_stats': self._compute_direction_summary(),
                 })
                 
@@ -438,6 +478,8 @@ class FullPipelineThread(QThread):
                 'direction_stats': self._compute_direction_summary(),
             })
             
+            # === KHONG reset ve 0! Giu nguyen so lieu cuoi cung ===
+            # (xoa khoi block self.stats_ready.emit(...) thu hai)
             self.log_message.emit(
                 f"Hoan thanh! {frame_count} frames, "
                 f"{len(active_track_ids)} xe duy nhat, "
@@ -1081,6 +1123,12 @@ class MainWindow(QMainWindow):
         if not self.current_video_path:
             QMessageBox.warning(self, "Chua co video", "Vui long chon video truoc.")
             return
+        
+        self._alert_dialog_shown = False
+        self.alert_history.clear()
+        self._last_stats = {}       
+        self._stats_accum = {}    
+        
         if self.video_thread and self.video_thread.isRunning():
             self.video_thread.stop()
         self.video_thread = FullPipelineThread(self.current_video_path)
@@ -1090,6 +1138,7 @@ class MainWindow(QMainWindow):
         self.video_thread.alert_detected.connect(self._on_alert)
         self.video_thread.video_finished.connect(self._on_finished)
         self.video_thread.log_message.connect(self._log)
+        self.video_thread.event_logged.connect(self.dashboard.add_event)
         self.video_thread.start()
         self.workflow_bar.set_state(True)
         self.dashboard.set_mode("processing")
@@ -1115,8 +1164,38 @@ class MainWindow(QMainWindow):
         self.workflow_bar.update_progress(cur, total)
 
     def _on_stats(self, stats):
-        self._latest_stats = stats
         self.dashboard.update_stats(stats)
+
+        if not hasattr(self, '_stats_accum'):
+            self._stats_accum = {}
+
+        for k, v in stats.items():
+            if v is None:
+                continue
+
+            # zone_area: KHONG cho 0 ghi de gia tri da co
+            if k == 'zone_area' and (v == 0 or v == 0.0):
+                if self._stats_accum.get(k, 0) > 0:
+                    continue
+
+            # congestion_level: KHONG cho UNKNOWN ghi de level da co
+            if k == 'congestion_level' and v == 'UNKNOWN':
+                if self._stats_accum.get(k, 'UNKNOWN') != 'UNKNOWN':
+                    continue
+
+            # congestion_density: KHONG cho 0 ghi de gia tri > 0
+            if k == 'congestion_density' and v == 0:
+                if self._stats_accum.get(k, 0) > 0:
+                    continue
+
+            # Counters: luon LAY MAX (so tich luy)
+            if k in ('total_vehicles_unique', 'total_detections',
+                    'alerts', 'frame_count'):
+                self._stats_accum[k] = max(self._stats_accum.get(k, 0), v)
+            else:
+                self._stats_accum[k] = v
+
+        self._last_stats = self._stats_accum
 
     def _on_error(self, msg):
         QMessageBox.critical(self, "Loi", msg)
@@ -1136,15 +1215,22 @@ class MainWindow(QMainWindow):
         self._log("Pipeline hoan thanh!")
 
     def _trigger_demo_alert(self):
-        data = {
-            'track_id': 42, 'timestamp': time.time(), 'frame_id': 9999,
-            'final_score': 0.956, 'risk_level': 'ACCIDENT',
-            'violations': ['SUDDEN_BRAKE: a=-6.8 m/s2', 'COLLISION_RISK: d=1.3m', 'HIGH_LEAN_ANGLE: 34 do'],
-            'location': 'Nga tu Linh Nam - Ha Noi'
-        }
-        frame = np.zeros((480, 640, 3), dtype=np.uint8)
-        cv2.putText(frame, "MAU SU CO", (160, 250), cv2.FONT_HERSHEY_SIMPLEX, 1.5, (26, 58, 92), 3)
-        IncidentDialog(data, frame, self).exec_()
+        """Load video demo va chay pipeline."""
+        from pathlib import Path
+        demo_path = Path(__file__).parent.parent / "videos" / "demo_demo.mp4"
+        if not demo_path.exists():
+            QMessageBox.warning(
+                self, "Khong tim thay video demo",
+                f"Vui long dat file demo tai: {demo_path}"
+            )
+            return
+
+        # Tai vao preview va chay pipeline
+        self.video_preview.load_video(str(demo_path))
+        self.current_video_path = str(demo_path)
+        self._log(f"Loaded demo: {demo_path.name}")
+        # Chay pipeline ngay
+        self._start_processing()
 
     def _export_report(self):
         ts = datetime.now().strftime('%Y%m%d_%H%M%S')
@@ -1169,11 +1255,15 @@ class MainWindow(QMainWindow):
         s = dir_stats.get('S', {'speed_kmh': 0.0, 'count': 0})
         e = dir_stats.get('E', {'speed_kmh': 0.0, 'count': 0})
         w = dir_stats.get('W', {'speed_kmh': 0.0, 'count': 0})
+        # === Tong hop tac nghen tu IPM zone ===
+        last_stats = getattr(self, '_last_stats', {}) or {}
         congestion = {
-            'north_speed': float(n.get('speed_kmh', 0.0)), 'north_count': int(n.get('count', 0)),
-            'south_speed': float(s.get('speed_kmh', 0.0)), 'south_count': int(s.get('count', 0)),
-            'east_speed':  float(e.get('speed_kmh', 0.0)), 'east_count':  int(e.get('count', 0)),
-            'west_speed':  float(w.get('speed_kmh', 0.0)), 'west_count':  int(w.get('count', 0)),
+            'level': last_stats.get('congestion_level', 'UNKNOWN'),
+            'density': last_stats.get('congestion_density', 0.0),
+            'avg_speed_kmh': last_stats.get('avg_speed', 0.0) * 3.6,
+            'vehicle_count': last_stats.get('vehicles', 0),
+            'total_unique': last_stats.get('total_vehicles_unique', 0),
+            'zone_area': last_stats.get('zone_area', 0.0),
         }
 
         # Thu thập event log từ dashboard
@@ -1241,28 +1331,22 @@ class MainWindow(QMainWindow):
             label = key.replace('_', ' ').title()
             video_rows += f"<tr><td>{label}:</td><td><b>{val}</b></td></tr>"
         
-        # Congestion HTML
-        def congestion_bar(direction, speed, count):
-            if speed > 15:
-                color, level, pct = "#27ae60", "THONG THOANG", 25
-            elif speed > 8:
-                color, level, pct = "#f39c12", "DONG VUA", 55
-            elif speed > 0:
-                color, level, pct = "#e74c3c", "TAC NGHEN", 85
-            else:
-                color, level, pct = "#b0b8c1", "KHONG DU LIEU", 0
-            return f"""
-            <tr>
-                <td style="width:80px; font-weight:bold;">{direction}</td>
-                <td style="width:120px;">{speed:.1f} km/h</td>
-                <td style="width:80px; color:{color}; font-weight:bold;">{level}</td>
-                <td>{count} xe</td>
-                <td>
-                    <div style="background:#e8ecf0; border-radius:4px; height:14px; width:120px;">
-                        <div style="background:{color}; width:{pct}%; height:14px; border-radius:4px;"></div>
-                    </div>
-                </td>
-            </tr>"""
+        # === Tong hop muc do tac nghen vung IPM ===
+        level_colors = {
+            'THONG THOANG': '#27ae60',
+            'DONG VUA':     '#f39c12',
+            'DONG DUC':     '#e67e22',
+            'TAC NGHEN':    '#e74c3c',
+            'UNKNOWN':      '#b0b8c1',
+        }
+        level = congestion.get('level', 'UNKNOWN')
+        color = level_colors.get(level, '#b0b8c1')
+
+        level_pct = {
+            'THONG THOANG': 25, 'DONG VUA': 55,
+            'DONG DUC': 75, 'TAC NGHEN': 90, 'UNKNOWN': 0,
+        }
+        pct = level_pct.get(level, 0)
         
         # Config rows
         config_rows = ""
@@ -1524,27 +1608,37 @@ body {{
     </div>
 </div>
 
-<!-- ============ MUC DO TAC NGHEN ============ -->
+<!-- ============ MUC DO TAC NGHEN VUNG IPM ============ -->
 <div class="card">
-    <h2>MUC DO TAC NGHEN THEO HUONG</h2>
-    <table class="congestion-table">
-        <tr style="background:#f0f3f7; font-weight:bold; font-size:11px;">
-            <td style="width:80px;">Huong</td>
-            <td style="width:120px;">Toc do TB</td>
-            <td style="width:100px;">Trang thai</td>
-            <td style="width:80px;">Luong xe</td>
-            <td>Muc do</td>
-        </tr>
-        {congestion_bar('Bac (North)', congestion.get('north_speed', 0), congestion.get('north_count', 0))}
-        {congestion_bar('Nam (South)', congestion.get('south_speed', 0), congestion.get('south_count', 0))}
-        {congestion_bar('Dong (East)', congestion.get('east_speed', 0), congestion.get('east_count', 0))}
-        {congestion_bar('Tay (West)', congestion.get('west_speed', 0), congestion.get('west_count', 0))}
-    </table>
-    <div style="margin-top:10px; font-size:10px; color:#8a9aa8;">
-        Chu thich: 
-        <span style="color:#27ae60;">Xanh > 15 km/h</span> | 
-        <span style="color:#f39c12;">Vang 8-15 km/h</span> | 
-        <span style="color:#e74c3c;">Do < 5 km/h</span>
+    <h2>MUC DO TAC NGHEN (VUNG QUAN SAT IPM)</h2>
+
+    <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 20px; align-items: center;">
+        <div style="text-align: center; padding: 24px; background: {color}15;
+                    border: 2px solid {color}; border-radius: 8px;">
+            <div style="font-size: 13px; color: #5a6c7d; margin-bottom: 8px;">Trang thai</div>
+            <div style="font-size: 22px; font-weight: bold; color: {color};">{level}</div>
+        </div>
+        <table class="info-table">
+            <tr><td>Toc do trung binh:</td><td><b>{congestion.get('avg_speed_kmh', 0):.1f} km/h</b></td></tr>
+            <tr><td>Mat do phuong tien:</td><td><b>{congestion.get('density', 0):.2f} xe / 100m²</b></td></tr>
+            <tr><td>Xe trong vung tai thoi diem cuoi:</td><td><b>{congestion.get('vehicle_count', 0)} xe</b></td></tr>
+            <tr><td>Tong xe duy nhat di qua:</td><td><b>{congestion.get('total_unique', 0)} xe</b></td></tr>
+            <tr><td>Dien tich vung quan sat:</td><td><b>{congestion.get('zone_area', 0):.0f} m²</b></td></tr>
+        </table>
+    </div>
+
+    <div style="margin-top: 16px;">
+        <div style="background: #e8ecf0; border-radius: 4px; height: 18px; width: 100%;">
+            <div style="background: {color}; width: {pct}%; height: 18px;
+                        border-radius: 4px; transition: width 0.5s;"></div>
+        </div>
+        <div style="margin-top: 6px; font-size: 10px; color: #8a9aa8;">
+            Chu thich:
+            <span style="color: #27ae60;">Thong thoang &lt;1 xe/100m²</span> |
+            <span style="color: #f39c12;">Dong vua 1-2.5</span> |
+            <span style="color: #e67e22;">Dong duc 2.5-4</span> |
+            <span style="color: #e74c3c;">Tac nghen &gt;4</span>
+        </div>
     </div>
 </div>
 
@@ -1643,13 +1737,14 @@ body {{
             f"  Tong canh bao:         {stats.get('tong_canh_bao', '--')}",
             "",
             "-" * 70,
-            "  MUC DO TAC NGHEN",
+            "  MUC DO TAC NGHEN (VUNG QUAN SAT IPM)",
             "-" * 70,
-            f"  Bac:  {congestion.get('north_speed', 0):.1f} km/h - {congestion.get('north_count', 0)} xe",
-            f"  Nam:  {congestion.get('south_speed', 0):.1f} km/h - {congestion.get('south_count', 0)} xe",
-            f"  Dong: {congestion.get('east_speed', 0):.1f} km/h - {congestion.get('east_count', 0)} xe",
-            f"  Tay:  {congestion.get('west_speed', 0):.1f} km/h - {congestion.get('west_count', 0)} xe",
-            "",
+            f"  Trang thai:               {congestion.get('level', 'UNKNOWN')}",
+            f"  Toc do trung binh:        {congestion.get('avg_speed_kmh', 0):.1f} km/h",
+            f"  Mat do:                   {congestion.get('density', 0):.2f} xe/100m²",
+            f"  Xe trong vung (cuoi):     {congestion.get('vehicle_count', 0)} xe",
+            f"  Tong xe duy nhat:         {congestion.get('total_unique', 0)} xe",
+            f"  Dien tich vung:           {congestion.get('zone_area', 0):.0f} m²",
             "-" * 70,
             "  THONG TIN VIDEO",
             "-" * 70,

@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Bao cao Phan tich Giao thong - Linh Nam - Ha Noi</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: 'Times New Roman', 'Segoe UI', serif;
+    color: #2c3e50;
+    background: #f5f6fa;
+    padding: 40px;
+}
+.container { max-width: 950px; margin: 0 auto; }
+.header {
+    text-align: center;
+    padding: 40px 30px;
+    background: linear-gradient(135deg, #ffffff 0%, #f0f3f7 100%);
+    border: 2px solid #1a3a5c;
+    border-radius: 6px;
+    margin-bottom: 24px;
+}
+.header h1 { font-size: 26px; color: #1a3a5c; margin-bottom: 8px; }
+.header .subtitle { font-size: 16px; color: #2c3e50; margin-bottom: 4px; }
+.header .meta { color: #5a6c7d; font-size: 13px; margin-top: 6px; }
+.card {
+    background: #ffffff;
+    border: 1px solid #d0d5db;
+    border-radius: 6px;
+    padding: 24px;
+    margin-bottom: 20px;
+    page-break-inside: avoid;
+}
+.card h2 {
+    color: #1a3a5c;
+    font-size: 18px;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #1a3a5c;
+}
+.card h3 {
+    color: #2c3e50;
+    font-size: 14px;
+    margin: 16px 0 10px 0;
+}
+
+/* Stats */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-bottom: 16px;
+}
+.stat-box {
+    text-align: center;
+    padding: 20px 14px;
+    background: #f8f9fb;
+    border: 1px solid #e0e4e8;
+    border-radius: 6px;
+}
+.stat-box.highlight {
+    background: #f0f4ff;
+    border-color: #1a3a5c;
+}
+.stat-box .number {
+    display: block;
+    font-size: 34px;
+    font-weight: bold;
+    color: #1a3a5c;
+}
+.stat-box .label {
+    display: block;
+    color: #5a6c7d;
+    font-size: 12px;
+    margin-top: 6px;
+}
+.stat-box .sub {
+    display: block;
+    color: #8a9aa8;
+    font-size: 10px;
+    margin-top: 2px;
+}
+
+/* Tables */
+.info-table { width: 100%; border-collapse: collapse; }
+.info-table td {
+    padding: 10px 14px;
+    border-bottom: 1px solid #e8ecf0;
+    font-size: 13px;
+}
+.info-table td:first-child {
+    color: #5a6c7d;
+    width: 200px;
+    font-weight: bold;
+}
+
+/* Alert Table */
+.alert-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+}
+.alert-table th {
+    background: #f0f3f7;
+    color: #2c3e50;
+    padding: 8px 10px;
+    text-align: left;
+    border-bottom: 2px solid #d0d5db;
+    font-size: 11px;
+    font-weight: bold;
+}
+.alert-table td {
+    padding: 7px 10px;
+    border-bottom: 1px solid #e8ecf0;
+}
+.alert-table tr:hover { background: #fafbfc; }
+
+/* Event Table */
+.event-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+}
+.event-table th {
+    background: #f0f3f7;
+    color: #2c3e50;
+    padding: 8px 10px;
+    text-align: left;
+    border-bottom: 2px solid #d0d5db;
+    font-size: 11px;
+}
+.event-table td {
+    padding: 6px 10px;
+    border-bottom: 1px solid #e8ecf0;
+}
+
+/* Congestion */
+.congestion-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+}
+.congestion-table td {
+    padding: 6px 10px;
+    border-bottom: 1px solid #e8ecf0;
+}
+
+.footer {
+    text-align: center;
+    color: #8a9aa8;
+    font-size: 12px;
+    padding: 30px 20px;
+    margin-top: 10px;
+    border-top: 2px solid #d0d5db;
+}
+.footer .highlight { color: #1a3a5c; font-weight: bold; }
+.footer .members { font-size: 11px; color: #5a6c7d; margin-top: 6px; }
+
+@media print {
+    body { padding: 20px; }
+    .card { page-break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- ============ HEADER ============ -->
+<div class="header">
+    <h1>He thong Giam sat Giao thong Linh Nam</h1>
+    <p class="subtitle">BAO CAO PHAN TICH GIAO THONG TU DONG</p>
+    <p class="meta">Thoi gian xuat bao cao: 11/05/2026 01:45:45</p>
+    <p class="meta">Phien ban he thong: 1.0.0 - NCKH 2026</p>
+</div>
+
+<!-- ============ KET QUA TONG HOP ============ -->
+<div class="card">
+    <h2>KET QUA TONG HOP</h2>
+    
+    <h3>Hieu nang He thong</h3>
+    <div class="stats-grid">
+        <div class="stat-box highlight">
+            <span class="number">5.2</span>
+            <span class="label">FPS Trung binh</span>
+            <span class="sub">Muc tieu: >= 25 FPS</span>
+        </div>
+        <div class="stat-box">
+            <span class="number">784 ms</span>
+            <span class="label">Do tre xu ly</span>
+            <span class="sub">Detection + Tracking</span>
+        </div>
+        <div class="stat-box">
+            <span class="number">23%</span>
+            <span class="label">GPU Usage</span>
+            <span class="sub">-- GB RAM</span>
+        </div>
+    </div>
+    
+    <h3>Thong ke Giao thong</h3>
+    <div class="stats-grid">
+        <div class="stat-box">
+            <span class="number">14</span>
+            <span class="label">Tong xe duy nhat</span>
+            <span class="sub">Track ID rieng biet</span>
+        </div>
+        <div class="stat-box">
+            <span class="number">686</span>
+            <span class="label">Tong luot phat hien</span>
+            <span class="sub">Detection events</span>
+        </div>
+        <div class="stat-box">
+            <span class="number">14</span>
+            <span class="label">Tong canh bao</span>
+            <span class="sub">Su co giao thong</span>
+        </div>
+    </div>
+</div>
+
+<!-- ============ MUC DO TAC NGHEN VUNG IPM ============ -->
+<div class="card">
+    <h2>MUC DO TAC NGHEN (VUNG QUAN SAT IPM)</h2>
+
+    <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 20px; align-items: center;">
+        <div style="text-align: center; padding: 24px; background: #b0b8c115;
+                    border: 2px solid #b0b8c1; border-radius: 8px;">
+            <div style="font-size: 13px; color: #5a6c7d; margin-bottom: 8px;">Trang thai</div>
+            <div style="font-size: 22px; font-weight: bold; color: #b0b8c1;">UNKNOWN</div>
+        </div>
+        <table class="info-table">
+            <tr><td>Toc do trung binh:</td><td><b>0.0 km/h</b></td></tr>
+            <tr><td>Mat do phuong tien:</td><td><b>0.00 xe / 100m²</b></td></tr>
+            <tr><td>Xe trong vung tai thoi diem cuoi:</td><td><b>0 xe</b></td></tr>
+            <tr><td>Tong xe duy nhat di qua:</td><td><b>0 xe</b></td></tr>
+            <tr><td>Dien tich vung quan sat:</td><td><b>0 m²</b></td></tr>
+        </table>
+    </div>
+
+    <div style="margin-top: 16px;">
+        <div style="background: #e8ecf0; border-radius: 4px; height: 18px; width: 100%;">
+            <div style="background: #b0b8c1; width: 0%; height: 18px;
+                        border-radius: 4px; transition: width 0.5s;"></div>
+        </div>
+        <div style="margin-top: 6px; font-size: 10px; color: #8a9aa8;">
+            Chu thich:
+            <span style="color: #27ae60;">Thong thoang &lt;1 xe/100m²</span> |
+            <span style="color: #f39c12;">Dong vua 1-2.5</span> |
+            <span style="color: #e67e22;">Dong duc 2.5-4</span> |
+            <span style="color: #e74c3c;">Tac nghen &gt;4</span>
+        </div>
+    </div>
+</div>
+
+<!-- ============ THONG TIN VIDEO ============ -->
+<div class="card">
+    <h2>THONG TIN VIDEO NGUON</h2>
+    <table class="info-table">
+        <tr><td>Nguon:</td><td><b>v48_25fps.mp4</b></td></tr><tr><td>Do Phan Giai:</td><td><b>2354x1234</b></td></tr><tr><td>Fps Goc:</td><td><b>25.0</b></td></tr><tr><td>Tong Khung Hinh:</td><td><b>308</b></td></tr><tr><td>Thoi Luong:</td><td><b>12s</b></td></tr>
+    </table>
+</div>
+
+<!-- ============ DANH SACH CANH BAO ============ -->
+<div class="card">
+    <h2>DANH SACH CANH BAO SU CO (14)</h2>
+    <table class="alert-table">
+        <tr>
+            <th>#</th>
+            <th>Thoi gian</th>
+            <th>Doi tuong</th>
+            <th>Score</th>
+            <th>Muc do</th>
+            <th>Vi pham</th>
+        </tr>
+        
+            <tr>
+                <td>1</td>
+                <td>01:42:29</td>
+                <td>Track #1</td>
+                <td style="color:#e74c3c; font-weight:bold;">1.000</td>
+                <td>ACCIDENT</td>
+                <td style="font-size:11px;">SUDDEN_BRAKE</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>01:42:35</td>
+                <td>Track #1</td>
+                <td style="color:#e74c3c; font-weight:bold;">0.928</td>
+                <td>ACCIDENT</td>
+                <td style="font-size:11px;">SUDDEN_BRAKE, COLLISION_RISK</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>01:42:40</td>
+                <td>Track #1</td>
+                <td style="color:#e74c3c; font-weight:bold;">0.962</td>
+                <td>ACCIDENT</td>
+                <td style="font-size:11px;">SUDDEN_BRAKE, COLLISION_RISK</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>01:42:46</td>
+                <td>Track #3</td>
+                <td style="color:#e74c3c; font-weight:bold;">1.000</td>
+                <td>ACCIDENT</td>
+                <td style="font-size:11px;">SUDDEN_BRAKE</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>01:42:55</td>
+                <td>Track #3</td>
+                <td style="color:#e74c3c; font-weight:bold;">1.000</td>
+                <td>ACCIDENT</td>
+                <td style="font-size:11px;">SUDDEN_BRAKE</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>01:43:01</td>
+                <td>Track #3</td>
+                <td style="color:#e74c3c; font-weight:bold;">1.000</td>
+                <td>ACCIDENT</td>
+                <td style="font-size:11px;">SUDDEN_BRAKE</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>01:43:06</td>
+                <td>Track #9</td>
+                <td style="color:#e74c3c; font-weight:bold;">0.957</td>
+                <td>ACCIDENT</td>
+                <td style="font-size:11px;">SUDDEN_BRAKE, COLLISION_RISK</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>01:43:23</td>
+                <td>Track #9</td>
+                <td style="color:#e74c3c; font-weight:bold;">0.953</td>
+                <td>ACCIDENT</td>
+                <td style="font-size:11px;">SUDDEN_BRAKE, COLLISION_RISK</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>01:43:43</td>
+                <td>Track #3</td>
+                <td style="color:#e74c3c; font-weight:bold;">0.897</td>
+                <td>ACCIDENT</td>
+                <td style="font-size:11px;">COLLISION_RISK</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>01:43:54</td>
+                <td>Track #12</td>
+                <td style="color:#e74c3c; font-weight:bold;">0.872</td>
+                <td>ACCIDENT</td>
+                <td style="font-size:11px;">SUDDEN_BRAKE</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>01:43:55</td>
+                <td>Track #3</td>
+                <td style="color:#e74c3c; font-weight:bold;">0.998</td>
+                <td>ACCIDENT</td>
+                <td style="font-size:11px;">COLLISION_RISK</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>01:44:03</td>
+                <td>Track #13</td>
+                <td style="color:#e74c3c; font-weight:bold;">1.000</td>
+                <td>ACCIDENT</td>
+                <td style="font-size:11px;">SUDDEN_BRAKE</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>01:44:12</td>
+                <td>Track #13</td>
+                <td style="color:#e74c3c; font-weight:bold;">1.000</td>
+                <td>ACCIDENT</td>
+                <td style="font-size:11px;">SUDDEN_BRAKE</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>01:44:18</td>
+                <td>Track #13</td>
+                <td style="color:#e74c3c; font-weight:bold;">1.000</td>
+                <td>ACCIDENT</td>
+                <td style="font-size:11px;">SUDDEN_BRAKE</td>
+            </tr>
+    </table>
+</div>
+
+<!-- ============ NHAT KY SU KIEN ============ -->
+<div class="card">
+    <h2>NHAT KY SU KIEN (28)</h2>
+    <table class="event-table">
+        <tr>
+            <th>Thoi gian</th>
+            <th>Loai</th>
+            <th>Mo ta</th>
+        </tr>
+        
+            <tr style="background:#ffffff;">
+                <td style="width:90px;">01:42:29</td>
+                <td style="width:100px; color:#2c3e50; font-weight:bold;">[WARNING]</td>
+                <td>Track #1 | SUDDEN_BRAKE: Phanh gấp: a=-10.1 m/s²</td>
+            </tr>
+            <tr style="background:#fdf2f2;">
+                <td style="width:90px;">01:42:29</td>
+                <td style="width:100px; color:#e74c3c; font-weight:bold;">[ACCIDENT]</td>
+                <td>Track 1 - Score: 1.00</td>
+            </tr>
+            <tr style="background:#ffffff;">
+                <td style="width:90px;">01:42:30</td>
+                <td style="width:100px; color:#2c3e50; font-weight:bold;">[DANGER]</td>
+                <td>Track #1 | COLLISION_RISK: Nguy cơ va chạm: d=0.5m, v=8.1m/s</td>
+            </tr>
+            <tr style="background:#fdf2f2;">
+                <td style="width:90px;">01:42:35</td>
+                <td style="width:100px; color:#e74c3c; font-weight:bold;">[ACCIDENT]</td>
+                <td>Track 1 - Score: 0.93</td>
+            </tr>
+            <tr style="background:#ffffff;">
+                <td style="width:90px;">01:42:40</td>
+                <td style="width:100px; color:#2c3e50; font-weight:bold;">[INFO]</td>
+                <td>Track #3 | SUDDEN_BRAKE: Phanh gấp: a=-8.0 m/s²</td>
+            </tr>
+            <tr style="background:#ffffff;">
+                <td style="width:90px;">01:42:40</td>
+                <td style="width:100px; color:#2c3e50; font-weight:bold;">[DANGER]</td>
+                <td>Track #3 | COLLISION_RISK: Nguy cơ va chạm: d=0.1m, v=4.1m/s</td>
+            </tr>
+            <tr style="background:#fdf2f2;">
+                <td style="width:90px;">01:42:40</td>
+                <td style="width:100px; color:#e74c3c; font-weight:bold;">[ACCIDENT]</td>
+                <td>Track 1 - Score: 0.96</td>
+            </tr>
+            <tr style="background:#fdf2f2;">
+                <td style="width:90px;">01:42:46</td>
+                <td style="width:100px; color:#e74c3c; font-weight:bold;">[ACCIDENT]</td>
+                <td>Track 3 - Score: 1.00</td>
+            </tr>
+            <tr style="background:#fdf2f2;">
+                <td style="width:90px;">01:42:55</td>
+                <td style="width:100px; color:#e74c3c; font-weight:bold;">[ACCIDENT]</td>
+                <td>Track 3 - Score: 1.00</td>
+            </tr>
+            <tr style="background:#fdf2f2;">
+                <td style="width:90px;">01:43:01</td>
+                <td style="width:100px; color:#e74c3c; font-weight:bold;">[ACCIDENT]</td>
+                <td>Track 3 - Score: 1.00</td>
+            </tr>
+            <tr style="background:#ffffff;">
+                <td style="width:90px;">01:43:02</td>
+                <td style="width:100px; color:#2c3e50; font-weight:bold;">[DANGER]</td>
+                <td>Track #7 | COLLISION_RISK: Nguy cơ va chạm: d=1.3m, v=7.3m/s</td>
+            </tr>
+            <tr style="background:#ffffff;">
+                <td style="width:90px;">01:43:06</td>
+                <td style="width:100px; color:#2c3e50; font-weight:bold;">[DANGER]</td>
+                <td>Track #7 | SUDDEN_STOP: Dừng đột ngột: 7.3→0.2 m/s</td>
+            </tr>
+            <tr style="background:#ffffff;">
+                <td style="width:90px;">01:43:06</td>
+                <td style="width:100px; color:#2c3e50; font-weight:bold;">[DANGER]</td>
+                <td>Track #9 | SUDDEN_BRAKE: Phanh gấp: a=-12.7 m/s²</td>
+            </tr>
+            <tr style="background:#ffffff;">
+                <td style="width:90px;">01:43:06</td>
+                <td style="width:100px; color:#2c3e50; font-weight:bold;">[DANGER]</td>
+                <td>Track #9 | COLLISION_RISK: Nguy cơ va chạm: d=0.1m, v=4.5m/s</td>
+            </tr>
+            <tr style="background:#fdf2f2;">
+                <td style="width:90px;">01:43:06</td>
+                <td style="width:100px; color:#e74c3c; font-weight:bold;">[ACCIDENT]</td>
+                <td>Track 9 - Score: 0.96</td>
+            </tr>
+            <tr style="background:#fdf2f2;">
+                <td style="width:90px;">01:43:23</td>
+                <td style="width:100px; color:#e74c3c; font-weight:bold;">[ACCIDENT]</td>
+                <td>Track 9 - Score: 0.95</td>
+            </tr>
+            <tr style="background:#ffffff;">
+                <td style="width:90px;">01:43:43</td>
+                <td style="width:100px; color:#2c3e50; font-weight:bold;">[DANGER]</td>
+                <td>Track #3 | COLLISION_RISK: Nguy cơ va chạm: d=0.1m, v=10.3m/s</td>
+            </tr>
+            <tr style="background:#fdf2f2;">
+                <td style="width:90px;">01:43:43</td>
+                <td style="width:100px; color:#e74c3c; font-weight:bold;">[ACCIDENT]</td>
+                <td>Track 3 - Score: 0.90</td>
+            </tr>
+            <tr style="background:#ffffff;">
+                <td style="width:90px;">01:43:49</td>
+                <td style="width:100px; color:#2c3e50; font-weight:bold;">[WARNING]</td>
+                <td>Track #11 | SUDDEN_BRAKE: Phanh gấp: a=-9.4 m/s²</td>
+            </tr>
+            <tr style="background:#ffffff;">
+                <td style="width:90px;">01:43:54</td>
+                <td style="width:100px; color:#2c3e50; font-weight:bold;">[DANGER]</td>
+                <td>Track #12 | SUDDEN_BRAKE: Phanh gấp: a=-11.3 m/s²</td>
+            </tr>
+            <tr style="background:#fdf2f2;">
+                <td style="width:90px;">01:43:54</td>
+                <td style="width:100px; color:#e74c3c; font-weight:bold;">[ACCIDENT]</td>
+                <td>Track 12 - Score: 0.87</td>
+            </tr>
+            <tr style="background:#fdf2f2;">
+                <td style="width:90px;">01:43:55</td>
+                <td style="width:100px; color:#e74c3c; font-weight:bold;">[ACCIDENT]</td>
+                <td>Track 3 - Score: 1.00</td>
+            </tr>
+            <tr style="background:#ffffff;">
+                <td style="width:90px;">01:44:00</td>
+                <td style="width:100px; color:#2c3e50; font-weight:bold;">[DANGER]</td>
+                <td>Track #3 | SUDDEN_STOP: Dừng đột ngột: 10.7→0.2 m/s</td>
+            </tr>
+            <tr style="background:#ffffff;">
+                <td style="width:90px;">01:44:03</td>
+                <td style="width:100px; color:#2c3e50; font-weight:bold;">[DANGER]</td>
+                <td>Track #13 | SUDDEN_BRAKE: Phanh gấp: a=-12.2 m/s²</td>
+            </tr>
+            <tr style="background:#fdf2f2;">
+                <td style="width:90px;">01:44:03</td>
+                <td style="width:100px; color:#e74c3c; font-weight:bold;">[ACCIDENT]</td>
+                <td>Track 13 - Score: 1.00</td>
+            </tr>
+            <tr style="background:#ffffff;">
+                <td style="width:90px;">01:44:12</td>
+                <td style="width:100px; color:#2c3e50; font-weight:bold;">[DANGER]</td>
+                <td>Track #12 | COLLISION_RISK: Nguy cơ va chạm: d=0.0m, v=4.4m/s</td>
+            </tr>
+            <tr style="background:#fdf2f2;">
+                <td style="width:90px;">01:44:12</td>
+                <td style="width:100px; color:#e74c3c; font-weight:bold;">[ACCIDENT]</td>
+                <td>Track 13 - Score: 1.00</td>
+            </tr>
+            <tr style="background:#fdf2f2;">
+                <td style="width:90px;">01:44:18</td>
+                <td style="width:100px; color:#e74c3c; font-weight:bold;">[ACCIDENT]</td>
+                <td>Track 13 - Score: 1.00</td>
+            </tr>
+    </table>
+</div>
+
+<!-- ============ CAU HINH HE THONG ============ -->
+<div class="card">
+    <h2>CAU HINH HE THONG</h2>
+    <table class="info-table">
+        <tr><td>Nguong Phat Hien:</td><td><b>0.65</b></td></tr><tr><td>Mo Hinh Phat Hien:</td><td><b>YOLOv8n (Ultralytics)</b></td></tr><tr><td>Mo Hinh Theo Doi:</td><td><b>DeepSORT (lambda=0.7, max_age=60)</b></td></tr><tr><td>Phan Loai Su Co:</td><td><b>LightGBM + IPM + Dac trung Dong hoc</b></td></tr><tr><td>Dac Trung:</td><td><b>20-chieu (Van toc, Gia toc, Goc nghieng, Khoang cach)</b></td></tr><tr><td>Tang Toc Phan Cung:</td><td><b>TensorRT FP16</b></td></tr><tr><td>Thiet Bi Xu Ly:</td><td><b>NVIDIA RTX 3060 (CUDA)</b></td></tr><tr><td>Fps Muc Tieu:</td><td><b>>= 25 FPS (Full HD)</b></td></tr>
+    </table>
+</div>
+
+<!-- ============ FOOTER ============ -->
+<div class="footer">
+    <p class="highlight">DE TAI NGHIEN CUU KHOA HOC SINH VIEN 2026</p>
+    <p><strong>Thiet ke He thong Camera AI Phan tich Giao thong Khu vuc Linh Nam - Ha Noi</strong></p>
+    <p>Truong Dai hoc Kinh te - Ky thuat Cong nghiep | Khoa Cong nghe Thong tin</p>
+    <p style="margin-top:10px;">
+        <span class="highlight">GVHD:</span> Th.S Hoang Thi Phuong &nbsp;|&nbsp; 
+        <span class="highlight">Chu nhiem de tai:</span> Tran Phuong Thao (DHTI17A4HN)
+    </p>
+    <p class="members">
+        Thanh vien: Pham Duc Minh | Vu Trong Khue | Dang Hai Lam | Nguyen Ngoc Tu
+    </p>
+    <p style="margin-top:12px; font-size:10px; color:#b0b8c1;">
+        Bao cao duoc xuat tu dong boi Traffic AI System - Phien ban 1.0.0
+    </p>
+</div>
+
+</div>
+</body>
+</html>
